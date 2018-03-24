@@ -7,7 +7,9 @@
 }
 
 #basket-container {
-  width: 200px;
+  position: relative;
+  top: 20px;
+  width: 120px;
   height: auto;
   margin: auto;
   text-align: center;
