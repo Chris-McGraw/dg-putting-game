@@ -2,11 +2,20 @@
   margin: 0;
   padding: 0;
   user-select: none;
+
+  /* border: 2px solid red; */
+}
+
+#basket-container {
+  width: 200px;
+  height: auto;
+  margin: auto;
+  text-align: center;
 }
 
 #disc {
   position: relative;
-  top: 550px;
+  top: 360px;
   width: 120px;
   height: 20px;
   margin: auto;
@@ -16,8 +25,8 @@
 }
 
 .madePutt {
-  transform: translate(0px, -500px) rotate(-15deg);
+  transform: translate(0px, -510px) rotate(-15deg);
   width: 60px !important;
   height: 10px !important;
-  transition: transform 1350ms, width 1350ms, height 1350ms;
+  transition: transform 1000ms ease-out, width 1000ms ease-in, height 1000ms ease-in;
 }
