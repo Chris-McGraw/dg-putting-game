@@ -9,5 +9,6 @@ $(document).ready(function() {
       $("#disc").removeClass("madePutt");
       $("#disc").removeClass("madePuttDrop");
     }, 2250);
+
   })
 });
