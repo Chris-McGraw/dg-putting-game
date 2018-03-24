@@ -25,8 +25,13 @@
 }
 
 .madePutt {
-  transform: translate(0px, -510px) rotate(-15deg);
-  width: 60px !important;
-  height: 10px !important;
+  transform: translate(-4px, -510px) rotate(-15deg);
+  width: 40px !important;
+  height: 8px !important;
   transition: transform 1000ms ease-out, width 1000ms ease-in, height 1000ms ease-in;
+}
+
+.madePuttDrop {
+  transform: translate(-4px, -457px) rotate(0deg);
+  transition: transform 500ms;
 }
