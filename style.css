@@ -13,6 +13,10 @@
   text-align: center;
 }
 
+#basket {
+  z-index: 1;
+}
+
 #disc {
   position: relative;
   top: 360px;
@@ -22,16 +26,18 @@
   border: 1px solid black;
   border-radius: 20px;
   background-color: blue;
+  cursor: pointer;
 }
 
 .madePutt {
-  transform: translate(-4px, -510px) rotate(-15deg);
+  transform: translate(18px, -510px) rotate(-15deg);
   width: 40px !important;
   height: 8px !important;
   transition: transform 1000ms ease-out, width 1000ms ease-in, height 1000ms ease-in;
 }
 
 .madePuttDrop {
-  transform: translate(-4px, -457px) rotate(0deg);
+  transform: translate(18px, -455px) rotate(0deg);
   transition: transform 500ms;
+  z-index: -1;
 }
