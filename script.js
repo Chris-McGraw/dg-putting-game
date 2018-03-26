@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   $("#disc").draggable({
     axis: "y",
-    containment: "#containment-wrapper", scroll: false ,
+    containment: "#arrow-container", scroll: false ,
 
     start: function( event, ui ) {
       $("#disc").removeClass("disc-start");
