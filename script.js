@@ -10,18 +10,22 @@ $(document).ready(function() {
 
     stop: function( event, ui ) {
 
-      /* console.log($("#disc").position()); */
+      console.log($("#disc").position());
 
-      $("#disc").addClass("made-putt");
+      if($("#disc").position().top >= 45 && $("#disc").position().top <= 66) {
+        $("#disc").addClass("made-putt");
+      }
+
+      /* $("#disc").addClass("made-putt"); */
 
       setTimeout(function() {
         $("#disc").addClass("made-putt-drop");
         $("#cage").addClass("cage-overlay");
       }, 1100);
 
-      /* setTimeout(function() {
+      setTimeout(function() {
         console.log($("#disc").position());
-      }, 1100); */
+      }, 1100);
 
       setTimeout(function() {
         $("#disc").removeClass("made-putt");
