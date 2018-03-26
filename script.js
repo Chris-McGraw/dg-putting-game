@@ -12,11 +12,11 @@ $(document).ready(function() {
 
       /* console.log($("#disc").position()); */
 
-      $("#disc").addClass("madePutt");
+      $("#disc").addClass("made-putt");
 
       setTimeout(function() {
-        $("#disc").addClass("madePuttDrop");
-        $("#cage").addClass("cageOverlay");
+        $("#disc").addClass("made-putt-drop");
+        $("#cage").addClass("cage-overlay");
       }, 1100);
 
       /* setTimeout(function() {
@@ -24,9 +24,9 @@ $(document).ready(function() {
       }, 1100); */
 
       setTimeout(function() {
-        $("#disc").removeClass("madePutt");
-        $("#disc").removeClass("madePuttDrop");
-        $("#cage").removeClass("cageOverlay");
+        $("#disc").removeClass("made-putt");
+        $("#disc").removeClass("made-putt-drop");
+        $("#cage").removeClass("cage-overlay");
         $("#disc").addClass("disc-start");
       }, 2250);
     }
