@@ -17,7 +17,7 @@ $(document).ready(function() {
           if($("#disc").position().top === shotPower) {
             var powerChange = 55 - shotPower;
             console.log(powerChange);
-            var shotHeight = powerChange + -525 + powerChange;
+            var shotHeight = powerChange + -515 + powerChange + powerChange;
             console.log(shotHeight);
             $("#disc").addClass("made-putt");
             $("#disc").css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
