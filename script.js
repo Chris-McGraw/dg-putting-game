@@ -12,7 +12,7 @@ $(document).ready(function() {
 
       console.log($("#disc").position());
 
-      if($("#disc").position().top >= 45 && $("#disc").position().top <= 66) {
+      if($("#disc").position().top >= 55 && $("#disc").position().top <= 75) {
         $("#disc").addClass("made-putt");
       }
 
@@ -37,7 +37,7 @@ $(document).ready(function() {
   });
 
   $("#disc").on("click", function() {
-    console.log($(this).position())
+    console.log($(this).position());
   });
 
 });

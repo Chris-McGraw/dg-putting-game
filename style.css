@@ -67,7 +67,9 @@
 }
 
 .disc-start {
-  top: 0 !important;
+  /* top: 0 !important; */
+
+  top: 45 !important;
   left: 0 !important;
   right: 0 !important;
 }
@@ -104,14 +106,14 @@
 }
 
 .made-putt {
-  transform: translate(18px, -500px) rotate(-15deg);
+  transform: translate(18px, -520px) rotate(-15deg);
   width: 40px !important;
   height: 6px !important;
   transition: transform 1000ms ease-out, width 1000ms ease-in, height 1000ms ease-in;
 }
 
 .made-putt-drop {
-  transform: translate(18px, -439px) rotate(0deg);
+  transform: translate(18px, -480px) rotate(0deg);
   transition: transform 500ms;
   z-index: 1;
 }
