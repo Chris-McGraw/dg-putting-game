@@ -113,10 +113,23 @@
   transition: transform 1000ms ease-out, width 1000ms ease-in, height 1000ms ease-in;
 }
 
+.putt-high {
+  transform: translate(18px, -520px) rotate(-15deg);
+  width: 34px !important;
+  height: 5px !important;
+  transition: transform 1000ms ease-out, width 1000ms ease-in, height 1000ms ease-in;
+}
+
 .putt-drop {
   transform: translate(18px, -480px) rotate(0deg);
   transition: transform 500ms;
   z-index: 1;
+}
+
+.putt-drop-behind {
+  transform: translate(18px, -480px) rotate(0deg);
+  transition: transform 1000ms;
+  z-index: -1 !important;
 }
 
 .cage-overlay {
