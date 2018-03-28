@@ -9,9 +9,9 @@ $(document).ready(function() {
     },
 
     stop: function( event, ui ) {
-
       console.log($("#disc").position());
 
+  /* ------------------------- Made Putt ------------------------- */
       if($("#disc").position().top >= 55 && $("#disc").position().top <= 75) {
         for(shotPower = 55; shotPower <= 75; shotPower++) {
           if($("#disc").position().top === shotPower) {
@@ -19,7 +19,7 @@ $(document).ready(function() {
             console.log(powerChange);
             var shotHeight = powerChange + -515 + powerChange + powerChange;
             console.log(shotHeight);
-            $("#disc").addClass("made-putt");
+            $("#disc").addClass("putt");
             $("#disc").css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
 
             setTimeout(function() {
@@ -34,7 +34,7 @@ $(document).ready(function() {
             }, 1100);
 
             setTimeout(function() {
-              $("#disc").removeClass("made-putt");
+              $("#disc").removeClass("putt");
               $("#disc").removeClass("made-putt-drop");
               $("#cage").removeClass("cage-overlay");
               $("#disc").addClass("disc-start");
@@ -42,26 +42,8 @@ $(document).ready(function() {
             }, 2250);
           }
         }
-
       }
 
-      /* $("#disc").addClass("made-putt");
-
-      setTimeout(function() {
-        $("#disc").addClass("made-putt-drop");
-        $("#cage").addClass("cage-overlay");
-      }, 1100);
-
-      setTimeout(function() {
-        console.log($("#disc").position());
-      }, 1100);
-
-      setTimeout(function() {
-        $("#disc").removeClass("made-putt");
-        $("#disc").removeClass("made-putt-drop");
-        $("#cage").removeClass("cage-overlay");
-        $("#disc").addClass("disc-start");
-      }, 2250); */
     }
   });
 
