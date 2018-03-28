@@ -106,14 +106,14 @@
 	border-top: 30px solid rgba(0, 0, 0, 0.2);
 }
 
-.made-putt {
+.putt {
   transform: translate(18px, -520px) rotate(-15deg);
   width: 40px !important;
   height: 6px !important;
   transition: transform 1000ms ease-out, width 1000ms ease-in, height 1000ms ease-in;
 }
 
-.made-putt-drop {
+.putt-drop {
   transform: translate(18px, -480px) rotate(0deg);
   transition: transform 500ms;
   z-index: 1;
