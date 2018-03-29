@@ -1,2 +1,3 @@
-# dg-putting-game
+# disc-golf-putting-game
+
 work in progress
