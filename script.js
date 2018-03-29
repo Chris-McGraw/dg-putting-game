@@ -76,8 +76,8 @@ $(document).ready(function() {
       }
 
   /* ---------------------- Missed Putt High ---------------------- */
-      if($("#disc").position().top >= 92 && $("#disc").position().top <= 101) {
-        for(shotPower = 92; shotPower <= 101; shotPower++) {
+      if($("#disc").position().top >= 92 && $("#disc").position().top <= 110) {
+        for(shotPower = 92; shotPower <= 110; shotPower++) {
           if($("#disc").position().top === shotPower) {
             var powerChange = 92 - shotPower;
             console.log(powerChange);
@@ -89,7 +89,7 @@ $(document).ready(function() {
             setTimeout(function() {
               var dropHeight = powerChange + -472;
               $("#disc").addClass("putt-drop-behind");
-              $("#disc").css({"transform": "translate(14px," + dropHeight + "px) rotate(0deg)"});
+              $("#disc").css({"transform": "translate(0px," + dropHeight + "px) rotate(0deg)"});
             }, 1100);
 
             setTimeout(function() {
@@ -107,7 +107,7 @@ $(document).ready(function() {
       }
 
   /* ---------------------- Missed Putt Over ---------------------- */
-      if($("#disc").position().top >= 102 && $("#disc").position().top <= 110) {
+      /* if($("#disc").position().top >= 102 && $("#disc").position().top <= 110) {
         for(shotPower = 102; shotPower <= 110; shotPower++) {
           if($("#disc").position().top === shotPower) {
             var powerChange = 102 - shotPower;
@@ -128,7 +128,7 @@ $(document).ready(function() {
             }, 2250);
           }
         }
-      }
+      } */
 
     }
   });
