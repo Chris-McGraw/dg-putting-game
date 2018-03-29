@@ -115,8 +115,8 @@
 
 .putt-high {
   transform: translate(18px, -520px) rotate(-15deg);
-  width: 34px !important;
-  height: 5px !important;
+  width: 38px !important;
+  height: 6px !important;
   transition: transform 1000ms ease-out, width 1000ms ease-in, height 1000ms ease-in;
 }
 
@@ -128,7 +128,9 @@
 
 .putt-drop-behind {
   transform: translate(18px, -480px) rotate(0deg);
-  transition: transform 1000ms;
+  width: 30px !important;
+  height: 4px !important;
+  transition: transform 1000ms ease-out, width 1000ms ease-in, height 1000ms ease-in;
   z-index: -1 !important;
 }
 

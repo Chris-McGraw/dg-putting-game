@@ -75,7 +75,7 @@ $(document).ready(function() {
         }
       }
 
-  /* ---------------------- Missed Putt High ---------------------- */
+  /* ---------------------- Missed Putt Over ---------------------- */
       if($("#disc").position().top >= 92 && $("#disc").position().top <= 110) {
         for(shotPower = 92; shotPower <= 110; shotPower++) {
           if($("#disc").position().top === shotPower) {
@@ -90,11 +90,11 @@ $(document).ready(function() {
               var dropHeight = powerChange + -472;
               $("#disc").addClass("putt-drop-behind");
               $("#disc").css({"transform": "translate(0px," + dropHeight + "px) rotate(0deg)"});
-            }, 1100);
+            }, 1000);
 
             setTimeout(function() {
               console.log($("#disc").position());
-            }, 1100);
+            }, 1000);
 
             setTimeout(function() {
               $("#disc").removeClass("putt-high");
@@ -105,30 +105,6 @@ $(document).ready(function() {
           }
         }
       }
-
-  /* ---------------------- Missed Putt Over ---------------------- */
-      /* if($("#disc").position().top >= 102 && $("#disc").position().top <= 110) {
-        for(shotPower = 102; shotPower <= 110; shotPower++) {
-          if($("#disc").position().top === shotPower) {
-            var powerChange = 102 - shotPower;
-            console.log(powerChange);
-            var shotHeight = powerChange + -660 + powerChange + powerChange;
-            console.log(shotHeight);
-            $("#disc").addClass("putt");
-            $("#disc").css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
-
-            setTimeout(function() {
-              console.log($("#disc").position());
-            }, 1100);
-
-            setTimeout(function() {
-              $("#disc").removeClass("putt");
-              $("#disc").addClass("disc-start");
-              $("#disc").css({"transform": "translate(0px, 0px) rotate(0deg)"});
-            }, 2250);
-          }
-        }
-      } */
 
     }
   });
