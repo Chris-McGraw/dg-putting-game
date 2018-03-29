@@ -9,16 +9,47 @@ $(document).ready(function() {
     },
 
     stop: function( event, ui ) {
-      console.log($("#disc").position());
+      /* console.log($("#disc").position()); */
+
+  /* ---------------------- Missed Putt Low ---------------------- */
+      if($("#disc").position().top >= 0 && $("#disc").position().top <= 54) {
+        for(shotPower = 0; shotPower <= 54; shotPower++) {
+          if($("#disc").position().top === shotPower) {
+            var powerChange = 0 - shotPower;
+            /* console.log(powerChange); */
+            var shotHeight = powerChange + -386 + powerChange + (powerChange / 4);
+            /* console.log(shotHeight); */
+            $("#disc").addClass("putt");
+            $("#disc").css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
+
+            setTimeout(function() {
+              var dropHeight = powerChange + -380;
+              $("#disc").addClass("putt-drop");
+              $("#disc").css({"transform": "translate(18px," + dropHeight + "px) rotate(0deg)"});
+            }, 1100);
+
+            /* setTimeout(function() {
+              console.log($("#disc").position());
+            }, 1100); */
+
+            setTimeout(function() {
+              $("#disc").removeClass("putt");
+              $("#disc").removeClass("putt-drop");
+              $("#disc").addClass("disc-start");
+              $("#disc").css({"transform": "translate(0px, 0px) rotate(0deg)"});
+            }, 2250);
+          }
+        }
+      }
 
   /* ------------------------- Made Putt ------------------------- */
       if($("#disc").position().top >= 55 && $("#disc").position().top <= 75) {
         for(shotPower = 55; shotPower <= 75; shotPower++) {
           if($("#disc").position().top === shotPower) {
             var powerChange = 55 - shotPower;
-            console.log(powerChange);
+            /* console.log(powerChange); */
             var shotHeight = powerChange + -515 + powerChange + powerChange;
-            console.log(shotHeight);
+            /* console.log(shotHeight); */
             $("#disc").addClass("putt");
             $("#disc").css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
 
@@ -29,9 +60,9 @@ $(document).ready(function() {
               $("#cage").addClass("cage-overlay");
             }, 1100);
 
-            setTimeout(function() {
+            /* setTimeout(function() {
               console.log($("#disc").position());
-            }, 1100);
+            }, 1100); */
 
             setTimeout(function() {
               $("#disc").removeClass("putt");
@@ -49,9 +80,9 @@ $(document).ready(function() {
         for(shotPower = 76; shotPower <= 91; shotPower++) {
           if($("#disc").position().top === shotPower) {
             var powerChange = 76 - shotPower;
-            console.log(powerChange);
+            /* console.log(powerChange); */
             var shotHeight = powerChange + -580 + powerChange + powerChange;
-            console.log(shotHeight);
+            /* console.log(shotHeight); */
             $("#disc").addClass("putt");
             $("#disc").css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
 
@@ -61,9 +92,9 @@ $(document).ready(function() {
               $("#disc").css({"transform": "translate(18px," + dropHeight + "px) rotate(0deg)"});
             }, 1100);
 
-            setTimeout(function() {
+            /* setTimeout(function() {
               console.log($("#disc").position());
-            }, 1100);
+            }, 1100); */
 
             setTimeout(function() {
               $("#disc").removeClass("putt");
@@ -75,14 +106,14 @@ $(document).ready(function() {
         }
       }
 
-  /* ---------------------- Missed Putt Over ---------------------- */
+  /* ---------------------- Missed Putt High ---------------------- */
       if($("#disc").position().top >= 92 && $("#disc").position().top <= 110) {
         for(shotPower = 92; shotPower <= 110; shotPower++) {
           if($("#disc").position().top === shotPower) {
             var powerChange = 92 - shotPower;
-            console.log(powerChange);
+            /* console.log(powerChange); */
             var shotHeight = powerChange + -629 + powerChange + powerChange;
-            console.log(shotHeight);
+            /* console.log(shotHeight); */
             $("#disc").addClass("putt-high");
             $("#disc").css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
 
@@ -92,9 +123,9 @@ $(document).ready(function() {
               $("#disc").css({"transform": "translate(0px," + dropHeight + "px) rotate(0deg)"});
             }, 1000);
 
-            setTimeout(function() {
+            /* setTimeout(function() {
               console.log($("#disc").position());
-            }, 1000);
+            }, 1000); */
 
             setTimeout(function() {
               $("#disc").removeClass("putt-high");
@@ -109,8 +140,8 @@ $(document).ready(function() {
     }
   });
 
-  $("#disc").on("click", function() {
+  /* $("#disc").on("click", function() {
     console.log($(this).position());
-  });
+  }); */
 
 });
