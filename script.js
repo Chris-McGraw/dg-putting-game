@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+  $("#game-mode-practice").on("click", function() {
+    $("#gamestart-overlay-background").addClass("hidden");
+  });
+
   $("#disc").draggable({
     axis: "y",
     containment: "#arrow-container", scroll: false ,
