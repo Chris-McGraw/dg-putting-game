@@ -6,6 +6,12 @@
   /* border: 2px solid red; */
 }
 
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
 #basket-container {
   position: relative;
   top: 20px;
@@ -28,7 +34,7 @@
 #inline-container {
   position: relative;
   top: 340px;
-  width: 300px;
+  width: 380px;
   height: 50px;
   margin: auto;
   text-align: center;
@@ -37,21 +43,33 @@
 #putt-start-line-left {
   position: absolute;
   top: 10px;
-  left: 50px;
+  left: 0px;
   display: inline-block;
-  width: 10px;
+  width: 120px;
   height: 0px;
-  border: 1px solid black;
+  border: 0.5px solid black;
 }
 
 #putt-start-line-right {
   position: absolute;
   top: 10px;
-  right: 50px;
+  right: 0px;
   display: inline-block;
-  width: 10px;
+  width: 120px;
   height: 0px;
-  border: 1px solid black;
+  border: 0.5px solid black;
+}
+
+.putt-start-line-left-collapsed {
+  left: 100px !important;
+  width: 10px !important;
+  transition: left 400ms ease-in-out, width 400ms ease-in-out;
+}
+
+.putt-start-line-right-collapsed {
+  right: 100px !important;
+  width: 10px !important;
+  transition: right 400ms ease-in-out, width 400ms ease-in-out;
 }
 
 #disc {
@@ -104,6 +122,98 @@
 	border-left: 40px solid transparent;
 	border-right: 40px solid transparent;
 	border-top: 30px solid rgba(0, 0, 0, 0.2);
+}
+
+#putting-instructions {
+  position: relative;
+  top: 148px;
+  width: 380px;
+  margin: auto;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+}
+
+#instructions-left {
+  position: absolute;
+  left: 0;
+  width: 120px;
+  display: inline-block;
+}
+
+#instructions-right {
+  position: absolute;
+  right: 0;
+  width: 120px;
+  display: inline-block;
+}
+
+#gamestart-overlay-background {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+}
+
+#gamestart-overlay-menu {
+  position: relative;
+  top: 190px;
+  width: 600px;
+  height: 300px;
+  margin: auto;
+  text-align: center;
+  border: 1px solid black;
+  background-color: lightGray;
+}
+
+#game-title-top {
+  position: relative;
+  top: 40px;
+  width: 400px;
+  margin: auto;
+  font-family: sans-serif;
+  font-size: 40px;
+}
+
+#game-title-bottom {
+  position: relative;
+  top: 40px;
+  width: 400px;
+  margin: auto;
+  font-family: sans-serif;
+  font-size: 40px;
+}
+
+#game-mode-timed {
+  position: relative;
+  top: 60px;
+  width: 160px;
+  margin: auto;
+  font-family: sans-serif;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+#game-mode-practice {
+  position: relative;
+  top: 64px;
+  width: 160px;
+  margin: auto;
+  font-family: sans-serif;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+#game-mode-timed:hover {
+  color: white;
+}
+
+#game-mode-practice:hover {
+  color: white;
 }
 
 .putt {
