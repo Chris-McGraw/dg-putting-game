@@ -6,6 +6,12 @@
   /* border: 2px solid red; */
 }
 
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
 #basket-container {
   position: relative;
   top: 20px;
@@ -41,7 +47,7 @@
   display: inline-block;
   width: 120px;
   height: 0px;
-  border: 1px solid black;
+  border: 0.5px solid black;
 }
 
 #putt-start-line-right {
@@ -51,7 +57,19 @@
   display: inline-block;
   width: 120px;
   height: 0px;
-  border: 1px solid black;
+  border: 0.5px solid black;
+}
+
+.putt-start-line-left-collapsed {
+  left: 100px !important;
+  width: 10px !important;
+  transition: left 400ms ease-in-out, width 400ms ease-in-out;
+}
+
+.putt-start-line-right-collapsed {
+  right: 100px !important;
+  width: 10px !important;
+  transition: right 400ms ease-in-out, width 400ms ease-in-out;
 }
 
 #disc {
@@ -114,6 +132,7 @@
   text-align: center;
   font-family: sans-serif;
   font-size: 16px;
+  font-weight: 200;
 }
 
 #instructions-left {

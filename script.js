@@ -11,6 +11,10 @@ $(document).ready(function() {
     stop: function( event, ui ) {
       /* console.log($("#disc").position()); */
 
+      $("#putting-instructions").addClass("hidden");
+      $("#putt-start-line-left").addClass("putt-start-line-left-collapsed");
+      $("#putt-start-line-right").addClass("putt-start-line-right-collapsed");
+
   /* ---------------------- Missed Putt Low ---------------------- */
       if($("#disc").position().top >= 0 && $("#disc").position().top <= 54) {
         for(shotPower = 0; shotPower <= 54; shotPower++) {
