@@ -12,6 +12,95 @@
   transition: visibility 0.4s ease-in-out, opacity 0.4s ease-in-out;
 }
 
+#gamestart-overlay-background {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+}
+
+#gamestart-overlay-menu {
+  position: relative;
+  top: 190px;
+  width: 600px;
+  height: 300px;
+  margin: auto;
+  text-align: center;
+  border: 1px solid black;
+  background-color: lightGray;
+}
+
+#game-title-top {
+  position: relative;
+  top: 40px;
+  width: 360px;
+  margin: auto;
+  font-family: sans-serif;
+  font-size: 40px;
+}
+
+#game-title-bottom {
+  position: relative;
+  top: 40px;
+  width: 360px;
+  margin: auto;
+  font-family: sans-serif;
+  font-size: 40px;
+}
+
+#game-mode-timed {
+  position: relative;
+  top: 60px;
+  width: 160px;
+  margin: auto;
+  font-family: sans-serif;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+#game-mode-practice {
+  position: relative;
+  top: 64px;
+  width: 160px;
+  margin: auto;
+  font-family: sans-serif;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+#game-mode-timed:hover {
+  color: white;
+}
+
+#game-mode-practice:hover {
+  color: white;
+}
+
+#game-timer {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: 180px;
+  text-align: left;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+#player-score {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  width: 180px;
+  text-align: left;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 200;
+}
+
 #basket-container {
   position: relative;
   top: 20px;
@@ -29,6 +118,45 @@
   position: relative;
   top: -82px;
   z-index: 0;
+}
+
+#corner-quit {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  width: 40px;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+#putting-instructions {
+  position: absolute;
+  top: 528px;
+  left: 0;
+  right: 0;
+  width: 380px;
+  margin: auto;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+}
+
+#instructions-left {
+  position: absolute;
+  left: 0;
+  width: 120px;
+  display: inline-block;
+}
+
+#instructions-right {
+  position: absolute;
+  right: 0;
+  width: 120px;
+  display: inline-block;
 }
 
 #inline-container {
@@ -122,98 +250,6 @@
 	border-left: 40px solid transparent;
 	border-right: 40px solid transparent;
 	border-top: 30px solid rgba(0, 0, 0, 0.2);
-}
-
-#putting-instructions {
-  position: relative;
-  top: 148px;
-  width: 380px;
-  margin: auto;
-  text-align: center;
-  font-family: sans-serif;
-  font-size: 16px;
-  font-weight: 200;
-}
-
-#instructions-left {
-  position: absolute;
-  left: 0;
-  width: 120px;
-  display: inline-block;
-}
-
-#instructions-right {
-  position: absolute;
-  right: 0;
-  width: 120px;
-  display: inline-block;
-}
-
-#gamestart-overlay-background {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 2;
-}
-
-#gamestart-overlay-menu {
-  position: relative;
-  top: 190px;
-  width: 600px;
-  height: 300px;
-  margin: auto;
-  text-align: center;
-  border: 1px solid black;
-  background-color: lightGray;
-}
-
-#game-title-top {
-  position: relative;
-  top: 40px;
-  width: 400px;
-  margin: auto;
-  font-family: sans-serif;
-  font-size: 40px;
-}
-
-#game-title-bottom {
-  position: relative;
-  top: 40px;
-  width: 400px;
-  margin: auto;
-  font-family: sans-serif;
-  font-size: 40px;
-}
-
-#game-mode-timed {
-  position: relative;
-  top: 60px;
-  width: 160px;
-  margin: auto;
-  font-family: sans-serif;
-  font-size: 30px;
-  cursor: pointer;
-}
-
-#game-mode-practice {
-  position: relative;
-  top: 64px;
-  width: 160px;
-  margin: auto;
-  font-family: sans-serif;
-  font-size: 30px;
-  cursor: pointer;
-}
-
-#game-mode-timed:hover {
-  color: white;
-}
-
-#game-mode-practice:hover {
-  color: white;
 }
 
 .putt {

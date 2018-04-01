@@ -4,6 +4,13 @@ $(document).ready(function() {
     $("#gamestart-overlay-background").addClass("hidden");
   });
 
+  $("#corner-quit").on("click", function() {
+    $("#gamestart-overlay-background").removeClass("hidden");
+    $("#putting-instructions").removeClass("hidden");
+    $("#putt-start-line-left").removeClass("putt-start-line-left-collapsed");
+    $("#putt-start-line-right").removeClass("putt-start-line-right-collapsed");
+  });
+
   $("#disc").draggable({
     axis: "y",
     containment: "#arrow-container", scroll: false ,
