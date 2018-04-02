@@ -1,5 +1,11 @@
 $(document).ready(function() {
 
+/* ------------------------- Variable Declarations ------------------------- */
+
+  currentScore = 0;
+
+/* ---------------------------- Event Handlers ---------------------------- */
+
   $("#game-mode-practice").on("click", function() {
     $("#gamestart-overlay-background").addClass("hidden");
   });
@@ -9,19 +15,19 @@ $(document).ready(function() {
     $("#putting-instructions").removeClass("hidden");
     $("#putt-start-line-left").removeClass("putt-start-line-left-collapsed");
     $("#putt-start-line-right").removeClass("putt-start-line-right-collapsed");
+    currentScore = 0;
+    $("#player-score").html("Score: " + currentScore);
   });
 
   $("#disc").draggable({
     axis: "y",
-    containment: "#arrow-container", scroll: false ,
+    containment: "#arrow-container", scroll: false,
 
     start: function( event, ui ) {
       $("#disc").removeClass("disc-start");
     },
 
     stop: function( event, ui ) {
-      /* console.log($("#disc").position()); */
-
       $("#putting-instructions").addClass("hidden");
       $("#putt-start-line-left").addClass("putt-start-line-left-collapsed");
       $("#putt-start-line-right").addClass("putt-start-line-right-collapsed");
@@ -31,9 +37,7 @@ $(document).ready(function() {
         for(shotPower = 0; shotPower <= 54; shotPower++) {
           if($("#disc").position().top === shotPower) {
             var powerChange = 0 - shotPower;
-            /* console.log(powerChange); */
             var shotHeight = powerChange + -386 + powerChange + (powerChange / 4);
-            /* console.log(shotHeight); */
             $("#disc").addClass("putt");
             $("#disc").css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
 
@@ -42,10 +46,6 @@ $(document).ready(function() {
               $("#disc").addClass("putt-drop");
               $("#disc").css({"transform": "translate(18px," + dropHeight + "px) rotate(0deg)"});
             }, 1100);
-
-            /* setTimeout(function() {
-              console.log($("#disc").position());
-            }, 1100); */
 
             setTimeout(function() {
               $("#disc").removeClass("putt");
@@ -62,9 +62,7 @@ $(document).ready(function() {
         for(shotPower = 55; shotPower <= 75; shotPower++) {
           if($("#disc").position().top === shotPower) {
             var powerChange = 55 - shotPower;
-            /* console.log(powerChange); */
             var shotHeight = powerChange + -515 + powerChange + powerChange;
-            /* console.log(shotHeight); */
             $("#disc").addClass("putt");
             $("#disc").css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
 
@@ -75,9 +73,10 @@ $(document).ready(function() {
               $("#cage").addClass("cage-overlay");
             }, 1100);
 
-            /* setTimeout(function() {
-              console.log($("#disc").position());
-            }, 1100); */
+            setTimeout(function() {
+              currentScore++;
+              $("#player-score").html("Score: " + currentScore);
+            }, 2000);
 
             setTimeout(function() {
               $("#disc").removeClass("putt");
@@ -95,9 +94,7 @@ $(document).ready(function() {
         for(shotPower = 76; shotPower <= 91; shotPower++) {
           if($("#disc").position().top === shotPower) {
             var powerChange = 76 - shotPower;
-            /* console.log(powerChange); */
             var shotHeight = powerChange + -580 + powerChange + powerChange;
-            /* console.log(shotHeight); */
             $("#disc").addClass("putt");
             $("#disc").css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
 
@@ -106,10 +103,6 @@ $(document).ready(function() {
               $("#disc").addClass("putt-drop");
               $("#disc").css({"transform": "translate(18px," + dropHeight + "px) rotate(0deg)"});
             }, 1100);
-
-            /* setTimeout(function() {
-              console.log($("#disc").position());
-            }, 1100); */
 
             setTimeout(function() {
               $("#disc").removeClass("putt");
@@ -126,9 +119,7 @@ $(document).ready(function() {
         for(shotPower = 92; shotPower <= 110; shotPower++) {
           if($("#disc").position().top === shotPower) {
             var powerChange = 92 - shotPower;
-            /* console.log(powerChange); */
             var shotHeight = powerChange + -629 + powerChange + powerChange;
-            /* console.log(shotHeight); */
             $("#disc").addClass("putt-high");
             $("#disc").css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
 
@@ -137,10 +128,6 @@ $(document).ready(function() {
               $("#disc").addClass("putt-drop-behind");
               $("#disc").css({"transform": "translate(0px," + dropHeight + "px) rotate(0deg)"});
             }, 1000);
-
-            /* setTimeout(function() {
-              console.log($("#disc").position());
-            }, 1000); */
 
             setTimeout(function() {
               $("#disc").removeClass("putt-high");
@@ -154,9 +141,5 @@ $(document).ready(function() {
 
     }
   });
-
-  /* $("#disc").on("click", function() {
-    console.log($(this).position());
-  }); */
 
 });
