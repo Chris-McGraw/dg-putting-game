@@ -2,11 +2,35 @@ $(document).ready(function() {
 
 /* ------------------------- Variable Declarations ------------------------- */
 
+  gameMode = "";
+  timerStart = false;
+  currentTime = 45;
   currentScore = 0;
+
+/* ------------------------- Function Declarations ------------------------- */
+
+  function timerCountDown() {
+    currentTime--;
+    /* console.log(currentTime); */
+    $("#game-timer").html("Remaining Time: " + currentTime);
+    setTimeout(function() {
+      if(currentTime > 0) {
+        timerCountDown();
+      }
+    }, 1000);
+  }
 
 /* ---------------------------- Event Handlers ---------------------------- */
 
+  $("#game-mode-timed").on("click", function() {
+    gameMode = "timed";
+    $("#gamestart-overlay-background").addClass("hidden");
+    currentTime = 45;
+    $("#game-timer").html("Remaining Time: " + currentTime);
+  });
+
   $("#game-mode-practice").on("click", function() {
+    gameMode = "practice";
     $("#gamestart-overlay-background").addClass("hidden");
   });
 
@@ -15,8 +39,11 @@ $(document).ready(function() {
     $("#putting-instructions").removeClass("hidden");
     $("#putt-start-line-left").removeClass("putt-start-line-left-collapsed");
     $("#putt-start-line-right").removeClass("putt-start-line-right-collapsed");
+    currentTime = 0;
+    $("#game-timer").html("Remaining Time: " + currentTime);
     currentScore = 0;
     $("#player-score").html("Score: " + currentScore);
+    timerStart = false;
   });
 
   $("#disc").draggable({
@@ -31,6 +58,13 @@ $(document).ready(function() {
       $("#putting-instructions").addClass("hidden");
       $("#putt-start-line-left").addClass("putt-start-line-left-collapsed");
       $("#putt-start-line-right").addClass("putt-start-line-right-collapsed");
+
+      if(gameMode === "timed" && timerStart === false) {
+        timerStart = true;
+        setTimeout(function() {
+          timerCountDown();
+        }, 500);
+      }
 
   /* ---------------------- Missed Putt Low ---------------------- */
       if($("#disc").position().top >= 0 && $("#disc").position().top <= 54) {
