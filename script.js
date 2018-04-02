@@ -9,32 +9,19 @@ $(document).ready(function() {
 
 /* ------------------------- Function Declarations ------------------------- */
 
-  function timerCountDown() {
-    currentTime--;
-    /* console.log(currentTime); */
-    $("#game-timer").html("Remaining Time: " + currentTime);
-    setTimeout(function() {
-      if(currentTime > 0) {
-        timerCountDown();
-      }
-    }, 1000);
-  }
-
-/* ---------------------------- Event Handlers ---------------------------- */
-
-  $("#game-mode-timed").on("click", function() {
+  function startGameModeTimed() {
     gameMode = "timed";
     $("#gamestart-overlay-background").addClass("hidden");
     currentTime = 45;
     $("#game-timer").html("Remaining Time: " + currentTime);
-  });
+  }
 
-  $("#game-mode-practice").on("click", function() {
+  function startGameModePractice() {
     gameMode = "practice";
     $("#gamestart-overlay-background").addClass("hidden");
-  });
+  }
 
-  $("#corner-quit").on("click", function() {
+  function displayGameOverlay() {
     $("#gamestart-overlay-background").removeClass("hidden");
     $("#putting-instructions").removeClass("hidden");
     $("#putt-start-line-left").removeClass("putt-start-line-left-collapsed");
@@ -44,6 +31,34 @@ $(document).ready(function() {
     currentScore = 0;
     $("#player-score").html("Score: " + currentScore);
     timerStart = false;
+  }
+
+  function startTimerCountDown() {
+    currentTime--;
+    console.log(currentTime);
+    $("#game-timer").html("Remaining Time: " + currentTime);
+    setTimeout(function() {
+      if(currentTime > 0) {
+        startTimerCountDown();
+      }
+    }, 1000);
+    /* if(currentTime === 0) {
+      displayGameOverlay();
+    } */
+  }
+
+/* ---------------------------- Event Handlers ---------------------------- */
+
+  $("#game-mode-timed").on("click", function() {
+    startGameModeTimed();
+  });
+
+  $("#game-mode-practice").on("click", function() {
+    startGameModePractice();
+  });
+
+  $("#corner-quit").on("click", function() {
+    displayGameOverlay();
   });
 
   $("#disc").draggable({
@@ -62,7 +77,7 @@ $(document).ready(function() {
       if(gameMode === "timed" && timerStart === false) {
         timerStart = true;
         setTimeout(function() {
-          timerCountDown();
+          startTimerCountDown();
         }, 500);
       }
 
