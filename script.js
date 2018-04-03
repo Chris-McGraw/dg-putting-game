@@ -4,7 +4,7 @@ $(document).ready(function() {
 
   gameMode = "";
   timerStart = false;
-  currentTime = 45;
+  currentTime = 0;
   currentScore = 0;
 
 /* ------------------------- Function Declarations ------------------------- */
@@ -20,6 +20,8 @@ $(document).ready(function() {
   function startGameModePractice() {
     gameMode = "practice";
     $("#gamestart-overlay-background").addClass("hidden");
+    currentTime = "&infin;";
+    $("#game-timer").html("Remaining Time: " + currentTime);
   }
 
 
@@ -91,9 +93,17 @@ $(document).ready(function() {
           $("#cage").addClass("cage-overlay");
         }, 1100);
 
+        if(gameMode === "timed" && currentTime > 0) {
+          setTimeout(function() {
+            currentScore++;
+            $("#player-score").html("Score: " + currentScore);
+          }, 2000);
+        }
         setTimeout(function() {
-          currentScore++;
-          $("#player-score").html("Score: " + currentScore);
+          if(gameMode === "practice" && currentTime === "&infin;") {
+            currentScore++;
+            $("#player-score").html("Score: " + currentScore);
+          }
         }, 2000);
 
         setTimeout(function() {
