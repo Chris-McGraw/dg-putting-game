@@ -20,6 +20,8 @@ $(document).ready(function() {
   function startGameModePractice() {
     gameMode = "practice";
     $("#gamestart-overlay-background").addClass("hidden");
+    currentTime = "&infin;";
+    $("#game-timer").html("Remaining Time: " + currentTime);
   }
 
 
@@ -97,12 +99,12 @@ $(document).ready(function() {
             $("#player-score").html("Score: " + currentScore);
           }, 2000);
         }
-        else if(gameMode === "practice") {
-          setTimeout(function() {
+        setTimeout(function() {
+          if(gameMode === "practice" && currentTime === "&infin;") {
             currentScore++;
             $("#player-score").html("Score: " + currentScore);
-          }, 2000);
-        }
+          }
+        }, 2000);
 
         setTimeout(function() {
           $("#disc").removeClass("putt");
