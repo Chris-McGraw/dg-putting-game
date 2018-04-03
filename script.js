@@ -4,7 +4,7 @@ $(document).ready(function() {
 
   gameMode = "";
   timerStart = false;
-  currentTime = 45;
+  currentTime = 0;
   currentScore = 0;
 
 /* ------------------------- Function Declarations ------------------------- */
@@ -91,10 +91,18 @@ $(document).ready(function() {
           $("#cage").addClass("cage-overlay");
         }, 1100);
 
-        setTimeout(function() {
-          currentScore++;
-          $("#player-score").html("Score: " + currentScore);
-        }, 2000);
+        if(gameMode === "timed" && currentTime > 0) {
+          setTimeout(function() {
+            currentScore++;
+            $("#player-score").html("Score: " + currentScore);
+          }, 2000);
+        }
+        else if(gameMode === "practice") {
+          setTimeout(function() {
+            currentScore++;
+            $("#player-score").html("Score: " + currentScore);
+          }, 2000);
+        }
 
         setTimeout(function() {
           $("#disc").removeClass("putt");
