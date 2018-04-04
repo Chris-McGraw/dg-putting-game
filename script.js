@@ -25,7 +25,7 @@ $(document).ready(function() {
   }
 
 
-  function displayGameOverlay() {
+  function displayGameStartOverlay() {
     $("#gamestart-overlay-background").removeClass("hidden");
     $("#putting-instructions").removeClass("hidden");
     $("#putt-start-line-left").removeClass("putt-start-line-left-collapsed");
@@ -38,6 +38,28 @@ $(document).ready(function() {
   }
 
 
+  function displayTimedScoreOverlay() {
+    $("#gamestart-overlay-background").removeClass("hidden");
+    $("#putting-instructions").removeClass("hidden");
+    $("#putt-start-line-left").removeClass("putt-start-line-left-collapsed");
+    $("#putt-start-line-right").removeClass("putt-start-line-right-collapsed");
+    currentTime = 0;
+    $("#game-timer").html("Remaining Time: " + currentTime);
+    $("#player-score").html("Score: " + currentScore);
+    timerStart = false;
+
+    $("#game-title-top").html("Total Score:");
+    $("#game-title-bottom").html("--");
+    $("#game-mode-timed").remove();
+    $("#game-mode-practice").remove();
+
+    setTimeout(function() {
+      $("#game-title-top").html("Total Score:");
+      $("#game-title-bottom").html(currentScore);
+    }, 2000);
+  }
+
+
   function startTimerCountDown() {
     currentTime--;
     console.log(currentTime);
@@ -47,9 +69,9 @@ $(document).ready(function() {
         startTimerCountDown();
       }
     }, 1000);
-    /* if(currentTime === 0) {
-      displayGameOverlay();
-    } */
+    if(currentTime === 0) {
+      displayTimedScoreOverlay();
+    }
   }
 
 
@@ -178,7 +200,7 @@ $(document).ready(function() {
   });
 
   $("#corner-quit").on("click", function() {
-    displayGameOverlay();
+    displayGameStartOverlay();
   });
 
   $("#disc").draggable({
