@@ -283,3 +283,31 @@
 .cage-overlay {
   z-index: 2 !important;
 }
+
+#overlay-play-again {
+  position: relative;
+  top: 60px;
+  width: 160px;
+  margin: auto;
+  font-family: sans-serif;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+#overlay-quit {
+  position: relative;
+  top: 64px;
+  width: 160px;
+  margin: auto;
+  font-family: sans-serif;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+#overlay-play-again:hover {
+  color: white;
+}
+
+#overlay-quit:hover {
+  color: white;
+}
