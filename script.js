@@ -31,6 +31,8 @@ $(document).ready(function() {
 
 
   function displayGameStartOverlay() {
+    gameMode = "";
+
     $("#gamestart-overlay-background").removeClass("hidden");
     $("#putting-instructions").removeClass("hidden");
     $("#putt-start-line-left").removeClass("putt-start-line-left-collapsed");
@@ -144,12 +146,13 @@ $(document).ready(function() {
           $("#cage").addClass("cage-overlay");
         }, 1100);
 
-        if(gameMode === "timed" && currentTime > 0) {
-          setTimeout(function() {
+        setTimeout(function() {
+          if(gameMode === "timed" && currentTime > 0) {
             currentScore++;
             $("#player-score").html("Score: " + currentScore);
-          }, 2000);
-        }
+          }
+        }, 2000);
+
         setTimeout(function() {
           if(gameMode === "practice" && currentTime === "&infin;") {
             currentScore++;
