@@ -14,6 +14,9 @@ $(document).ready(function() {
     $("#gamestart-overlay-background").addClass("hidden");
     currentTime = 45;
     $("#game-timer").html("Remaining Time: " + currentTime);
+    currentScore = 0;
+    $("#player-score").html("Score: " + currentScore);
+    timerStart = false;
   }
 
 
@@ -22,6 +25,8 @@ $(document).ready(function() {
     $("#gamestart-overlay-background").addClass("hidden");
     currentTime = "&infin;";
     $("#game-timer").html("Remaining Time: " + currentTime);
+    currentScore = 0;
+    $("#player-score").html("Score: " + currentScore);
   }
 
 
@@ -35,6 +40,21 @@ $(document).ready(function() {
     currentScore = 0;
     $("#player-score").html("Score: " + currentScore);
     timerStart = false;
+    $("#game-title-top").html("Disc Golf");
+    $("#game-title-bottom").html("Putting Challenge");
+    $("#overlay-play-again").remove();
+    $("#overlay-quit").remove();
+    $("#game-mode-timed").remove();
+    $("#game-mode-practice").remove()
+    $("#gamestart-overlay-menu").append("<div id='game-mode-timed'>Time Attack</div>");
+    $("#gamestart-overlay-menu").append("<div id='game-mode-practice'>Practice</div>");
+
+    $("#game-mode-timed").on("click", function() {
+      startGameModeTimed();
+    });
+    $("#game-mode-practice").on("click", function() {
+      startGameModePractice();
+    });
   }
 
 
@@ -46,8 +66,6 @@ $(document).ready(function() {
     currentTime = 0;
     $("#game-timer").html("Remaining Time: " + currentTime);
     $("#player-score").html("Score: " + currentScore);
-    timerStart = false;
-
     $("#game-title-top").html("Total Score:");
     $("#game-title-bottom").html("--");
     $("#game-mode-timed").remove();
@@ -56,6 +74,17 @@ $(document).ready(function() {
     setTimeout(function() {
       $("#game-title-top").html("Total Score:");
       $("#game-title-bottom").html(currentScore);
+      $("#overlay-play-again").remove();
+      $("#overlay-quit").remove();
+      $("#gamestart-overlay-menu").append("<div id='overlay-play-again'>Play Again</div>");
+      $("#gamestart-overlay-menu").append("<div id='overlay-quit'>Quit</div>");
+
+      $("#overlay-play-again").on("click", function() {
+        startGameModeTimed();
+      });
+      $("#overlay-quit").on("click", function() {
+        displayGameStartOverlay();
+      });
     }, 2000);
   }
 
