@@ -71,12 +71,12 @@ $(document).ready(function() {
     $("#game-title-bottom").html("--");
     $("#game-mode-timed").remove();
     $("#game-mode-practice").remove();
+    $("#overlay-play-again").remove();
+    $("#overlay-quit").remove();
 
     setTimeout(function() {
       $("#game-title-top").html("Total Score:");
       $("#game-title-bottom").html(currentScore);
-      $("#overlay-play-again").remove();
-      $("#overlay-quit").remove();
       $("#gamestart-overlay-menu").append("<div id='overlay-play-again'>Play Again</div>");
       $("#gamestart-overlay-menu").append("<div id='overlay-quit'>Quit</div>");
 
