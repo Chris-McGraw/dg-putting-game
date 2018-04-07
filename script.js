@@ -13,6 +13,7 @@ $(document).ready(function() {
   $gameTitleBottom = $("#game-title-bottom");
   $gameModeTimed = $("#game-mode-timed");
   $gameModePractice = $("#game-mode-practice");
+  $gameTimer = $("#game-timer");
 
 /* ------------------------- Function Declarations ------------------------- */
 
@@ -20,7 +21,7 @@ $(document).ready(function() {
     gameMode = "timed";
     $gamestartOverlayBackground.addClass("hidden");
     currentTime = 45;
-    $("#game-timer").html("Remaining Time: " + currentTime);
+    $gameTimer.html("Remaining Time: " + currentTime);
     currentScore = 0;
     $("#player-score").html("Score: " + currentScore);
     timerStart = false;
@@ -31,7 +32,7 @@ $(document).ready(function() {
     gameMode = "practice";
     $gamestartOverlayBackground.addClass("hidden");
     currentTime = "&infin;";
-    $("#game-timer").html("Remaining Time: " + currentTime);
+    $gameTimer.html("Remaining Time: " + currentTime);
     currentScore = 0;
     $("#player-score").html("Score: " + currentScore);
   }
@@ -44,7 +45,7 @@ $(document).ready(function() {
     $("#putt-start-line-left").removeClass("putt-start-line-left-collapsed");
     $("#putt-start-line-right").removeClass("putt-start-line-right-collapsed");
     currentTime = 0;
-    $("#game-timer").html("Remaining Time: " + currentTime);
+    $gameTimer.html("Remaining Time: " + currentTime);
     currentScore = 0;
     $("#player-score").html("Score: " + currentScore);
     timerStart = false;
@@ -75,7 +76,7 @@ $(document).ready(function() {
     $("#putt-start-line-left").removeClass("putt-start-line-left-collapsed");
     $("#putt-start-line-right").removeClass("putt-start-line-right-collapsed");
     currentTime = 0;
-    $("#game-timer").html("Remaining Time: " + currentTime);
+    $gameTimer.html("Remaining Time: " + currentTime);
     $gameTitleTop.html("Total Score:");
     $gameTitleBottom.html("--");
     $gameModeTimed.remove();
@@ -105,7 +106,7 @@ $(document).ready(function() {
 
     /* console.log(currentTime); */
 
-    $("#game-timer").html("Remaining Time: " + currentTime);
+    $gameTimer.html("Remaining Time: " + currentTime);
     setTimeout(function() {
       if(currentTime > 0) {
         startTimerCountDown();
