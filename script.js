@@ -17,6 +17,8 @@ $(document).ready(function() {
   $playerScore = $("#player-score");
   $cage = $("#cage");
   $puttingInstructions = $("#putting-instructions");
+  $puttStartLineLeft = $("#putt-start-line-left");
+  $puttStartLineRight = $("#putt-start-line-right");
 
 /* ------------------------- Function Declarations ------------------------- */
 
@@ -45,8 +47,8 @@ $(document).ready(function() {
     gameMode = "";
     $gamestartOverlayBackground.removeClass("hidden");
     $puttingInstructions.removeClass("hidden");
-    $("#putt-start-line-left").removeClass("putt-start-line-left-collapsed");
-    $("#putt-start-line-right").removeClass("putt-start-line-right-collapsed");
+    $puttStartLineLeft.removeClass("putt-start-line-left-collapsed");
+    $puttStartLineRight.removeClass("putt-start-line-right-collapsed");
     currentTime = 0;
     $gameTimer.html("Remaining Time: " + currentTime);
     currentScore = 0;
@@ -76,8 +78,8 @@ $(document).ready(function() {
   function displayTimedScoreOverlay() {
     $gamestartOverlayBackground.removeClass("hidden");
     $puttingInstructions.removeClass("hidden");
-    $("#putt-start-line-left").removeClass("putt-start-line-left-collapsed");
-    $("#putt-start-line-right").removeClass("putt-start-line-right-collapsed");
+    $puttStartLineLeft.removeClass("putt-start-line-left-collapsed");
+    $puttStartLineRight.removeClass("putt-start-line-right-collapsed");
     currentTime = 0;
     $gameTimer.html("Remaining Time: " + currentTime);
     $gameTitleTop.html("Total Score:");
@@ -264,8 +266,8 @@ $(document).ready(function() {
     stop: function(event, ui ) {
       if(gameMode !== "" && currentTime === 45 || gameMode !== "" && currentTime === "&infin;") {
         $puttingInstructions.addClass("hidden");
-        $("#putt-start-line-left").addClass("putt-start-line-left-collapsed");
-        $("#putt-start-line-right").addClass("putt-start-line-right-collapsed");
+        $puttStartLineLeft.addClass("putt-start-line-left-collapsed");
+        $puttStartLineRight.addClass("putt-start-line-right-collapsed");
       }
 
       if(gameMode === "timed" && timerStart === false) {
