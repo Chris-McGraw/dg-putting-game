@@ -7,78 +7,94 @@ $(document).ready(function() {
   currentTime = 0;
   currentScore = 0;
 
+  $gamestartOverlayBackground = $("#gamestart-overlay-background");
+  $gamestartOverlayMenu = $("#gamestart-overlay-menu");
+  $gameTitleTop = $("#game-title-top");
+  $gameTitleBottom = $("#game-title-bottom");
+  $gameModeTimed = $("#game-mode-timed");
+  $gameModePractice = $("#game-mode-practice");
+  $gameTimer = $("#game-timer");
+  $playerScore = $("#player-score");
+  $cage = $("#cage");
+  $puttingInstructions = $("#putting-instructions");
+  $puttStartLineLeft = $("#putt-start-line-left");
+  $disc = $("#disc");
+  $puttStartLineRight = $("#putt-start-line-right");
+
 /* ------------------------- Function Declarations ------------------------- */
 
   function startGameModeTimed() {
     gameMode = "timed";
-    $("#gamestart-overlay-background").addClass("hidden");
+    $gamestartOverlayBackground.addClass("hidden");
     currentTime = 45;
-    $("#game-timer").html("Remaining Time: " + currentTime);
+    $gameTimer.html("Remaining Time: " + currentTime);
     currentScore = 0;
-    $("#player-score").html("Score: " + currentScore);
+    $playerScore.html("Score: " + currentScore);
     timerStart = false;
   }
 
 
   function startGameModePractice() {
     gameMode = "practice";
-    $("#gamestart-overlay-background").addClass("hidden");
+    $gamestartOverlayBackground.addClass("hidden");
     currentTime = "&infin;";
-    $("#game-timer").html("Remaining Time: " + currentTime);
+    $gameTimer.html("Remaining Time: " + currentTime);
     currentScore = 0;
-    $("#player-score").html("Score: " + currentScore);
+    $playerScore.html("Score: " + currentScore);
   }
 
 
   function displayGameStartOverlay() {
     gameMode = "";
-    $("#gamestart-overlay-background").removeClass("hidden");
-    $("#putting-instructions").removeClass("hidden");
-    $("#putt-start-line-left").removeClass("putt-start-line-left-collapsed");
-    $("#putt-start-line-right").removeClass("putt-start-line-right-collapsed");
+    $gamestartOverlayBackground.removeClass("hidden");
+    $puttingInstructions.removeClass("hidden");
+    $puttStartLineLeft.removeClass("putt-start-line-left-collapsed");
+    $puttStartLineRight.removeClass("putt-start-line-right-collapsed");
     currentTime = 0;
-    $("#game-timer").html("Remaining Time: " + currentTime);
+    $gameTimer.html("Remaining Time: " + currentTime);
     currentScore = 0;
-    $("#player-score").html("Score: " + currentScore);
+    $playerScore.html("Score: " + currentScore);
     timerStart = false;
-    $("#game-title-top").html("Disc Golf");
-    $("#game-title-bottom").html("Putting Challenge");
+    $gameTitleTop.html("Disc Golf");
+    $gameTitleBottom.html("Putting Challenge");
     $("#overlay-play-again").remove();
     $("#overlay-quit").remove();
-    $("#game-mode-timed").remove();
-    $("#game-mode-practice").remove()
-    $("#gamestart-overlay-menu").append("<div id='game-mode-timed'>Time Attack</div>");
-    $("#gamestart-overlay-menu").append("<div id='game-mode-practice'>Practice</div>");
+    $gameModeTimed.remove();
+    $gameModePractice.remove()
+    $gamestartOverlayMenu.append("<div id='game-mode-timed'>Time Attack</div>");
+    $gameModeTimed = $("#game-mode-timed");
+    $gamestartOverlayMenu.append("<div id='game-mode-practice'>Practice</div>");
+    $gameModePractice = $("#game-mode-practice");
 
   /* ------------------ Overlay Event Handlers ------------------ */
-    $("#game-mode-timed").on("click", function() {
+    $gameModeTimed.on("click", function() {
       startGameModeTimed();
     });
-    $("#game-mode-practice").on("click", function() {
+    $gameModePractice.on("click", function() {
       startGameModePractice();
     });
   }
 
 
   function displayTimedScoreOverlay() {
-    $("#gamestart-overlay-background").removeClass("hidden");
-    $("#putting-instructions").removeClass("hidden");
-    $("#putt-start-line-left").removeClass("putt-start-line-left-collapsed");
-    $("#putt-start-line-right").removeClass("putt-start-line-right-collapsed");
+    $gamestartOverlayBackground.removeClass("hidden");
+    $puttingInstructions.removeClass("hidden");
+    $puttStartLineLeft.removeClass("putt-start-line-left-collapsed");
+    $puttStartLineRight.removeClass("putt-start-line-right-collapsed");
     currentTime = 0;
-    $("#game-timer").html("Remaining Time: " + currentTime);
-    $("#game-title-top").html("Total Score:");
-    $("#game-title-bottom").html("--");
-    $("#game-mode-timed").remove();
-    $("#game-mode-practice").remove();
+    $gameTimer.html("Remaining Time: " + currentTime);
+    $gameTitleTop.html("Total Score:");
+    $gameTitleBottom.html("--");
+    $gameModeTimed.remove();
+    $gameModePractice.remove();
     $("#overlay-play-again").remove();
     $("#overlay-quit").remove();
 
     setTimeout(function() {
-      $("#game-title-top").html("Total Score:");
-      $("#game-title-bottom").html(currentScore);
-      $("#gamestart-overlay-menu").append("<div id='overlay-play-again'>Play Again</div>");
-      $("#gamestart-overlay-menu").append("<div id='overlay-quit'>Quit</div>");
+      $gameTitleTop.html("Total Score:");
+      $gameTitleBottom.html(currentScore);
+      $gamestartOverlayMenu.append("<div id='overlay-play-again'>Play Again</div>");
+      $gamestartOverlayMenu.append("<div id='overlay-quit'>Quit</div>");
 
   /* ------------------ Overlay Event Handlers ------------------ */
       $("#overlay-play-again").on("click", function() {
@@ -96,7 +112,7 @@ $(document).ready(function() {
 
     /* console.log(currentTime); */
 
-    $("#game-timer").html("Remaining Time: " + currentTime);
+    $gameTimer.html("Remaining Time: " + currentTime);
     setTimeout(function() {
       if(currentTime > 0) {
         startTimerCountDown();
@@ -113,23 +129,23 @@ $(document).ready(function() {
 
   function missedPuttLow() {
     for(shotPower = 0; shotPower <= 54; shotPower++) {
-      if($("#disc").position().top === shotPower) {
+      if($disc.position().top === shotPower) {
         var powerChange = 0 - shotPower;
         var shotHeight = powerChange + -386 + powerChange + (powerChange / 4);
-        $("#disc").addClass("putt");
-        $("#disc").css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
+        $disc.addClass("putt");
+        $disc.css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
 
         setTimeout(function() {
           var dropHeight = powerChange + -380;
-          $("#disc").addClass("putt-drop");
-          $("#disc").css({"transform": "translate(18px," + dropHeight + "px) rotate(0deg)"});
+          $disc.addClass("putt-drop");
+          $disc.css({"transform": "translate(18px," + dropHeight + "px) rotate(0deg)"});
         }, 1100);
 
         setTimeout(function() {
-          $("#disc").removeClass("putt");
-          $("#disc").removeClass("putt-drop");
-          $("#disc").addClass("disc-start");
-          $("#disc").css({"transform": "translate(0px, 0px) rotate(0deg)"});
+          $disc.removeClass("putt");
+          $disc.removeClass("putt-drop");
+          $disc.addClass("disc-start");
+          $disc.css({"transform": "translate(0px, 0px) rotate(0deg)"});
         }, 2250);
       }
     }
@@ -138,39 +154,39 @@ $(document).ready(function() {
 
   function madePutt() {
     for(shotPower = 55; shotPower <= 75; shotPower++) {
-      if($("#disc").position().top === shotPower) {
+      if($disc.position().top === shotPower) {
         var powerChange = 55 - shotPower;
         var shotHeight = powerChange + -515 + powerChange + powerChange;
-        $("#disc").addClass("putt");
-        $("#disc").css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
+        $disc.addClass("putt");
+        $disc.css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
 
         setTimeout(function() {
           var dropHeight = powerChange + -480;
-          $("#disc").addClass("putt-drop");
-          $("#disc").css({"transform": "translate(18px," + dropHeight + "px) rotate(0deg)"});
-          $("#cage").addClass("cage-overlay");
+          $disc.addClass("putt-drop");
+          $disc.css({"transform": "translate(18px," + dropHeight + "px) rotate(0deg)"});
+          $cage.addClass("cage-overlay");
         }, 1100);
 
         setTimeout(function() {
           if(gameMode === "timed" && currentTime >= 0) {
             currentScore++;
-            $("#player-score").html("Score: " + currentScore);
+            $playerScore.html("Score: " + currentScore);
           }
         }, 2000);
 
         setTimeout(function() {
           if(gameMode === "practice" && currentTime === "&infin;") {
             currentScore++;
-            $("#player-score").html("Score: " + currentScore);
+            $playerScore.html("Score: " + currentScore);
           }
         }, 2000);
 
         setTimeout(function() {
-          $("#disc").removeClass("putt");
-          $("#disc").removeClass("putt-drop");
-          $("#cage").removeClass("cage-overlay");
-          $("#disc").addClass("disc-start");
-          $("#disc").css({"transform": "translate(0px, 0px) rotate(0deg)"});
+          $disc.removeClass("putt");
+          $disc.removeClass("putt-drop");
+          $cage.removeClass("cage-overlay");
+          $disc.addClass("disc-start");
+          $disc.css({"transform": "translate(0px, 0px) rotate(0deg)"});
         }, 2250);
       }
     }
@@ -179,23 +195,23 @@ $(document).ready(function() {
 
   function missedPuttBelt() {
     for(shotPower = 76; shotPower <= 91; shotPower++) {
-      if($("#disc").position().top === shotPower) {
+      if($disc.position().top === shotPower) {
         var powerChange = 76 - shotPower;
         var shotHeight = powerChange + -580 + powerChange + powerChange;
-        $("#disc").addClass("putt");
-        $("#disc").css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
+        $disc.addClass("putt");
+        $disc.css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
 
         setTimeout(function() {
           var dropHeight = powerChange + -456;
-          $("#disc").addClass("putt-drop");
-          $("#disc").css({"transform": "translate(18px," + dropHeight + "px) rotate(0deg)"});
+          $disc.addClass("putt-drop");
+          $disc.css({"transform": "translate(18px," + dropHeight + "px) rotate(0deg)"});
         }, 1100);
 
         setTimeout(function() {
-          $("#disc").removeClass("putt");
-          $("#disc").removeClass("putt-drop");
-          $("#disc").addClass("disc-start");
-          $("#disc").css({"transform": "translate(0px, 0px) rotate(0deg)"});
+          $disc.removeClass("putt");
+          $disc.removeClass("putt-drop");
+          $disc.addClass("disc-start");
+          $disc.css({"transform": "translate(0px, 0px) rotate(0deg)"});
         }, 2250);
       }
     }
@@ -204,23 +220,23 @@ $(document).ready(function() {
 
   function missedPuttHigh() {
     for(shotPower = 92; shotPower <= 110; shotPower++) {
-      if($("#disc").position().top === shotPower) {
+      if($disc.position().top === shotPower) {
         var powerChange = 92 - shotPower;
         var shotHeight = powerChange + -629 + powerChange + powerChange;
-        $("#disc").addClass("putt-high");
-        $("#disc").css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
+        $disc.addClass("putt-high");
+        $disc.css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
 
         setTimeout(function() {
           var dropHeight = powerChange + -472;
-          $("#disc").addClass("putt-drop-behind");
-          $("#disc").css({"transform": "translate(0px," + dropHeight + "px) rotate(0deg)"});
+          $disc.addClass("putt-drop-behind");
+          $disc.css({"transform": "translate(0px," + dropHeight + "px) rotate(0deg)"});
         }, 1000);
 
         setTimeout(function() {
-          $("#disc").removeClass("putt-high");
-          $("#disc").removeClass("putt-drop-behind");
-          $("#disc").addClass("disc-start");
-          $("#disc").css({"transform": "translate(0px, 0px) rotate(0deg)"});
+          $disc.removeClass("putt-high");
+          $disc.removeClass("putt-drop-behind");
+          $disc.addClass("disc-start");
+          $disc.css({"transform": "translate(0px, 0px) rotate(0deg)"});
         }, 2250);
       }
     }
@@ -228,11 +244,11 @@ $(document).ready(function() {
 
 /* ---------------------------- Event Handlers ---------------------------- */
 
-  $("#game-mode-timed").on("click", function() {
+  $gameModeTimed.on("click", function() {
     startGameModeTimed();
   });
 
-  $("#game-mode-practice").on("click", function() {
+  $gameModePractice.on("click", function() {
     startGameModePractice();
   });
 
@@ -240,19 +256,19 @@ $(document).ready(function() {
     displayGameStartOverlay();
   });
 
-  $("#disc").draggable({
+  $disc.draggable({
     axis: "y",
     containment: "#arrow-container", scroll: false,
 
     start: function(event, ui ) {
-      $("#disc").removeClass("disc-start");
+      $disc.removeClass("disc-start");
     },
 
     stop: function(event, ui ) {
       if(gameMode !== "" && currentTime === 45 || gameMode !== "" && currentTime === "&infin;") {
-        $("#putting-instructions").addClass("hidden");
-        $("#putt-start-line-left").addClass("putt-start-line-left-collapsed");
-        $("#putt-start-line-right").addClass("putt-start-line-right-collapsed");
+        $puttingInstructions.addClass("hidden");
+        $puttStartLineLeft.addClass("putt-start-line-left-collapsed");
+        $puttStartLineRight.addClass("putt-start-line-right-collapsed");
       }
 
       if(gameMode === "timed" && timerStart === false) {
@@ -263,22 +279,22 @@ $(document).ready(function() {
       }
 
   /* ---------------------- Missed Putt Low ---------------------- */
-      if($("#disc").position().top >= 0 && $("#disc").position().top <= 54) {
+      if($disc.position().top >= 0 && $("#disc").position().top <= 54) {
         missedPuttLow();
       }
 
   /* ------------------------- Made Putt ------------------------- */
-      if($("#disc").position().top >= 55 && $("#disc").position().top <= 75) {
+      if($disc.position().top >= 55 && $("#disc").position().top <= 75) {
         madePutt();
       }
 
   /* ---------------------- Missed Putt Belt ---------------------- */
-      if($("#disc").position().top >= 76 && $("#disc").position().top <= 91) {
+      if($disc.position().top >= 76 && $("#disc").position().top <= 91) {
         missedPuttBelt();
       }
 
   /* ---------------------- Missed Putt High ---------------------- */
-      if($("#disc").position().top >= 92 && $("#disc").position().top <= 110) {
+      if($disc.position().top >= 92 && $("#disc").position().top <= 110) {
         missedPuttHigh();
       }
     }
