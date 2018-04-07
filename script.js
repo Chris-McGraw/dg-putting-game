@@ -14,6 +14,7 @@ $(document).ready(function() {
   $gameModeTimed = $("#game-mode-timed");
   $gameModePractice = $("#game-mode-practice");
   $gameTimer = $("#game-timer");
+  $playerScore = $("#player-score");
 
 /* ------------------------- Function Declarations ------------------------- */
 
@@ -23,7 +24,7 @@ $(document).ready(function() {
     currentTime = 45;
     $gameTimer.html("Remaining Time: " + currentTime);
     currentScore = 0;
-    $("#player-score").html("Score: " + currentScore);
+    $playerScore.html("Score: " + currentScore);
     timerStart = false;
   }
 
@@ -34,7 +35,7 @@ $(document).ready(function() {
     currentTime = "&infin;";
     $gameTimer.html("Remaining Time: " + currentTime);
     currentScore = 0;
-    $("#player-score").html("Score: " + currentScore);
+    $playerScore.html("Score: " + currentScore);
   }
 
 
@@ -47,7 +48,7 @@ $(document).ready(function() {
     currentTime = 0;
     $gameTimer.html("Remaining Time: " + currentTime);
     currentScore = 0;
-    $("#player-score").html("Score: " + currentScore);
+    $playerScore.html("Score: " + currentScore);
     timerStart = false;
     $gameTitleTop.html("Disc Golf");
     $gameTitleBottom.html("Putting Challenge");
@@ -164,14 +165,14 @@ $(document).ready(function() {
         setTimeout(function() {
           if(gameMode === "timed" && currentTime >= 0) {
             currentScore++;
-            $("#player-score").html("Score: " + currentScore);
+            $playerScore.html("Score: " + currentScore);
           }
         }, 2000);
 
         setTimeout(function() {
           if(gameMode === "practice" && currentTime === "&infin;") {
             currentScore++;
-            $("#player-score").html("Score: " + currentScore);
+            $playerScore.html("Score: " + currentScore);
           }
         }, 2000);
 
