@@ -7,11 +7,13 @@ $(document).ready(function() {
   currentTime = 0;
   currentScore = 0;
 
+  $gamestartOverlayBackground = $("#gamestart-overlay-background");
+
 /* ------------------------- Function Declarations ------------------------- */
 
   function startGameModeTimed() {
     gameMode = "timed";
-    $("#gamestart-overlay-background").addClass("hidden");
+    $gamestartOverlayBackground.addClass("hidden");
     currentTime = 45;
     $("#game-timer").html("Remaining Time: " + currentTime);
     currentScore = 0;
@@ -22,7 +24,7 @@ $(document).ready(function() {
 
   function startGameModePractice() {
     gameMode = "practice";
-    $("#gamestart-overlay-background").addClass("hidden");
+    $gamestartOverlayBackground.addClass("hidden");
     currentTime = "&infin;";
     $("#game-timer").html("Remaining Time: " + currentTime);
     currentScore = 0;
@@ -32,7 +34,7 @@ $(document).ready(function() {
 
   function displayGameStartOverlay() {
     gameMode = "";
-    $("#gamestart-overlay-background").removeClass("hidden");
+    $gamestartOverlayBackground.removeClass("hidden");
     $("#putting-instructions").removeClass("hidden");
     $("#putt-start-line-left").removeClass("putt-start-line-left-collapsed");
     $("#putt-start-line-right").removeClass("putt-start-line-right-collapsed");
@@ -61,7 +63,7 @@ $(document).ready(function() {
 
 
   function displayTimedScoreOverlay() {
-    $("#gamestart-overlay-background").removeClass("hidden");
+    $gamestartOverlayBackground.removeClass("hidden");
     $("#putting-instructions").removeClass("hidden");
     $("#putt-start-line-left").removeClass("putt-start-line-left-collapsed");
     $("#putt-start-line-right").removeClass("putt-start-line-right-collapsed");
