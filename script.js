@@ -15,6 +15,8 @@ $(document).ready(function() {
   $gameModePractice = $("#game-mode-practice");
   $gameTimer = $("#game-timer");
   $playerScore = $("#player-score");
+  $cage = $("#cage");
+  $puttingInstructions = $("#putting-instructions");
 
 /* ------------------------- Function Declarations ------------------------- */
 
@@ -42,7 +44,7 @@ $(document).ready(function() {
   function displayGameStartOverlay() {
     gameMode = "";
     $gamestartOverlayBackground.removeClass("hidden");
-    $("#putting-instructions").removeClass("hidden");
+    $puttingInstructions.removeClass("hidden");
     $("#putt-start-line-left").removeClass("putt-start-line-left-collapsed");
     $("#putt-start-line-right").removeClass("putt-start-line-right-collapsed");
     currentTime = 0;
@@ -73,7 +75,7 @@ $(document).ready(function() {
 
   function displayTimedScoreOverlay() {
     $gamestartOverlayBackground.removeClass("hidden");
-    $("#putting-instructions").removeClass("hidden");
+    $puttingInstructions.removeClass("hidden");
     $("#putt-start-line-left").removeClass("putt-start-line-left-collapsed");
     $("#putt-start-line-right").removeClass("putt-start-line-right-collapsed");
     currentTime = 0;
@@ -159,7 +161,7 @@ $(document).ready(function() {
           var dropHeight = powerChange + -480;
           $("#disc").addClass("putt-drop");
           $("#disc").css({"transform": "translate(18px," + dropHeight + "px) rotate(0deg)"});
-          $("#cage").addClass("cage-overlay");
+          $cage.addClass("cage-overlay");
         }, 1100);
 
         setTimeout(function() {
@@ -179,7 +181,7 @@ $(document).ready(function() {
         setTimeout(function() {
           $("#disc").removeClass("putt");
           $("#disc").removeClass("putt-drop");
-          $("#cage").removeClass("cage-overlay");
+          $cage.removeClass("cage-overlay");
           $("#disc").addClass("disc-start");
           $("#disc").css({"transform": "translate(0px, 0px) rotate(0deg)"});
         }, 2250);
@@ -261,7 +263,7 @@ $(document).ready(function() {
 
     stop: function(event, ui ) {
       if(gameMode !== "" && currentTime === 45 || gameMode !== "" && currentTime === "&infin;") {
-        $("#putting-instructions").addClass("hidden");
+        $puttingInstructions.addClass("hidden");
         $("#putt-start-line-left").addClass("putt-start-line-left-collapsed");
         $("#putt-start-line-right").addClass("putt-start-line-right-collapsed");
       }
