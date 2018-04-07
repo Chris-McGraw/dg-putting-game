@@ -31,6 +31,7 @@ $(document).ready(function() {
 
 
   function displayGameStartOverlay() {
+    gameMode = "";
     $("#gamestart-overlay-background").removeClass("hidden");
     $("#putting-instructions").removeClass("hidden");
     $("#putt-start-line-left").removeClass("putt-start-line-left-collapsed");
@@ -49,6 +50,7 @@ $(document).ready(function() {
     $("#gamestart-overlay-menu").append("<div id='game-mode-timed'>Time Attack</div>");
     $("#gamestart-overlay-menu").append("<div id='game-mode-practice'>Practice</div>");
 
+  /* ------------------ Overlay Event Handlers ------------------ */
     $("#game-mode-timed").on("click", function() {
       startGameModeTimed();
     });
@@ -65,20 +67,20 @@ $(document).ready(function() {
     $("#putt-start-line-right").removeClass("putt-start-line-right-collapsed");
     currentTime = 0;
     $("#game-timer").html("Remaining Time: " + currentTime);
-    $("#player-score").html("Score: " + currentScore);
     $("#game-title-top").html("Total Score:");
     $("#game-title-bottom").html("--");
     $("#game-mode-timed").remove();
     $("#game-mode-practice").remove();
+    $("#overlay-play-again").remove();
+    $("#overlay-quit").remove();
 
     setTimeout(function() {
       $("#game-title-top").html("Total Score:");
       $("#game-title-bottom").html(currentScore);
-      $("#overlay-play-again").remove();
-      $("#overlay-quit").remove();
       $("#gamestart-overlay-menu").append("<div id='overlay-play-again'>Play Again</div>");
       $("#gamestart-overlay-menu").append("<div id='overlay-quit'>Quit</div>");
 
+  /* ------------------ Overlay Event Handlers ------------------ */
       $("#overlay-play-again").on("click", function() {
         startGameModeTimed();
       });
@@ -91,7 +93,9 @@ $(document).ready(function() {
 
   function startTimerCountDown() {
     currentTime--;
-    console.log(currentTime);
+
+    /* console.log(currentTime); */
+
     $("#game-timer").html("Remaining Time: " + currentTime);
     setTimeout(function() {
       if(currentTime > 0) {
@@ -100,6 +104,9 @@ $(document).ready(function() {
     }, 1000);
     if(currentTime === 0) {
       displayTimedScoreOverlay();
+      setTimeout(function() {
+        gameMode = "";
+      }, 2000);
     }
   }
 
@@ -144,12 +151,13 @@ $(document).ready(function() {
           $("#cage").addClass("cage-overlay");
         }, 1100);
 
-        if(gameMode === "timed" && currentTime > 0) {
-          setTimeout(function() {
+        setTimeout(function() {
+          if(gameMode === "timed" && currentTime >= 0) {
             currentScore++;
             $("#player-score").html("Score: " + currentScore);
-          }, 2000);
-        }
+          }
+        }, 2000);
+
         setTimeout(function() {
           if(gameMode === "practice" && currentTime === "&infin;") {
             currentScore++;
@@ -241,9 +249,11 @@ $(document).ready(function() {
     },
 
     stop: function(event, ui ) {
-      $("#putting-instructions").addClass("hidden");
-      $("#putt-start-line-left").addClass("putt-start-line-left-collapsed");
-      $("#putt-start-line-right").addClass("putt-start-line-right-collapsed");
+      if(gameMode !== "" && currentTime === 45 || gameMode !== "" && currentTime === "&infin;") {
+        $("#putting-instructions").addClass("hidden");
+        $("#putt-start-line-left").addClass("putt-start-line-left-collapsed");
+        $("#putt-start-line-right").addClass("putt-start-line-right-collapsed");
+      }
 
       if(gameMode === "timed" && timerStart === false) {
         timerStart = true;
