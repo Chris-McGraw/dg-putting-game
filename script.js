@@ -9,6 +9,8 @@ $(document).ready(function() {
 
   $gamestartOverlayBackground = $("#gamestart-overlay-background");
   $gamestartOverlayMenu = $("#gamestart-overlay-menu");
+  $gameTitleTop = $("#game-title-top");
+  $gameTitleBottom = $("#game-title-bottom");
 
 /* ------------------------- Function Declarations ------------------------- */
 
@@ -44,8 +46,8 @@ $(document).ready(function() {
     currentScore = 0;
     $("#player-score").html("Score: " + currentScore);
     timerStart = false;
-    $("#game-title-top").html("Disc Golf");
-    $("#game-title-bottom").html("Putting Challenge");
+    $gameTitleTop.html("Disc Golf");
+    $gameTitleBottom.html("Putting Challenge");
     $("#overlay-play-again").remove();
     $("#overlay-quit").remove();
     $("#game-mode-timed").remove();
@@ -70,16 +72,16 @@ $(document).ready(function() {
     $("#putt-start-line-right").removeClass("putt-start-line-right-collapsed");
     currentTime = 0;
     $("#game-timer").html("Remaining Time: " + currentTime);
-    $("#game-title-top").html("Total Score:");
-    $("#game-title-bottom").html("--");
+    $gameTitleTop.html("Total Score:");
+    $gameTitleBottom.html("--");
     $("#game-mode-timed").remove();
     $("#game-mode-practice").remove();
     $("#overlay-play-again").remove();
     $("#overlay-quit").remove();
 
     setTimeout(function() {
-      $("#game-title-top").html("Total Score:");
-      $("#game-title-bottom").html(currentScore);
+      $gameTitleTop.html("Total Score:");
+      $gameTitleBottom.html(currentScore);
       $gamestartOverlayMenu.append("<div id='overlay-play-again'>Play Again</div>");
       $gamestartOverlayMenu.append("<div id='overlay-quit'>Quit</div>");
 
