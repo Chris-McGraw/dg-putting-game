@@ -11,6 +11,7 @@ $(document).ready(function() {
   $gamestartOverlayMenu = $("#gamestart-overlay-menu");
   $gameTitleTop = $("#game-title-top");
   $gameTitleBottom = $("#game-title-bottom");
+  $gameModeTimed = $("#game-mode-timed");
 
 /* ------------------------- Function Declarations ------------------------- */
 
@@ -50,13 +51,14 @@ $(document).ready(function() {
     $gameTitleBottom.html("Putting Challenge");
     $("#overlay-play-again").remove();
     $("#overlay-quit").remove();
-    $("#game-mode-timed").remove();
+    $gameModeTimed.remove();
     $("#game-mode-practice").remove()
     $gamestartOverlayMenu.append("<div id='game-mode-timed'>Time Attack</div>");
+    $gameModeTimed = $("#game-mode-timed");
     $gamestartOverlayMenu.append("<div id='game-mode-practice'>Practice</div>");
 
   /* ------------------ Overlay Event Handlers ------------------ */
-    $("#game-mode-timed").on("click", function() {
+    $gameModeTimed.on("click", function() {
       startGameModeTimed();
     });
     $("#game-mode-practice").on("click", function() {
@@ -74,7 +76,7 @@ $(document).ready(function() {
     $("#game-timer").html("Remaining Time: " + currentTime);
     $gameTitleTop.html("Total Score:");
     $gameTitleBottom.html("--");
-    $("#game-mode-timed").remove();
+    $gameModeTimed.remove();
     $("#game-mode-practice").remove();
     $("#overlay-play-again").remove();
     $("#overlay-quit").remove();
@@ -233,7 +235,7 @@ $(document).ready(function() {
 
 /* ---------------------------- Event Handlers ---------------------------- */
 
-  $("#game-mode-timed").on("click", function() {
+  $gameModeTimed.on("click", function() {
     startGameModeTimed();
   });
 
