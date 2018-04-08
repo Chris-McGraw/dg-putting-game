@@ -13,9 +13,12 @@ $(document).ready(function() {
   $gameTitleBottom = $("#game-title-bottom");
   $gameModeTimed = $("#game-mode-timed");
   $gameModePractice = $("#game-mode-practice");
+  $overlayPlayAgain = $("#overlay-play-again");
+  $overlayQuit = $("#overlay-quit");
   $gameTimer = $("#game-timer");
   $playerScore = $("#player-score");
   $cage = $("#cage");
+  $cornerQuit = $("#corner-quit");
   $puttingInstructions = $("#putting-instructions");
   $puttStartLineLeft = $("#putt-start-line-left");
   $disc = $("#disc");
@@ -57,8 +60,8 @@ $(document).ready(function() {
     timerStart = false;
     $gameTitleTop.html("Disc Golf");
     $gameTitleBottom.html("Putting Challenge");
-    $("#overlay-play-again").remove();
-    $("#overlay-quit").remove();
+    $overlayPlayAgain.remove();
+    $overlayQuit.remove();
     $gameModeTimed.remove();
     $gameModePractice.remove()
     $gamestartOverlayMenu.append("<div id='game-mode-timed'>Time Attack</div>");
@@ -87,20 +90,22 @@ $(document).ready(function() {
     $gameTitleBottom.html("--");
     $gameModeTimed.remove();
     $gameModePractice.remove();
-    $("#overlay-play-again").remove();
-    $("#overlay-quit").remove();
+    $overlayPlayAgain.remove();
+    $overlayQuit.remove();
 
     setTimeout(function() {
       $gameTitleTop.html("Total Score:");
       $gameTitleBottom.html(currentScore);
       $gamestartOverlayMenu.append("<div id='overlay-play-again'>Play Again</div>");
+      $overlayPlayAgain = $("#overlay-play-again");
       $gamestartOverlayMenu.append("<div id='overlay-quit'>Quit</div>");
+      $overlayQuit = $("#overlay-quit");
 
   /* ------------------ Overlay Event Handlers ------------------ */
-      $("#overlay-play-again").on("click", function() {
+      $overlayPlayAgain.on("click", function() {
         startGameModeTimed();
       });
-      $("#overlay-quit").on("click", function() {
+      $overlayQuit.on("click", function() {
         displayGameStartOverlay();
       });
     }, 2000);
@@ -252,7 +257,7 @@ $(document).ready(function() {
     startGameModePractice();
   });
 
-  $("#corner-quit").on("click", function() {
+  $cornerQuit.on("click", function() {
     displayGameStartOverlay();
   });
 
