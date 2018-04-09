@@ -3,6 +3,7 @@ $(document).ready(function() {
 /* ------------------------- Variable Declarations ------------------------- */
 
   gameMode = "";
+  muteStatus = false;
   timerStart = false;
   currentTime = 0;
   currentScore = 0;
@@ -23,6 +24,7 @@ $(document).ready(function() {
   $puttStartLineLeft = $("#putt-start-line-left");
   $disc = $("#disc");
   $puttStartLineRight = $("#putt-start-line-right");
+  $muteButton = $("#mute-button");
 
 /* ------------------------- Function Declarations ------------------------- */
 
@@ -44,6 +46,20 @@ $(document).ready(function() {
     $gameTimer.html("Remaining Time: " + currentTime);
     currentScore = 0;
     $playerScore.html("Score: " + currentScore);
+  }
+
+
+  function muteToggle() {
+    if(muteStatus === false) {
+      $muteButton.removeClass("fa-volume-up");
+      $muteButton.addClass("fa-volume-off");
+      muteStatus = true;
+    }
+    else if(muteStatus === true) {
+      $muteButton.removeClass("fa-volume-off");
+      $muteButton.addClass("fa-volume-up");
+      muteStatus = false;
+    }
   }
 
 
@@ -255,6 +271,10 @@ $(document).ready(function() {
 
   $gameModePractice.on("click", function() {
     startGameModePractice();
+  });
+
+  $muteButton.on("click", function() {
+    muteToggle();
   });
 
   $cornerQuit.on("click", function() {
