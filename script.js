@@ -3,9 +3,12 @@ $(document).ready(function() {
 /* ------------------------- Variable Declarations ------------------------- */
 
   gameMode = "";
+  muteStatus = false;
   timerStart = false;
   currentTime = 0;
   currentScore = 0;
+
+  chainHitAudio = document.getElementById("chain-hit-audio");
 
   $gamestartOverlayBackground = $("#gamestart-overlay-background");
   $gamestartOverlayMenu = $("#gamestart-overlay-menu");
@@ -23,6 +26,7 @@ $(document).ready(function() {
   $puttStartLineLeft = $("#putt-start-line-left");
   $disc = $("#disc");
   $puttStartLineRight = $("#putt-start-line-right");
+  $muteButton = $("#mute-button");
 
 /* ------------------------- Function Declarations ------------------------- */
 
@@ -44,6 +48,22 @@ $(document).ready(function() {
     $gameTimer.html("Remaining Time: " + currentTime);
     currentScore = 0;
     $playerScore.html("Score: " + currentScore);
+  }
+
+
+  function muteToggle() {
+    if(muteStatus === false) {
+      $muteButton.removeClass("fa-volume-up");
+      $muteButton.addClass("fa-volume-off");
+      chainHitAudio.muted = true;
+      muteStatus = true;
+    }
+    else if(muteStatus === true) {
+      $muteButton.removeClass("fa-volume-off");
+      $muteButton.addClass("fa-volume-up");
+      chainHitAudio.muted = false;
+      muteStatus = false;
+    }
   }
 
 
@@ -166,6 +186,11 @@ $(document).ready(function() {
         $disc.css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
 
         setTimeout(function() {
+          chainHitAudio.volume = 0.5;
+          chainHitAudio.play();
+        }, 1000);
+
+        setTimeout(function() {
           var dropHeight = powerChange + -480;
           $disc.addClass("putt-drop");
           $disc.css({"transform": "translate(18px," + dropHeight + "px) rotate(0deg)"});
@@ -255,6 +280,10 @@ $(document).ready(function() {
 
   $gameModePractice.on("click", function() {
     startGameModePractice();
+  });
+
+  $muteButton.on("click", function() {
+    muteToggle();
   });
 
   $cornerQuit.on("click", function() {

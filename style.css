@@ -80,6 +80,34 @@
   color: white;
 }
 
+#overlay-play-again {
+  position: relative;
+  top: 60px;
+  width: 160px;
+  margin: auto;
+  font-family: sans-serif;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+#overlay-quit {
+  position: relative;
+  top: 64px;
+  width: 160px;
+  margin: auto;
+  font-family: sans-serif;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+#overlay-play-again:hover {
+  color: white;
+}
+
+#overlay-quit:hover {
+  color: white;
+}
+
 #game-timer {
   position: absolute;
   top: 20px;
@@ -121,11 +149,15 @@
   z-index: 0;
 }
 
+.cage-overlay {
+  z-index: 2 !important;
+}
+
 #corner-quit {
   position: absolute;
   top: 20px;
   right: 40px;
-  width: 40px;
+  width: auto;
   text-align: center;
   font-family: sans-serif;
   font-size: 20px;
@@ -219,6 +251,34 @@
   right: 0 !important;
 }
 
+.putt {
+  transform: translate(18px, -520px) rotate(-15deg);
+  width: 40px !important;
+  height: 6px !important;
+  transition: transform 1000ms ease-out, width 1000ms ease-in, height 1000ms ease-in;
+}
+
+.putt-high {
+  transform: translate(18px, -520px) rotate(-15deg);
+  width: 38px !important;
+  height: 6px !important;
+  transition: transform 1000ms ease-out, width 1000ms ease-in, height 1000ms ease-in;
+}
+
+.putt-drop {
+  transform: translate(18px, -480px) rotate(0deg);
+  transition: transform 500ms;
+  z-index: 1;
+}
+
+.putt-drop-behind {
+  transform: translate(18px, -480px) rotate(0deg);
+  width: 30px !important;
+  height: 4px !important;
+  z-index: -1 !important;
+  transition: transform 1000ms ease-out, width 1000ms ease-in, height 1000ms ease-in;
+}
+
 #arrow-container {
   position: relative;
   top: 290px;
@@ -250,62 +310,12 @@
 	border-top: 30px solid rgba(0, 0, 0, 0.2);
 }
 
-.putt {
-  transform: translate(18px, -520px) rotate(-15deg);
-  width: 40px !important;
-  height: 6px !important;
-  transition: transform 1000ms ease-out, width 1000ms ease-in, height 1000ms ease-in;
-}
-
-.putt-high {
-  transform: translate(18px, -520px) rotate(-15deg);
-  width: 38px !important;
-  height: 6px !important;
-  transition: transform 1000ms ease-out, width 1000ms ease-in, height 1000ms ease-in;
-}
-
-.putt-drop {
-  transform: translate(18px, -480px) rotate(0deg);
-  transition: transform 500ms;
-  z-index: 1;
-}
-
-.putt-drop-behind {
-  transform: translate(18px, -480px) rotate(0deg);
-  width: 30px !important;
-  height: 4px !important;
-  z-index: -1 !important;
-  transition: transform 1000ms ease-out, width 1000ms ease-in, height 1000ms ease-in;
-}
-
-.cage-overlay {
-  z-index: 2 !important;
-}
-
-#overlay-play-again {
-  position: relative;
-  top: 60px;
-  width: 160px;
-  margin: auto;
-  font-family: sans-serif;
-  font-size: 30px;
+#mute-button {
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+  width: 44px;
+  text-align: left;
+  color: black;
   cursor: pointer;
-}
-
-#overlay-quit {
-  position: relative;
-  top: 64px;
-  width: 160px;
-  margin: auto;
-  font-family: sans-serif;
-  font-size: 30px;
-  cursor: pointer;
-}
-
-#overlay-play-again:hover {
-  color: white;
-}
-
-#overlay-quit:hover {
-  color: white;
 }

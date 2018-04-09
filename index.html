@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0" />
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="style.css">
   <title>Disc Golf Putting Game</title>
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
@@ -15,6 +16,11 @@
 </head>
 
 <body>
+  <audio id="chain-hit-audio"
+    src="http://res.cloudinary.com/dtwyohvli/video/upload/v1523115962/dg-chains_us4bbz.mp3"
+    preload="auto">
+  </audio>
+
   <div id="gamestart-overlay-background">
     <div id="gamestart-overlay-menu">
       <div id="game-title-top">Disc Golf</div>
@@ -49,6 +55,8 @@
     <div id="arrow-top"></div>
     <div id="arrow-bottom"></div>
   </div>
+
+  <i id="mute-button" class="fa fa-volume-up fa-3x" aria-hidden="true"></i>
 </body>
 
 </html>
