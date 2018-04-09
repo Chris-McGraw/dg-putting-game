@@ -8,6 +8,8 @@ $(document).ready(function() {
   currentTime = 0;
   currentScore = 0;
 
+  chainHitAudio = document.getElementById("chain-hit-audio");
+
   $gamestartOverlayBackground = $("#gamestart-overlay-background");
   $gamestartOverlayMenu = $("#gamestart-overlay-menu");
   $gameTitleTop = $("#game-title-top");
@@ -53,11 +55,13 @@ $(document).ready(function() {
     if(muteStatus === false) {
       $muteButton.removeClass("fa-volume-up");
       $muteButton.addClass("fa-volume-off");
+      chainHitAudio.muted = true;
       muteStatus = true;
     }
     else if(muteStatus === true) {
       $muteButton.removeClass("fa-volume-off");
       $muteButton.addClass("fa-volume-up");
+      chainHitAudio.muted = false;
       muteStatus = false;
     }
   }
@@ -180,6 +184,11 @@ $(document).ready(function() {
         var shotHeight = powerChange + -515 + powerChange + powerChange;
         $disc.addClass("putt");
         $disc.css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
+
+        setTimeout(function() {
+          chainHitAudio.volume = 0.5;
+          chainHitAudio.play();
+        }, 1000);
 
         setTimeout(function() {
           var dropHeight = powerChange + -480;
