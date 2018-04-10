@@ -146,6 +146,13 @@
 #cage {
   position: relative;
   top: -82px;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 75px;
+  margin: auto;
+
   z-index: 0;
 }
 
@@ -194,7 +201,7 @@
 
 #inline-container {
   position: relative;
-  top: 340px;
+  top: 381px;
   width: 380px;
   height: 50px;
   margin: auto;
@@ -281,7 +288,7 @@
 
 #arrow-container {
   position: relative;
-  top: 290px;
+  top: 331px;
   margin: auto;
   width: 200px;
   height: 132px;
