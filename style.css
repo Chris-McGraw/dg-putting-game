@@ -6,6 +6,10 @@
   /* border: 2px solid red; */
 }
 
+body {
+  height: 100vh;
+}
+
 .hidden {
   visibility: hidden;
   opacity: 0;
