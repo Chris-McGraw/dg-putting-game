@@ -190,17 +190,17 @@ body {
 }
 
 #instructions-left {
+  display: inline-block;
   position: absolute;
   left: 0;
   width: 120px;
-  display: inline-block;
 }
 
 #instructions-right {
+  display: inline-block;
   position: absolute;
   right: 0;
   width: 120px;
-  display: inline-block;
 }
 
 #inline-container {
@@ -363,5 +363,11 @@ body {
 @media screen and (max-width: 480px) {
   #gamestart-overlay-menu {
     width: 360px;
+  }
+}
+
+@media screen and (max-height: 500px) {
+  #inline-container {
+    top: 301px;
   }
 }
