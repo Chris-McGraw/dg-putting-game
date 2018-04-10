@@ -319,3 +319,38 @@
   color: black;
   cursor: pointer;
 }
+
+
+@media screen and (max-width: 680px) {
+  #gamestart-overlay-menu {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  #gamestart-overlay-menu {
+    width: 400px;
+  }
+
+  #game-timer {
+    left: 20px;
+  }
+
+  #player-score {
+    left: 20px;
+  }
+
+  #corner-quit {
+    right: 20px;
+  }
+
+  #mute-button {
+    right: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #gamestart-overlay-menu {
+    width: 360px;
+  }
+}
