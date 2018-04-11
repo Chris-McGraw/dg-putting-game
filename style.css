@@ -368,15 +368,29 @@ body {
 }
 
 @media screen and (max-height: 600px) {
+  #putting-instructions {
+    top: 368px;
+  }
+
+  #instructions-left {
+    left: 12px;
+  }
+
+  #instructions-right {
+    right: 12px;
+  }
+
   #inline-container {
-    top: 261px;
+    top: 221px;
   }
 
   #putt-start-line-left {
+    left: 20px;
     width: 100px;
   }
 
   #putt-start-line-right {
+    right: 20px;
     width: 100px;
   }
 }
