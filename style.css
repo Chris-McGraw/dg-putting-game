@@ -8,6 +8,7 @@
 
 body {
   height: 100vh;
+  overflow: hidden;
 }
 
 .hidden {
@@ -366,8 +367,8 @@ body {
   }
 }
 
-@media screen and (max-height: 200px) {
+/* @media screen and (max-height: 700px) {
   #inline-container {
     top: 301px;
   }
-}
+} */
