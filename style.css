@@ -366,7 +366,7 @@ body {
   }
 }
 
-@media screen and (max-height: 500px) {
+@media screen and (max-height: 400px) {
   #inline-container {
     top: 301px;
   }
