@@ -368,6 +368,10 @@ body {
 }
 
 @media screen and (max-height: 600px) {
+  #gamestart-overlay-menu {
+    top: 140px;
+  }
+
   #putting-instructions {
     top: 368px;
   }
@@ -396,6 +400,6 @@ body {
 
   #arrow-container {
     position: relative;
-    top: 181px;
+    top: 211px;
   }
 }
