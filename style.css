@@ -373,11 +373,11 @@ body {
   }
 
   #instructions-left {
-    left: 12px;
+    left: 6px;
   }
 
   #instructions-right {
-    right: 12px;
+    right: 6px;
   }
 
   #inline-container {
@@ -385,12 +385,17 @@ body {
   }
 
   #putt-start-line-left {
-    left: 20px;
-    width: 100px;
+    left: 10px;
+    width: 110px;
   }
 
   #putt-start-line-right {
-    right: 20px;
-    width: 100px;
+    right: 10px;
+    width: 110px;
+  }
+
+  #arrow-container {
+    position: relative;
+    top: 171px;
   }
 }
