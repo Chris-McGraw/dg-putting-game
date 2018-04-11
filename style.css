@@ -373,7 +373,7 @@ body {
   }
 
   #putting-instructions {
-    top: 368px;
+    top: 398px;
   }
 
   #instructions-left {
@@ -385,7 +385,7 @@ body {
   }
 
   #inline-container {
-    top: 221px;
+    top: 251px;
   }
 
   #putt-start-line-left {
@@ -400,6 +400,6 @@ body {
 
   #arrow-container {
     position: relative;
-    top: 211px;
+    top: 201px;
   }
 }
