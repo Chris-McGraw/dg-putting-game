@@ -369,6 +369,14 @@ body {
 
 @media screen and (max-height: 600px) {
   #inline-container {
-    top: 301px;
+    top: 261px;
+  }
+
+  #putt-start-line-left {
+    width: 100px;
+  }
+
+  #putt-start-line-right {
+    width: 100px;
   }
 }
