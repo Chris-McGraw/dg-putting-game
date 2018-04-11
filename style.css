@@ -367,8 +367,8 @@ body {
   }
 }
 
-/* @media screen and (max-height: 700px) {
+@media screen and (max-height: 600px) {
   #inline-container {
     top: 301px;
   }
-} */
+}
