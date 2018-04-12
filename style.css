@@ -7,7 +7,8 @@
 }
 
 body {
-  /* height: 100vh; */
+  height: 100vh;
+  overflow: hidden;
 }
 
 .hidden {
@@ -364,10 +365,36 @@ body {
   #gamestart-overlay-menu {
     width: 360px;
   }
+
+  #putting-instructions {
+    width: 360px;
+  }
+
+  #instructions-left {
+    width: 110px;
+  }
+
+  #instructions-right {
+    width: 110px;
+  }
+
+  #inline-container {
+    width: 360px;
+  }
+
+  #putt-start-line-left {
+    left: 0px;
+    width: 110px;
+  }
+
+  #putt-start-line-right {
+    right: 0px;
+    width: 110px;
+  }
 }
 
 /* ---------- Main Mobile Design ---------- */
-@media screen and (max-height: 600px) {
+@media screen and (max-height: 675px) {
   #gamestart-overlay-menu {
     top: 160px;
     height: 220px;
@@ -399,22 +426,10 @@ body {
 
   #putting-instructions {
     top: 398px;
-    width: 360px;
   }
 
   #inline-container {
     top: 251px;
-    width: 360px;
-  }
-
-  #putt-start-line-left {
-    left: 0px;
-    width: 110px;
-  }
-
-  #putt-start-line-right {
-    right: 0px;
-    width: 110px;
   }
 
   #arrow-container {
