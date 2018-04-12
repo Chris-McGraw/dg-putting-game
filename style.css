@@ -3,7 +3,7 @@
   padding: 0;
   user-select: none;
 
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 body {
@@ -400,14 +400,7 @@ body {
 
   #putting-instructions {
     top: 398px;
-  }
-
-  #instructions-left {
-    left: 6px;
-  }
-
-  #instructions-right {
-    right: 6px;
+    width: 360px;
   }
 
   #inline-container {
