@@ -367,9 +367,35 @@ body {
   }
 }
 
+/* ---------- Main Mobile Design ---------- */
 @media screen and (max-height: 600px) {
   #gamestart-overlay-menu {
-    top: 140px;
+    top: 160px;
+    height: 220px;
+  }
+
+  #game-title-top {
+    top: 10px;
+  }
+
+  #game-title-bottom {
+    top: 10px;
+  }
+
+  #game-mode-timed {
+    top: 30px;
+  }
+
+  #game-mode-practice {
+    top: 34px;
+  }
+
+  #overlay-play-again {
+    top: 30px;
+  }
+
+  #overlay-quit {
+    top: 34px;
   }
 
   #putting-instructions {
@@ -401,5 +427,9 @@ body {
   #arrow-container {
     position: relative;
     top: 201px;
+  }
+
+  #mute-button {
+    bottom: 10px;
   }
 }
