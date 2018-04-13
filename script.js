@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  $(document.body).on("touchmove", function(event) {
+  $(document).on("touchmove", function(event) {
     event.preventDefault();
     event.stopPropagation();
   });
