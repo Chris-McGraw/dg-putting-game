@@ -279,6 +279,12 @@ $(document).ready(function() {
 
 /* ---------------------------- Event Handlers ---------------------------- */
 
+  $gamestartOverlayBackground.css("height", $(document).height());
+
+  $(window).resize(function() {
+    $gamestartOverlayBackground.css("height", $(document).height());
+  });
+
   $gameModeTimed.on("click", function() {
     startGameModeTimed();
   });
