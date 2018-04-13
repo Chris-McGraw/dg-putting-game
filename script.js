@@ -1,5 +1,10 @@
 $(document).ready(function() {
 
+  $(document.body).on("touchmove", function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+  });
+
 /* ------------------------- Variable Declarations ------------------------- */
 
   gameMode = "";
