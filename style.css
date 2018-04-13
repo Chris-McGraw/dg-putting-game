@@ -132,7 +132,7 @@ body {
   text-align: left;
   font-family: sans-serif;
   font-size: 20px;
-  font-weight: 200;
+  font-weight: 400;
 }
 
 #basket-container {
@@ -346,9 +346,11 @@ body {
 
   #game-timer {
     left: 20px;
+    width: 100px;
   }
 
   #player-score {
+    top: 66px;
     left: 20px;
   }
 
