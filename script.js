@@ -25,6 +25,7 @@ $(document).ready(function() {
   $overlayQuit = $("#overlay-quit");
   $gameTimer = $("#game-timer");
   $playerScore = $("#player-score");
+  $basket = $("#basket");
   $cage = $("#cage");
   $cornerQuit = $("#corner-quit");
   $puttingInstructions = $("#putting-instructions");
@@ -299,6 +300,18 @@ $(document).ready(function() {
 
   $cornerQuit.on("click", function() {
     displayGameStartOverlay();
+  });
+
+  $basket.draggable({
+    start: function(event, ui ) {
+      event.preventDefault();
+    }
+  });
+
+  $cage.draggable({
+    start: function(event, ui ) {
+      event.preventDefault();
+    }
   });
 
   $disc.draggable({
