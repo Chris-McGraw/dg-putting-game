@@ -318,7 +318,7 @@ body {
 
 #mute-button {
   position: absolute;
-  bottom: 20px;
+  top: 626px;
   right: 40px;
   width: 44px;
   text-align: left;
@@ -434,6 +434,6 @@ body {
   }
 
   #mute-button {
-    bottom: 10px;
+    top: 496px;
   }
 }
