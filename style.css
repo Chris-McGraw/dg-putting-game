@@ -2,8 +2,8 @@
   margin: 0;
   padding: 0;
   user-select: none;
-  -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none;
+  -webkit-touch-callout: none;
 
   /* border: 2px solid red; */
 }
@@ -36,6 +36,7 @@ body {
   margin: auto;
   text-align: center;
   border: 1px solid black;
+  border-radius: 8px;
   background-color: lightGray;
 }
 
@@ -60,58 +61,82 @@ body {
 #game-mode-timed {
   position: relative;
   top: 60px;
-  width: 160px;
+  width: 180px;
+  height: 40px;
   margin: auto;
+  padding-top: 8px;
   font-family: sans-serif;
   font-size: 30px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid black;
+  border-radius: 8px;
   cursor: pointer;
 }
 
 #game-mode-practice {
   position: relative;
-  top: 64px;
-  width: 160px;
+  top: 70px;
+  width: 180px;
+  height: 40px;
   margin: auto;
+  padding-top: 8px;
   font-family: sans-serif;
   font-size: 30px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid black;
+  border-radius: 8px;
   cursor: pointer;
 }
 
-#game-mode-timed:hover {
+/* #game-mode-timed:hover {
   color: white;
 }
 
 #game-mode-practice:hover {
   color: white;
-}
+} */
 
 #overlay-play-again {
   position: relative;
   top: 60px;
-  width: 160px;
+  width: 180px;
+  height: 40px;
   margin: auto;
+  padding-top: 8px;
   font-family: sans-serif;
   font-size: 30px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid black;
+  border-radius: 8px;
   cursor: pointer;
 }
 
 #overlay-quit {
   position: relative;
-  top: 64px;
-  width: 160px;
+  top: 70px;
+  width: 180px;
+  height: 40px;
   margin: auto;
+  padding-top: 8px;
   font-family: sans-serif;
   font-size: 30px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid black;
+  border-radius: 8px;
   cursor: pointer;
 }
 
-#overlay-play-again:hover {
+/* #overlay-play-again:hover {
   color: white;
 }
 
 #overlay-quit:hover {
   color: white;
-}
+} */
 
 #game-timer {
   position: absolute;
@@ -165,11 +190,16 @@ body {
   position: absolute;
   top: 20px;
   right: 40px;
-  width: auto;
+  width: 100px;
+  height: 30px;
+  padding-top: 8px;
   text-align: center;
   font-family: sans-serif;
   font-size: 20px;
-  font-weight: 200;
+  font-weight: 400;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
   cursor: pointer;
 }
 
@@ -320,14 +350,19 @@ body {
 
 #mute-button {
   position: absolute;
-  top: 626px;
+  top: 618px;
   right: 40px;
-  width: 44px;
-  text-align: left;
-  color: black;
+  width: 52px;
+  height: 50px;
+  padding-top: 2px;
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
   cursor: pointer;
 }
 
+/* ----------------------------- Media Queries ----------------------------- */
 
 @media screen and (max-width: 680px) {
   #gamestart-overlay-menu {
@@ -346,7 +381,7 @@ body {
   }
 
   #player-score {
-    top: 66px;
+    top: 647px;
     left: 20px;
   }
 
@@ -407,19 +442,35 @@ body {
   }
 
   #game-mode-timed {
-    top: 30px;
+    top: 20px;
+    height: 26px;
+    padding-top: 2px;
+    padding-bottom: 10px;
   }
 
   #game-mode-practice {
-    top: 34px;
+    top: 30px;
+    height: 26px;
+    padding-top: 2px;
+    padding-bottom: 10px;
   }
 
   #overlay-play-again {
-    top: 30px;
+    top: 20px;
+    height: 26px;
+    padding-top: 2px;
+    padding-bottom: 10px;
   }
 
   #overlay-quit {
-    top: 34px;
+    top: 30px;
+    height: 26px;
+    padding-top: 2px;
+    padding-bottom: 10px;
+  }
+
+  #player-score {
+    top: 517px;
   }
 
   #putting-instructions {
@@ -436,6 +487,6 @@ body {
   }
 
   #mute-button {
-    top: 496px;
+    top: 488px;
   }
 }
