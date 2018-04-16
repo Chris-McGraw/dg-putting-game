@@ -369,9 +369,12 @@ body {
   position: absolute;
   top: 0px;
   width: 100%;
-  height: 200px;
+  height: 173px;
   background-color: #b9e2f5;
-  z-index: -69;
+  background: linear-gradient(#b9e2f5, white, white, white);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: -5;
 }
 
 #background-grass {
@@ -379,8 +382,11 @@ body {
   top: 172px;
   width: 100%;
   height: 600px;
-  background-color: #72e800;
-  z-index: -69;
+  background-color: #8fcc33;
+  background: linear-gradient(white, #bce085, #8fcc33, #72a329);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: -4;
 }
 
 /* ----------------------------- Media Queries ----------------------------- */
