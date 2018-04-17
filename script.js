@@ -14,6 +14,8 @@ $(document).ready(function() {
   currentScore = 0;
 
   chainHitAudio = document.getElementById("chain-hit-audio");
+  cageHitAudio = document.getElementById("cage-hit-audio");
+  metalHitAudio = document.getElementById("metal-hit-audio");
 
   $gamestartOverlayBackground = $("#gamestart-overlay-background");
   $gamestartOverlayMenu = $("#gamestart-overlay-menu");
@@ -166,6 +168,20 @@ $(document).ready(function() {
         $disc.addClass("putt");
         $disc.css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
 
+        if(shotPower <= 25) {
+          setTimeout(function() {
+            metalHitAudio.volume = 0.7;
+            metalHitAudio.play();
+          }, 1000);
+        }
+
+        else if(shotPower >= 26) {
+          setTimeout(function() {
+            cageHitAudio.volume = 0.7;
+            cageHitAudio.play();
+          }, 1000);
+        }
+
         setTimeout(function() {
           var dropHeight = powerChange + -380;
           $disc.addClass("putt-drop");
@@ -236,6 +252,11 @@ $(document).ready(function() {
         var shotHeight = powerChange + -580 + powerChange + powerChange;
         $disc.addClass("putt");
         $disc.css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
+
+        setTimeout(function() {
+          metalHitAudio.volume = 0.7;
+          metalHitAudio.play();
+        }, 1000);
 
         setTimeout(function() {
           var dropHeight = powerChange + -456;
