@@ -64,12 +64,16 @@ $(document).ready(function() {
       $muteButton.removeClass("fa-volume-up");
       $muteButton.addClass("fa-volume-off");
       chainHitAudio.muted = true;
+      cageHitAudio.muted = true;
+      metalHitAudio.muted = true;
       muteStatus = true;
     }
     else if(muteStatus === true) {
       $muteButton.removeClass("fa-volume-off");
       $muteButton.addClass("fa-volume-up");
       chainHitAudio.muted = false;
+      cageHitAudio.muted = false;
+      metalHitAudio.muted = false;
       muteStatus = false;
     }
   }
