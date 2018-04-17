@@ -369,11 +369,10 @@ body {
   position: absolute;
   top: 0px;
   width: 100%;
-  height: 173px;
+  height: 172px;
   background-color: #b9e2f5;
-  background: linear-gradient(#b9e2f5, white, white, white);
+  background: linear-gradient(#b9e2f5, #dcf0fa, #edf7fc, white);
   background-repeat: no-repeat;
-  background-attachment: fixed;
   z-index: -5;
 }
 
@@ -381,12 +380,12 @@ body {
   position: absolute;
   top: 172px;
   width: 100%;
-  height: 600px;
+  height: 100%;
   background-color: #8fcc33;
   background: linear-gradient(white, #bce085, #8fcc33, #72a329);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  z-index: -4;
+  z-index: -100;
 }
 
 /* ----------------------------- Media Queries ----------------------------- */
