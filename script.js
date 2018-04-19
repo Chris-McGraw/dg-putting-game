@@ -362,22 +362,22 @@ $(document).ready(function() {
       }
 
   /* ---------------------- Missed Putt Low ---------------------- */
-      if($disc.position().top >= 0 && $("#disc").position().top <= 54) {
+      if($disc.position().top >= 0 && $disc.position().top <= 54) {
         missedPuttLow();
       }
 
   /* ------------------------- Made Putt ------------------------- */
-      if($disc.position().top >= 55 && $("#disc").position().top <= 75) {
+      if($disc.position().top >= 55 && $disc.position().top <= 75) {
         madePutt();
       }
 
   /* ---------------------- Missed Putt Belt ---------------------- */
-      if($disc.position().top >= 76 && $("#disc").position().top <= 91) {
+      if($disc.position().top >= 76 && $disc.position().top <= 91) {
         missedPuttBelt();
       }
 
   /* ---------------------- Missed Putt High ---------------------- */
-      if($disc.position().top >= 92 && $("#disc").position().top <= 110) {
+      if($disc.position().top >= 92 && $disc.position().top <= 110) {
         missedPuttHigh();
       }
     }
