@@ -288,8 +288,8 @@ body {
   display: inline-block;
   position: absolute;
   top: 66%;
-  left: 0;
-  width: 100%;
+  left: 0.25px;
+  width: 99.5%;
   height: 33%;
   border-radius: 0 0 20px 20px;
   background-color: rgba(0, 0, 0, 0.3);
