@@ -207,7 +207,7 @@ body {
 }
 
 #corner-quit-text {
-  position: absolute;
+  position: relative;
   top: 5px;
   left: 0;
   right: 0;
