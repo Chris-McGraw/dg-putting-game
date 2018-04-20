@@ -167,10 +167,30 @@ $(document).ready(function() {
   function missedPuttLow() {
     for(shotPower = 0; shotPower <= 54; shotPower++) {
       if($disc.position().top === shotPower) {
-        var powerChange = 0 - shotPower;
-        var shotHeight = powerChange + -386 + powerChange + (powerChange / 4);
-        $disc.addClass("putt");
-        $disc.css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
+        if($(window).height() >= 676) {
+          var powerChange = 0 - shotPower;
+          var shotHeight = powerChange + -386 + powerChange + (powerChange / 4);
+          $disc.addClass("putt");
+          $disc.css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
+
+          setTimeout(function() {
+            var dropHeight = powerChange + -380;
+            $disc.addClass("putt-drop");
+            $disc.css({"transform": "translate(18px," + dropHeight + "px) rotate(0deg)"});
+          }, 1100);
+        }
+        else if($(window).height() <= 675) {
+          var powerChange = 0 - shotPower;
+          var shotHeight = powerChange + -255 + powerChange + (powerChange / 4);
+          $disc.addClass("putt");
+          $disc.css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
+
+          setTimeout(function() {
+            var dropHeight = powerChange + -250;
+            $disc.addClass("putt-drop");
+            $disc.css({"transform": "translate(18px," + dropHeight + "px) rotate(0deg)"});
+          }, 1100);
+        }
 
         if(shotPower <= 25) {
           setTimeout(function() {
@@ -187,12 +207,6 @@ $(document).ready(function() {
         }
 
         setTimeout(function() {
-          var dropHeight = powerChange + -380;
-          $disc.addClass("putt-drop");
-          $disc.css({"transform": "translate(18px," + dropHeight + "px) rotate(0deg)"});
-        }, 1100);
-
-        setTimeout(function() {
           $disc.removeClass("putt");
           $disc.removeClass("putt-drop");
           $disc.addClass("disc-start");
@@ -206,22 +220,37 @@ $(document).ready(function() {
   function madePutt() {
     for(shotPower = 55; shotPower <= 75; shotPower++) {
       if($disc.position().top === shotPower) {
-        var powerChange = 55 - shotPower;
-        var shotHeight = powerChange + -515 + powerChange + powerChange;
-        $disc.addClass("putt");
-        $disc.css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
+        if($(window).height() >= 676) {
+          var powerChange = 55 - shotPower;
+          var shotHeight = powerChange + -515 + powerChange + powerChange;
+          $disc.addClass("putt");
+          $disc.css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
+
+          setTimeout(function() {
+            var dropHeight = powerChange + -480;
+            $disc.addClass("putt-drop");
+            $disc.css({"transform": "translate(18px," + dropHeight + "px) rotate(0deg)"});
+            $cage.addClass("cage-overlay");
+          }, 1100);
+        }
+        else if($(window).height() <= 675) {
+          var powerChange = 55 - shotPower;
+          var shotHeight = powerChange + -384 + powerChange + powerChange;
+          $disc.addClass("putt");
+          $disc.css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
+
+          setTimeout(function() {
+            var dropHeight = powerChange + -350;
+            $disc.addClass("putt-drop");
+            $disc.css({"transform": "translate(18px," + dropHeight + "px) rotate(0deg)"});
+            $cage.addClass("cage-overlay");
+          }, 1100);
+        }
 
         setTimeout(function() {
           chainHitAudio.volume = 0.5;
           chainHitAudio.play();
         }, 1000);
-
-        setTimeout(function() {
-          var dropHeight = powerChange + -480;
-          $disc.addClass("putt-drop");
-          $disc.css({"transform": "translate(18px," + dropHeight + "px) rotate(0deg)"});
-          $cage.addClass("cage-overlay");
-        }, 1100);
 
         setTimeout(function() {
           if(gameMode === "timed" && currentTime >= 0) {
@@ -252,21 +281,35 @@ $(document).ready(function() {
   function missedPuttBelt() {
     for(shotPower = 76; shotPower <= 91; shotPower++) {
       if($disc.position().top === shotPower) {
-        var powerChange = 76 - shotPower;
-        var shotHeight = powerChange + -580 + powerChange + powerChange;
-        $disc.addClass("putt");
-        $disc.css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
+        if($(window).height() >= 676) {
+          var powerChange = 76 - shotPower;
+          var shotHeight = powerChange + -580 + powerChange + powerChange;
+          $disc.addClass("putt");
+          $disc.css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
+
+          setTimeout(function() {
+            var dropHeight = powerChange + -456;
+            $disc.addClass("putt-drop");
+            $disc.css({"transform": "translate(18px," + dropHeight + "px) rotate(0deg)"});
+          }, 1100);
+        }
+        else if($(window).height() <= 675) {
+          var powerChange = 76 - shotPower;
+          var shotHeight = powerChange + -449 + powerChange + powerChange;
+          $disc.addClass("putt");
+          $disc.css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
+
+          setTimeout(function() {
+            var dropHeight = powerChange + -326;
+            $disc.addClass("putt-drop");
+            $disc.css({"transform": "translate(18px," + dropHeight + "px) rotate(0deg)"});
+          }, 1100);
+        }
 
         setTimeout(function() {
           metalHitAudio.volume = 0.7;
           metalHitAudio.play();
         }, 1000);
-
-        setTimeout(function() {
-          var dropHeight = powerChange + -456;
-          $disc.addClass("putt-drop");
-          $disc.css({"transform": "translate(18px," + dropHeight + "px) rotate(0deg)"});
-        }, 1100);
 
         setTimeout(function() {
           $disc.removeClass("putt");
@@ -282,16 +325,30 @@ $(document).ready(function() {
   function missedPuttHigh() {
     for(shotPower = 92; shotPower <= 110; shotPower++) {
       if($disc.position().top === shotPower) {
-        var powerChange = 92 - shotPower;
-        var shotHeight = powerChange + -629 + powerChange + powerChange;
-        $disc.addClass("putt-high");
-        $disc.css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
+        if($(window).height() >= 676) {
+          var powerChange = 92 - shotPower;
+          var shotHeight = powerChange + -629 + powerChange + powerChange;
+          $disc.addClass("putt-high");
+          $disc.css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
 
-        setTimeout(function() {
-          var dropHeight = powerChange + -472;
-          $disc.addClass("putt-drop-behind");
-          $disc.css({"transform": "translate(0px," + dropHeight + "px) rotate(0deg)"});
-        }, 1000);
+          setTimeout(function() {
+            var dropHeight = powerChange + -472;
+            $disc.addClass("putt-drop-behind");
+            $disc.css({"transform": "translate(0px," + dropHeight + "px) rotate(0deg)"});
+          }, 1000);
+        }
+        else if($(window).height() <= 675) {
+          var powerChange = 92 - shotPower;
+          var shotHeight = powerChange + -498 + powerChange + powerChange;
+          $disc.addClass("putt-high");
+          $disc.css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
+
+          setTimeout(function() {
+            var dropHeight = powerChange + -342;
+            $disc.addClass("putt-drop-behind");
+            $disc.css({"transform": "translate(0px," + dropHeight + "px) rotate(0deg)"});
+          }, 1000);
+        }
 
         setTimeout(function() {
           $disc.removeClass("putt-high");
