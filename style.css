@@ -428,7 +428,7 @@ body {
     right: 20px;
     width: 67px;
     height: 27px;
-    padding-top: 0.75%;
+    padding-top: 3px;
   }
 
   #mute-button {
@@ -436,7 +436,7 @@ body {
     right: 20px;
     width: 40px;
     height: 40px;
-    padding-top: 0.5%;
+    padding-top: 2px;
     font-size: 36px;
   }
 }
