@@ -245,6 +245,7 @@ body {
   text-align: center;
 
   box-sizing: border-box;
+  line-height: 0;
 }
 
 #putt-start-line-left {
