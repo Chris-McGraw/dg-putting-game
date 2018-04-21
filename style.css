@@ -167,6 +167,7 @@ body {
   height: auto;
   margin: auto;
   text-align: center;
+  line-height: 0;
 }
 
 #basket {
@@ -239,6 +240,8 @@ body {
   height: 50px;
   margin: auto;
   text-align: center;
+  box-sizing: border-box;
+  line-height: 0;
 }
 
 #putt-start-line-left {
