@@ -241,8 +241,6 @@ body {
   height: 50px;
   margin: auto;
   text-align: center;
-
-  box-sizing: border-box;
 }
 
 #putt-start-line-left {
