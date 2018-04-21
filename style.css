@@ -5,12 +5,10 @@
   -webkit-user-select: none;
   -webkit-touch-callout: none;
 
-  /* border: 2px solid red; */
+  border: 2px solid red;
 }
 
 body {
-  margin: 0;
-  padding: 0;
   overflow: hidden;
 }
 
