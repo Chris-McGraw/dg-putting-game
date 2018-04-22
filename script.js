@@ -65,7 +65,7 @@ $(document).ready(function() {
   }
 
 
-  /* function muteToggle() {
+  function muteToggle() {
     if(muteStatus === false) {
       $muteButton.removeClass("fa-volume-up");
       $muteButton.addClass("fa-volume-off");
@@ -82,7 +82,7 @@ $(document).ready(function() {
       metalHitAudio.muted = false;
       muteStatus = false;
     }
-  } */
+  }
 
 
   function displayGameStartOverlay() {
@@ -379,7 +379,7 @@ $(document).ready(function() {
   });
 
   $muteButton.on("click", function() {
-    /* muteToggle(); */
+    muteToggle();
   });
 
   $cornerQuit.on("click", function() {
