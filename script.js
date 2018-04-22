@@ -376,6 +376,10 @@ $(document).ready(function() {
 
   $gameModePractice.on("click", function() {
     startGameModePractice();
+
+    chainHitAudio.muted = true;
+    cageHitAudio.muted = true;
+    metalHitAudio.muted = true;
   });
 
   $disc.on("click", function() {
