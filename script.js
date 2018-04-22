@@ -1,26 +1,26 @@
 $(document).ready(function() {
 
-  /* $(document).on("touchmove", function(event) {
+  $(document).on("touchmove", function(event) {
     event.preventDefault();
     event.stopPropagation();
-  }); */
+  });
 
 /* ------------------------- Variable Declarations ------------------------- */
 
   gameMode = "";
-  muteStatus = false;
+  muteStatus = true;
   timerStart = false;
   currentTime = 0;
   currentScore = 0;
 
   chainHitAudio = document.getElementById("chain-hit-audio");
-  chainHitAudio.muted = false;
+  chainHitAudio.muted = true;
   chainHitAudio.volume = 0.5;
   cageHitAudio = document.getElementById("cage-hit-audio");
-  cageHitAudio.muted = false;
+  cageHitAudio.muted = true;
   cageHitAudio.volume = 0.7;
   metalHitAudio = document.getElementById("metal-hit-audio");
-  metalHitAudio.muted = false;
+  metalHitAudio.muted = true;
   metalHitAudio.volume = 0.7;
 
   $gamestartOverlayBackground = $("#gamestart-overlay-background");
@@ -65,7 +65,7 @@ $(document).ready(function() {
   }
 
 
-  /* function muteToggle() {
+  function muteToggle() {
     if(muteStatus === false) {
       $muteButton.removeClass("fa-volume-up");
       $muteButton.addClass("fa-volume-off");
@@ -82,7 +82,7 @@ $(document).ready(function() {
       metalHitAudio.muted = false;
       muteStatus = false;
     }
-  } */
+  }
 
 
   function displayGameStartOverlay() {
@@ -379,7 +379,7 @@ $(document).ready(function() {
   });
 
   $muteButton.on("click", function() {
-    /* muteToggle(); */
+    muteToggle();
   });
 
   $cornerQuit.on("click", function() {
