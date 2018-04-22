@@ -14,8 +14,11 @@ $(document).ready(function() {
   currentScore = 0;
 
   chainHitAudio = document.getElementById("chain-hit-audio");
+  chainHitAudio.volume = 0.5;
   cageHitAudio = document.getElementById("cage-hit-audio");
+  cageHitAudio.volume = 0.7;
   metalHitAudio = document.getElementById("metal-hit-audio");
+  metalHitAudio.volume = 0.7;
 
   $gamestartOverlayBackground = $("#gamestart-overlay-background");
   $gamestartOverlayMenu = $("#gamestart-overlay-menu");
@@ -194,14 +197,12 @@ $(document).ready(function() {
 
         if(shotPower <= 25) {
           setTimeout(function() {
-            metalHitAudio.volume = 0.7;
             metalHitAudio.play();
           }, 1000);
         }
 
         else if(shotPower >= 26) {
           setTimeout(function() {
-            cageHitAudio.volume = 0.7;
             cageHitAudio.play();
           }, 1000);
         }
@@ -248,7 +249,6 @@ $(document).ready(function() {
         }
 
         setTimeout(function() {
-          chainHitAudio.volume = 0.5;
           chainHitAudio.play();
         }, 1000);
 
@@ -307,7 +307,6 @@ $(document).ready(function() {
         }
 
         setTimeout(function() {
-          metalHitAudio.volume = 0.7;
           metalHitAudio.play();
         }, 1000);
 
