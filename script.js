@@ -8,19 +8,19 @@ $(document).ready(function() {
 /* ------------------------- Variable Declarations ------------------------- */
 
   gameMode = "";
-  muteStatus = false;
+  muteStatus = true;
   timerStart = false;
   currentTime = 0;
   currentScore = 0;
 
   chainHitAudio = document.getElementById("chain-hit-audio");
-  chainHitAudio.muted = false;
+  chainHitAudio.muted = true;
   chainHitAudio.volume = 0.5;
   cageHitAudio = document.getElementById("cage-hit-audio");
-  cageHitAudio.muted = false;
+  cageHitAudio.muted = true;
   cageHitAudio.volume = 0.7;
   metalHitAudio = document.getElementById("metal-hit-audio");
-  metalHitAudio.muted = false;
+  metalHitAudio.muted = true;
   metalHitAudio.volume = 0.7;
 
   $gamestartOverlayBackground = $("#gamestart-overlay-background");
