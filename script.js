@@ -13,13 +13,13 @@ $(document).ready(function() {
   currentTime = 0;
   currentScore = 0;
 
-  chainHitAudio = document.getElementById("chain-hit-audio");
+  var chainHitAudio = document.getElementById("chain-hit-audio");
   chainHitAudio.muted = false;
   chainHitAudio.volume = 0.5;
-  cageHitAudio = document.getElementById("cage-hit-audio");
+  var cageHitAudio = document.getElementById("cage-hit-audio");
   cageHitAudio.muted = false;
   cageHitAudio.volume = 0.7;
-  metalHitAudio = document.getElementById("metal-hit-audio");
+  var metalHitAudio = document.getElementById("metal-hit-audio");
   metalHitAudio.muted = false;
   metalHitAudio.volume = 0.7;
 
