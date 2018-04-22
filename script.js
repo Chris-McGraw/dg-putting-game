@@ -378,6 +378,19 @@ $(document).ready(function() {
     startGameModePractice();
   });
 
+  $disc.on("click", function() {
+    if(muteStatus === false) {
+      chainHitAudio.muted = false;
+      cageHitAudio.muted = false;
+      metalHitAudio.muted = false;
+    }
+    else if(muteStatus === true) {
+      chainHitAudio.muted = true;
+      cageHitAudio.muted = true;
+      metalHitAudio.muted = true;
+    }
+  });
+
   $muteButton.on("click", function() {
     muteToggle();
   });
