@@ -382,7 +382,20 @@ $(document).ready(function() {
     metalHitAudio.muted = true;
   });
 
-  $disc.on("click", function() {
+  $(document).on("touchstart", function() {
+    if(muteStatus === false) {
+      chainHitAudio.muted = false;
+      cageHitAudio.muted = false;
+      metalHitAudio.muted = false;
+    }
+    else if(muteStatus === true) {
+      chainHitAudio.muted = true;
+      cageHitAudio.muted = true;
+      metalHitAudio.muted = true;
+    }
+  });
+
+  $(document).on("click", function() {
     if(muteStatus === false) {
       chainHitAudio.muted = false;
       cageHitAudio.muted = false;
