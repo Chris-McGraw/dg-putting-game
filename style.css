@@ -208,7 +208,7 @@ body {
 
 #putting-instructions {
   position: absolute;
-  top: 525px;
+  top: 524px;
   left: 0;
   right: 0;
   width: 380px;
@@ -509,19 +509,21 @@ body {
   #overlay-play-again {
     top: 20px;
     height: 26px;
-    padding-top: 0px;
-    padding-bottom: 12px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    line-height: 0.8;
   }
 
   #overlay-quit {
     top: 30px;
     height: 26px;
-    padding-top: 2px;
-    padding-bottom: 10px;
+    padding-top: 8px;
+    padding-bottom: 4px;
+    line-height: 0.8;
   }
 
   #putting-instructions {
-    top: 395px;
+    top: 394px;
   }
 
   #inline-container {
