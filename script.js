@@ -124,7 +124,7 @@ $(document).ready(function() {
     $puttStartLineRight.removeClass("putt-start-line-right-collapsed");
     currentTime = 0;
     $gameTimer.html("Remaining Time: " + currentTime);
-    $gameTitleTop.html("Total Score:");
+    $gameTitleTop.html("Final Score" + "<span class='centered-colon'>:</span>");
     $gameTitleBottom.html("--");
     $gameModeTimed.remove();
     $gameModePractice.remove();
@@ -132,7 +132,6 @@ $(document).ready(function() {
     $overlayQuit.remove();
 
     setTimeout(function() {
-      $gameTitleTop.html("Total Score:");
       $gameTitleBottom.html(currentScore);
       $gamestartOverlayMenu.append("<div id='overlay-play-again'>Play Again</div>");
       $overlayPlayAgain = $("#overlay-play-again");
