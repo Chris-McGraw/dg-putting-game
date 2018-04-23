@@ -494,10 +494,9 @@ body {
 
   #game-mode-timed {
     top: 20px;
-    height: 26px;
-    padding-top: 8px;
-    padding-bottom: 4px;
-    line-height: 0.8;
+    height: 18px;
+    padding-top: 20px;
+    line-height: 0;
   }
 
   #game-mode-practice {
