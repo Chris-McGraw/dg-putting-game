@@ -208,7 +208,7 @@ body {
 
 #putting-instructions {
   position: absolute;
-  top: 525px;
+  top: 524px;
   left: 0;
   right: 0;
   width: 380px;
@@ -521,7 +521,7 @@ body {
   }
 
   #putting-instructions {
-    top: 395px;
+    top: 394px;
   }
 
   #inline-container {
