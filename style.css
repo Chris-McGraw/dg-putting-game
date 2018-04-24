@@ -172,7 +172,7 @@ body {
 
 #basket-container {
   position: relative;
-  top: 20px;
+  top: 110px;
   width: 120px;
   height: auto;
   margin: auto;
@@ -401,6 +401,76 @@ body {
   background: linear-gradient(#b9e2f5, #dcf0fa, #edf7fc, white);
   background-repeat: no-repeat;
   z-index: -5;
+}
+
+#background-mountain-1 {
+  position: absolute;
+  top: 92px;
+  left: -340px;
+  right: 0px;
+  margin: auto;
+  width: 0;
+	height: 0;
+	border-left: 180px solid transparent;
+	border-right: 180px solid transparent;
+	border-bottom: 80px solid #E9EAEE;
+  z-index: -2;
+}
+
+#background-mountain-2 {
+  position: absolute;
+  top: 22px;
+  left: -120px;
+  right: 0;
+  margin: auto;
+  width: 0;
+	height: 0;
+	border-left: 180px solid transparent;
+	border-right: 180px solid transparent;
+	border-bottom: 150px solid #DCDCDF;
+  z-index: -1;
+}
+
+#background-mountain-3 {
+  position: absolute;
+  top: 72px;
+  left: 0;
+  right: -80px;
+  margin: auto;
+  width: 0;
+	height: 0;
+	border-left: 135px solid transparent;
+	border-right: 135px solid transparent;
+	border-bottom: 100px solid #E9EAEE;
+  z-index: -2;
+}
+
+#background-mountain-4 {
+  position: absolute;
+  top: 92px;
+  left: 0px;
+  right: -240px;
+  margin: auto;
+  width: 0;
+	height: 0;
+	border-left: 180px solid transparent;
+	border-right: 180px solid transparent;
+	border-bottom: 80px solid #DCDCDF;
+  z-index: -1;
+}
+
+#background-mountain-5 {
+  position: absolute;
+  top: 97px;
+  left: 0px;
+  right: -370px;
+  margin: auto;
+  width: 0;
+	height: 0;
+	border-left: 200px solid transparent;
+	border-right: 200px solid transparent;
+	border-bottom: 75px solid #E9EAEE;
+  z-index: -2;
 }
 
 #background-grass {
