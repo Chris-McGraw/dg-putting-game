@@ -519,8 +519,8 @@ body {
   #overlay-play-again {
     top: 20px;
     height: 26px;
-    padding-top: 0px;
-    padding-bottom: 12px;
+    padding-top: 2px;
+    padding-bottom: 10px;
   }
 
   #overlay-quit {
