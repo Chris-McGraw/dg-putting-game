@@ -170,7 +170,7 @@ $(document).ready(function() {
 
 
   function missedPuttLow() {
-    for(shotPower = 0; shotPower <= 54; shotPower++) {
+    for(shotPower = 0; shotPower <= 22; shotPower++) {
       if($disc.position().top === shotPower) {
         if($(window).height() >= 676) {
           var powerChange = 0 - shotPower;
@@ -179,7 +179,7 @@ $(document).ready(function() {
           $disc.css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
 
           setTimeout(function() {
-            var dropHeight = powerChange + -280;
+            var dropHeight = powerChange + -278;
             $disc.addClass("putt-drop");
             $disc.css({"transform": "translate(18px," + dropHeight + "px) rotate(0deg)"});
           }, 1100);
@@ -197,17 +197,52 @@ $(document).ready(function() {
           }, 1100);
         }
 
-        if(shotPower <= 25) {
+        setTimeout(function() {
+          metalHitAudio.play();
+        }, 1000);
+
+        setTimeout(function() {
+          $disc.removeClass("putt");
+          $disc.removeClass("putt-drop");
+          $disc.addClass("disc-start");
+          $disc.css({"transform": "translate(0px, 0px) rotate(0deg)"});
+        }, 2250);
+      }
+    }
+  }
+
+
+  function missedPuttCage() {
+    for(shotPower = 23; shotPower <= 54; shotPower++) {
+      if($disc.position().top === shotPower) {
+        if($(window).height() >= 676) {
+          var powerChange = 0 - shotPower;
+          var shotHeight = powerChange + -287 + powerChange + (powerChange / 4);
+          $disc.addClass("putt");
+          $disc.css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
+
           setTimeout(function() {
-            metalHitAudio.play();
-          }, 1000);
+            var dropHeight = powerChange + -270;
+            $disc.addClass("putt-drop");
+            $disc.css({"transform": "translate(18px," + dropHeight + "px) rotate(0deg)"});
+          }, 1100);
+        }
+        else if($(window).height() <= 675) {
+          var powerChange = 0 - shotPower;
+          var shotHeight = powerChange + -246 + powerChange + (powerChange / 4);
+          $disc.addClass("putt");
+          $disc.css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
+
+          setTimeout(function() {
+            var dropHeight = powerChange + -240;
+            $disc.addClass("putt-drop");
+            $disc.css({"transform": "translate(18px," + dropHeight + "px) rotate(0deg)"});
+          }, 1100);
         }
 
-        else if(shotPower >= 26) {
-          setTimeout(function() {
-            cageHitAudio.play();
-          }, 1000);
-        }
+        setTimeout(function() {
+          cageHitAudio.play();
+        }, 1000);
 
         setTimeout(function() {
           $disc.removeClass("putt");
@@ -445,9 +480,14 @@ $(document).ready(function() {
         }, 500);
       }
 
-  /* ---------------------- Missed Putt Low ---------------------- */
-      if($disc.position().top >= 0 && $disc.position().top <= 54) {
+  /* --------------------- Missed Putt Low --------------------- */
+      if($disc.position().top >= 0 && $disc.position().top <= 22) {
         missedPuttLow();
+      }
+
+  /* --------------------- Missed Putt Cage --------------------- */
+      if($disc.position().top >= 23 && $disc.position().top <= 54) {
+        missedPuttCage();
       }
 
   /* ------------------------- Made Putt ------------------------- */
@@ -455,12 +495,12 @@ $(document).ready(function() {
         madePutt();
       }
 
-  /* ---------------------- Missed Putt Belt ---------------------- */
+  /* --------------------- Missed Putt Belt --------------------- */
       if($disc.position().top >= 76 && $disc.position().top <= 91) {
         missedPuttBelt();
       }
 
-  /* ---------------------- Missed Putt High ---------------------- */
+  /* --------------------- Missed Putt High --------------------- */
       if($disc.position().top >= 92 && $disc.position().top <= 110) {
         missedPuttHigh();
       }
