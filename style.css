@@ -406,7 +406,7 @@ body {
 #background-mountain-1 {
   position: absolute;
   top: 92px;
-  left: -340px;
+  left: -320px;
   right: 0px;
   margin: auto;
   width: 0;
@@ -419,15 +419,15 @@ body {
 
 #background-mountain-2 {
   position: absolute;
-  top: 22px;
-  left: -120px;
+  top: 47px;
+  left: -80px;
   right: 0;
   margin: auto;
   width: 0;
 	height: 0;
 	border-left: 180px solid transparent;
 	border-right: 180px solid transparent;
-	border-bottom: 150px solid #DCDCDF;
+	border-bottom: 125px solid #DCDCDF;
   z-index: -3;
 }
 
@@ -435,7 +435,7 @@ body {
   position: absolute;
   top: 72px;
   left: 0;
-  right: -80px;
+  right: -110px;
   margin: auto;
   width: 0;
 	height: 0;
