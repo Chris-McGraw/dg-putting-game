@@ -186,12 +186,12 @@ $(document).ready(function() {
         }
         else if($(window).height() <= 675) {
           var powerChange = 0 - shotPower;
-          var shotHeight = powerChange + -246 + powerChange + (powerChange / 4);
+          var shotHeight = powerChange + -156 + powerChange + (powerChange / 4);
           $disc.addClass("putt");
           $disc.css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
 
           setTimeout(function() {
-            var dropHeight = powerChange + -240;
+            var dropHeight = powerChange + -148;
             $disc.addClass("putt-drop");
             $disc.css({"transform": "translate(18px," + dropHeight + "px) rotate(0deg)"});
           }, 1100);
@@ -229,12 +229,12 @@ $(document).ready(function() {
         }
         else if($(window).height() <= 675) {
           var powerChange = 0 - shotPower;
-          var shotHeight = powerChange + -246 + powerChange + (powerChange / 4);
+          var shotHeight = powerChange + -156 + powerChange + (powerChange / 4);
           $disc.addClass("putt");
           $disc.css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
 
           setTimeout(function() {
-            var dropHeight = powerChange + -240;
+            var dropHeight = powerChange + -140;
             $disc.addClass("putt-drop");
             $disc.css({"transform": "translate(18px," + dropHeight + "px) rotate(0deg)"});
           }, 1100);
@@ -273,12 +273,12 @@ $(document).ready(function() {
         }
         else if($(window).height() <= 675) {
           var powerChange = 55 - shotPower;
-          var shotHeight = powerChange + -374 + powerChange + powerChange;
+          var shotHeight = powerChange + -284 + powerChange + powerChange;
           $disc.addClass("putt");
           $disc.css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
 
           setTimeout(function() {
-            var dropHeight = powerChange + -340;
+            var dropHeight = powerChange + -250;
             $disc.addClass("putt-drop");
             $disc.css({"transform": "translate(18px," + dropHeight + "px) rotate(0deg)"});
             $cage.addClass("cage-overlay");
@@ -332,12 +332,12 @@ $(document).ready(function() {
         }
         else if($(window).height() <= 675) {
           var powerChange = 76 - shotPower;
-          var shotHeight = powerChange + -439 + powerChange + powerChange;
+          var shotHeight = powerChange + -349 + powerChange + powerChange;
           $disc.addClass("putt");
           $disc.css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
 
           setTimeout(function() {
-            var dropHeight = powerChange + -316;
+            var dropHeight = powerChange + -211;
             $disc.addClass("putt-drop");
             $disc.css({"transform": "translate(18px," + dropHeight + "px) rotate(0deg)"});
           }, 1100);
@@ -375,12 +375,12 @@ $(document).ready(function() {
         }
         else if($(window).height() <= 675) {
           var powerChange = 92 - shotPower;
-          var shotHeight = powerChange + -490 + powerChange + powerChange;
+          var shotHeight = powerChange + -400 + powerChange + powerChange;
           $disc.addClass("putt-high");
           $disc.css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
 
           setTimeout(function() {
-            var dropHeight = powerChange + -330;
+            var dropHeight = powerChange + -255;
             $disc.addClass("putt-drop-behind");
             $disc.css({"transform": "translate(0px," + dropHeight + "px) rotate(0deg)"});
           }, 1000);
