@@ -290,7 +290,7 @@ $(document).ready(function() {
           $disc.css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
 
           setTimeout(function() {
-            var dropHeight = powerChange + -356;
+            var dropHeight = powerChange + -341;
             $disc.addClass("putt-drop");
             $disc.css({"transform": "translate(18px," + dropHeight + "px) rotate(0deg)"});
           }, 1100);
