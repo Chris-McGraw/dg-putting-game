@@ -431,6 +431,114 @@ body {
   z-index: -3;
 }
 
+#snowcap-2 {
+  position: absolute;
+  top: 0;
+  left: -22px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 22px solid transparent;
+	border-right: 22px solid transparent;
+	border-bottom: 15px solid #FFFAFA;
+  z-index: -3;
+}
+
+#accent-2-1 {
+  position: absolute;
+  top: 14px;
+  left: -18px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #FFFAFA;
+  z-index: -3;
+}
+
+#accent-2-1:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -8px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 3px solid transparent;
+	border-right: 3px solid transparent;
+	border-top: 3px solid #FFFAFA;
+  z-index: -3;
+}
+
+#accent-2-1:after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 2px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 3px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 4px solid #FFFAFA;
+  z-index: -3;
+}
+
+#accent-2-2 {
+  position: absolute;
+  top: 14px;
+  left: -7px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-top: 6px solid #FFFAFA;
+  z-index: -3;
+}
+
+#accent-2-3 {
+  position: absolute;
+  top: 14px;
+  left: 8px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #FFFAFA;
+  z-index: -3;
+}
+
+#accent-2-3:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -9px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+	border-right: 3px solid transparent;
+	border-top: 4px solid #FFFAFA;
+  z-index: -3;
+}
+
+#accent-2-3:after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 2px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 3px solid transparent;
+	border-right: 3px solid transparent;
+	border-top: 3px solid #FFFAFA;
+  z-index: -3;
+}
+
 #background-mountain-3 {
   position: absolute;
   top: 72px;
@@ -456,6 +564,114 @@ body {
 	border-left: 180px solid transparent;
 	border-right: 180px solid transparent;
 	border-bottom: 80px solid #DCDCDF;
+  z-index: -3;
+}
+
+#snowcap-4 {
+  position: absolute;
+  top: 0;
+  left: -23px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 23px solid transparent;
+	border-right: 23px solid transparent;
+	border-bottom: 10px solid #FFFAFA;
+  z-index: -3;
+}
+
+#accent-4-1 {
+  position: absolute;
+  top: 9px;
+  left: -17px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+	border-right: 7px solid transparent;
+	border-top: 7px solid #FFFAFA;
+  z-index: -2;
+}
+
+#accent-4-1:before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: -8px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 3px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 4px solid #FFFAFA;
+  z-index: -3;
+}
+
+#accent-4-1:after {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: 4px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 3px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 4px solid #FFFAFA;
+  z-index: -3;
+}
+
+#accent-4-2 {
+  position: absolute;
+  top: 9px;
+  left: -3px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 3px solid transparent;
+	border-right: 3px solid transparent;
+	border-top: 4px solid #FFFAFA;
+  z-index: -3;
+}
+
+#accent-4-3 {
+  position: absolute;
+  top: 9px;
+  left: 6px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 7px solid #FFFAFA;
+  z-index: -3;
+}
+
+#accent-4-3:before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: -12.8px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+	border-right: 3px solid transparent;
+	border-top: 4px solid #FFFAFA;
+  z-index: -3;
+}
+
+#accent-4-3:after {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+	border-right: 3px solid transparent;
+	border-top: 4px solid #FFFAFA;
   z-index: -3;
 }
 
