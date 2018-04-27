@@ -454,7 +454,7 @@ body {
   border-left: 5px solid transparent;
 	border-right: 5px solid transparent;
 	border-top: 5px solid #FFFAFA;
-  z-index: -3;
+  z-index: -2;
 }
 
 #accent-2-1:before {
@@ -583,7 +583,7 @@ body {
 #accent-4-1 {
   position: absolute;
   top: 9px;
-  left: -17px;
+  left: -16px;
   right: 0;
   width: 0;
   height: 0;
@@ -597,11 +597,11 @@ body {
   content: "";
   position: absolute;
   top: -7px;
-  left: -8px;
+  left: -9px;
   right: 0;
   width: 0;
   height: 0;
-  border-left: 2px solid transparent;
+  border-left: 3px solid transparent;
 	border-right: 6px solid transparent;
 	border-top: 4px solid #FFFAFA;
   z-index: -3;
@@ -611,7 +611,7 @@ body {
   content: "";
   position: absolute;
   top: -7px;
-  left: 4px;
+  left: 3px;
   right: 0;
   width: 0;
   height: 0;
@@ -637,7 +637,7 @@ body {
 #accent-4-3 {
   position: absolute;
   top: 9px;
-  left: 7px;
+  left: 6px;
   right: 0;
   width: 0;
   height: 0;
@@ -651,7 +651,7 @@ body {
   content: "";
   position: absolute;
   top: -7px;
-  left: -12px;
+  left: -11px;
   right: 0;
   width: 0;
   height: 0;
@@ -670,7 +670,7 @@ body {
   width: 0;
   height: 0;
   border-left: 6px solid transparent;
-	border-right: 2px solid transparent;
+	border-right: 3px solid transparent;
 	border-top: 4px solid #FFFAFA;
   z-index: -3;
 }
