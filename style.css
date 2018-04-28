@@ -426,7 +426,74 @@ body {
   height: 0;
   border-left: 18px solid transparent;
 	border-right: 18px solid transparent;
-	border-bottom: 8px solid rgba(255,250,250, 0.8);
+	border-bottom: 8px solid #faf7f7;
+  z-index: -3;
+}
+
+#accent-1-1 {
+  position: absolute;
+  top: 7px;
+  left: -16px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+	border-right: 2px solid transparent;
+	border-top: 5px solid #faf7f7;
+  z-index: -3;
+}
+
+#accent-1-2 {
+  position: absolute;
+  top: 7px;
+  left: -5px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #faf7f7;
+  z-index: -3;
+}
+
+#accent-1-2:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -11px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+	border-right: 3px solid transparent;
+	border-top: 3px solid #faf7f7;
+  z-index: -3;
+}
+
+#accent-1-2:after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 3px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 3px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 3px solid #faf7f7;
+  z-index: -3;
+}
+
+#accent-1-3 {
+  position: absolute;
+  top: 7px;
+  left: 8px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 2px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 5px solid #faf7f7;
   z-index: -3;
 }
 
@@ -575,9 +642,49 @@ body {
   height: 0;
   border-left: 11px solid transparent;
 	border-right: 11px solid transparent;
-	border-bottom: 8px solid rgba(255,250,250, 0.8);
+	border-bottom: 8px solid #faf7f7;
   z-index: -3;
 }
+
+#accent-3-1 {
+  position: absolute;
+  top: 7px;
+  left: -10.4px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 3px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 3px solid #faf7f7;
+  z-index: -3;
+}
+
+#accent-3-2 {
+  position: absolute;
+  top: 7px;
+  left: -5px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 4px solid #faf7f7;
+  z-index: -3;
+}
+
+#accent-3-3 {
+  position: absolute;
+  top: 7px;
+  left: 2.4px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+	border-right: 3px solid transparent;
+	border-top: 3px solid #faf7f7;
+  z-index: -3;
+}
+
 
 #background-mountain-4 {
   position: absolute;
@@ -656,7 +763,7 @@ body {
   height: 0;
   border-left: 4px solid transparent;
 	border-right: 4px solid transparent;
-	border-top: 5px solid #FFFAFA;
+	border-top: 6px solid #FFFAFA;
   z-index: -3;
 }
 
@@ -724,7 +831,7 @@ body {
   height: 0;
   border-left: 19px solid transparent;
 	border-right: 19px solid transparent;
-	border-bottom: 7px solid rgba(255,250,250, 0.8);
+	border-bottom: 7px solid #faf7f7;
   z-index: -3;
 }
 
