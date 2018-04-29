@@ -1066,11 +1066,16 @@ body {
   }
 
   #putting-instructions {
-    top: 394px;
+    top: 396px;
   }
 
   #inline-container {
-    top: 271px;
+    top: 273px;
+  }
+
+  #disc {
+    width: 110px;
+    height: 18px;
   }
 
   #arrow-container {
