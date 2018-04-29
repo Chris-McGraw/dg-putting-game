@@ -18,10 +18,6 @@ body {
   transition: visibility 0.4s ease-in-out, opacity 0.4s ease-in-out;
 }
 
-.hide-cage {
-  visibility: hidden;
-}
-
 .centered-colon {
   position: absolute;
   top: -3px;
@@ -1065,20 +1061,25 @@ body {
     top: 112px;
   }
 
+  #cage {
+    top: 65px;
+  }
+
   #putting-instructions {
-    top: 394px;
+    top: 396px;
   }
 
   #inline-container {
-    top: 251px;
+    top: 273px;
+  }
 
-    top: 271px;
+  #disc {
+    width: 110px;
+    height: 18px;
   }
 
   #arrow-container {
     position: relative;
-    top: 201px;
-
     top: 221px;
   }
 
