@@ -44,6 +44,14 @@ $(document).ready(function() {
 
 /* ------------------------- Function Declarations ------------------------- */
 
+  function resizeBasket() {
+    if($(window).height() <= 675) {
+      $basket.attr("src", "http://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_75/v1511904652/dg-basket-edit_Resize_pnxwcj.png");
+      $cage.addClass("hidden");
+    }
+  }
+
+
   function startGameModeTimed() {
     gameMode = "timed";
     $gamestartOverlayBackground.addClass("hidden");
@@ -398,10 +406,15 @@ $(document).ready(function() {
 
 /* ---------------------------- Event Handlers ---------------------------- */
 
+  resizeBasket();
+
   $gamestartOverlayBackground.css("height", $(document).height());
 
   $(window).resize(function() {
     $gamestartOverlayBackground.css("height", $(document).height());
+
+    resizeBasket();
+
   });
 
   $gameModeTimed.on("click", function() {
