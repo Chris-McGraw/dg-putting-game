@@ -46,8 +46,12 @@ $(document).ready(function() {
 
   function resizeBasket() {
     if($(window).height() <= 675) {
-      $basket.attr("src", "http://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_75/v1511904652/dg-basket-edit_Resize_pnxwcj.png");
-      $cage.addClass("hidden");
+      $basket.attr("src", "http://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_80/v1511904652/dg-basket-edit_Resize_pnxwcj.png");
+      $cage.addClass("hide-cage");
+    }
+    else {
+      $basket.attr("src", "https://res.cloudinary.com/dtwyohvli/image/upload/v1511904652/dg-basket-edit_Resize_pnxwcj.png");
+      $cage.removeClass("hide-cage");
     }
   }
 

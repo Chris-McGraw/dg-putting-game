@@ -18,6 +18,10 @@ body {
   transition: visibility 0.4s ease-in-out, opacity 0.4s ease-in-out;
 }
 
+.hide-cage {
+  visibility: hidden;
+}
+
 .centered-colon {
   position: absolute;
   top: -3px;
@@ -1057,17 +1061,25 @@ body {
     padding-bottom: 10px;
   }
 
+  #basket-container {
+    top: 115px;
+  }
+
   #putting-instructions {
     top: 394px;
   }
 
   #inline-container {
     top: 251px;
+
+    top: 271px;
   }
 
   #arrow-container {
     position: relative;
     top: 201px;
+
+    top: 221px;
   }
 
   #mute-button {
