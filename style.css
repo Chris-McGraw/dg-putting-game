@@ -1080,7 +1080,17 @@ body {
 
   #arrow-container {
     position: relative;
-    top: 221px;
+    top: 223px;
+    height: 130px;
+  }
+
+  #arrow-top {
+    top: 28px;
+    height: 70px;
+  }
+
+  #arrow-bottom {
+    top: 28px;
   }
 
   #mute-button {
