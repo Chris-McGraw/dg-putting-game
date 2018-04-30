@@ -198,14 +198,14 @@ $(document).ready(function() {
         }
         else if($(window).height() <= 675) {
           var powerChange = 0 - shotPower;
-          var shotHeight = powerChange + -156 + powerChange + (powerChange / 4);
-          $disc.addClass("putt");
-          $disc.css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
+          var shotHeight = powerChange + -173 + powerChange + (powerChange / 6);
+          $disc.addClass("putt-mobile");
+          $disc.css({"transform": "translate(16px," + shotHeight + "px) rotate(-15deg)"});
 
           setTimeout(function() {
-            var dropHeight = powerChange + -148;
+            var dropHeight = powerChange + -167;
             $disc.addClass("putt-drop");
-            $disc.css({"transform": "translate(18px," + dropHeight + "px) rotate(0deg)"});
+            $disc.css({"transform": "translate(16px," + dropHeight + "px) rotate(0deg)"});
           }, 1100);
         }
 
@@ -215,6 +215,7 @@ $(document).ready(function() {
 
         setTimeout(function() {
           $disc.removeClass("putt");
+          $disc.removeClass("putt-mobile");
           $disc.removeClass("putt-drop");
           $disc.addClass("disc-start");
           $disc.css({"transform": "translate(0px, 0px) rotate(0deg)"});
@@ -241,14 +242,14 @@ $(document).ready(function() {
         }
         else if($(window).height() <= 675) {
           var powerChange = 0 - shotPower;
-          var shotHeight = powerChange + -156 + powerChange + (powerChange / 4);
-          $disc.addClass("putt");
-          $disc.css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
+          var shotHeight = powerChange + -173 + powerChange + (powerChange / 6);
+          $disc.addClass("putt-mobile");
+          $disc.css({"transform": "translate(16px," + shotHeight + "px) rotate(-15deg)"});
 
           setTimeout(function() {
-            var dropHeight = powerChange + -140;
+            var dropHeight = powerChange + -159;
             $disc.addClass("putt-drop");
-            $disc.css({"transform": "translate(18px," + dropHeight + "px) rotate(0deg)"});
+            $disc.css({"transform": "translate(16px," + dropHeight + "px) rotate(0deg)"});
           }, 1100);
         }
 
@@ -258,6 +259,7 @@ $(document).ready(function() {
 
         setTimeout(function() {
           $disc.removeClass("putt");
+          $disc.removeClass("putt-mobile");
           $disc.removeClass("putt-drop");
           $disc.addClass("disc-start");
           $disc.css({"transform": "translate(0px, 0px) rotate(0deg)"});
@@ -285,14 +287,14 @@ $(document).ready(function() {
         }
         else if($(window).height() <= 675) {
           var powerChange = 55 - shotPower;
-          var shotHeight = powerChange + -284 + powerChange + powerChange;
-          $disc.addClass("putt");
-          $disc.css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
+          var shotHeight = powerChange + -295 + powerChange + (powerChange / 1.5);
+          $disc.addClass("putt-mobile");
+          $disc.css({"transform": "translate(16px," + shotHeight + "px) rotate(-15deg)"});
 
           setTimeout(function() {
-            var dropHeight = powerChange + -250;
+            var dropHeight = powerChange + -263;
             $disc.addClass("putt-drop");
-            $disc.css({"transform": "translate(18px," + dropHeight + "px) rotate(0deg)"});
+            $disc.css({"transform": "translate(16px," + dropHeight + "px) rotate(0deg)"});
             $cage.addClass("cage-overlay");
           }, 1100);
         }
@@ -317,6 +319,7 @@ $(document).ready(function() {
 
         setTimeout(function() {
           $disc.removeClass("putt");
+          $disc.removeClass("putt-mobile");
           $disc.removeClass("putt-drop");
           $cage.removeClass("cage-overlay");
           $disc.addClass("disc-start");
@@ -344,14 +347,14 @@ $(document).ready(function() {
         }
         else if($(window).height() <= 675) {
           var powerChange = 76 - shotPower;
-          var shotHeight = powerChange + -349 + powerChange + powerChange;
-          $disc.addClass("putt");
-          $disc.css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
+          var shotHeight = powerChange + -353 + powerChange + (powerChange / 1.5);
+          $disc.addClass("putt-mobile");
+          $disc.css({"transform": "translate(16px," + shotHeight + "px) rotate(-15deg)"});
 
           setTimeout(function() {
-            var dropHeight = powerChange + -211;
+            var dropHeight = powerChange + -231;
             $disc.addClass("putt-drop");
-            $disc.css({"transform": "translate(18px," + dropHeight + "px) rotate(0deg)"});
+            $disc.css({"transform": "translate(16px," + dropHeight + "px) rotate(0deg)"});
           }, 1100);
         }
 
@@ -361,6 +364,7 @@ $(document).ready(function() {
 
         setTimeout(function() {
           $disc.removeClass("putt");
+          $disc.removeClass("putt-mobile");
           $disc.removeClass("putt-drop");
           $disc.addClass("disc-start");
           $disc.css({"transform": "translate(0px, 0px) rotate(0deg)"});
@@ -387,20 +391,22 @@ $(document).ready(function() {
         }
         else if($(window).height() <= 675) {
           var powerChange = 92 - shotPower;
-          var shotHeight = powerChange + -400 + powerChange + powerChange;
-          $disc.addClass("putt-high");
-          $disc.css({"transform": "translate(18px," + shotHeight + "px) rotate(-15deg)"});
+          var shotHeight = powerChange + -399 + powerChange + powerChange;
+          $disc.addClass("putt-high-mobile");
+          $disc.css({"transform": "translate(16px," + shotHeight + "px) rotate(-15deg)"});
 
           setTimeout(function() {
-            var dropHeight = powerChange + -255;
-            $disc.addClass("putt-drop-behind");
+            var dropHeight = powerChange + -271;
+            $disc.addClass("putt-drop-behind-mobile");
             $disc.css({"transform": "translate(0px," + dropHeight + "px) rotate(0deg)"});
           }, 1000);
         }
 
         setTimeout(function() {
           $disc.removeClass("putt-high");
+          $disc.removeClass("putt-high-mobile");
           $disc.removeClass("putt-drop-behind");
+          $disc.removeClass("putt-drop-behind-mobile");
           $disc.addClass("disc-start");
           $disc.css({"transform": "translate(0px, 0px) rotate(0deg)"});
         }, 2250);
@@ -416,9 +422,7 @@ $(document).ready(function() {
 
   $(window).resize(function() {
     $gamestartOverlayBackground.css("height", $(document).height());
-
     resizeBasket();
-
   });
 
   $gameModeTimed.on("click", function() {
