@@ -1,9 +1,9 @@
 $(document).ready(function() {
 
-  /* $(document).on("touchstart", function(event) {
+  $(document).on("touchmove", function(event) {
     event.preventDefault();
     event.stopPropagation();
-  }); */
+  });
 
 /* ------------------------- Variable Declarations ------------------------- */
 
