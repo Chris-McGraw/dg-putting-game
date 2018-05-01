@@ -82,8 +82,6 @@ body {
   border: 1px solid black;
   border-radius: 8px;
   cursor: pointer;
-
-  touch-action: auto;
 }
 
 #game-mode-practice {
@@ -100,8 +98,6 @@ body {
   border: 1px solid black;
   border-radius: 8px;
   cursor: pointer;
-
-  touch-action: auto;
 }
 
 /* #game-mode-timed:hover {
@@ -126,8 +122,6 @@ body {
   border: 1px solid black;
   border-radius: 8px;
   cursor: pointer;
-
-  touch-action: auto;
 }
 
 #overlay-quit {
@@ -144,8 +138,6 @@ body {
   border: 1px solid black;
   border-radius: 8px;
   cursor: pointer;
-
-  touch-action: auto;
 }
 
 /* #overlay-play-again:hover {
