@@ -1,10 +1,5 @@
 $(document).ready(function() {
 
-  $(document).on("touchmove", function(event) {
-    event.preventDefault();
-    event.stopPropagation();
-  });
-
 /* ------------------------- Variable Declarations ------------------------- */
 
   gameMode = "";
@@ -414,15 +409,21 @@ $(document).ready(function() {
     }
   }
 
-/* ---------------------------- Event Handlers ---------------------------- */
+/* ------------------------ Initial Function Calls ------------------------ */
 
   resizeBasket();
-
   $gamestartOverlayBackground.css("height", $(document).height());
 
+/* ---------------------------- Event Handlers ---------------------------- */
+
+  $(document).on("touchmove", function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+  });
+
   $(window).resize(function() {
-    $gamestartOverlayBackground.css("height", $(document).height());
     resizeBasket();
+    $gamestartOverlayBackground.css("height", $(document).height());
   });
 
   $gameModeTimed.on("click", function() {
