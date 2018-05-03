@@ -158,11 +158,23 @@ $(document).ready(function() {
       $overlayQuit = $("#overlay-quit");
 
   /* ------------------ Overlay Event Handlers ------------------ */
+      $overlayPlayAgain.on("mouseenter", function() {
+        $(this).addClass("overlay-button-hover");
+      });
       $overlayPlayAgain.on("click", function() {
         startGameModeTimed();
       });
+      $overlayPlayAgain.on("mouseleave", function() {
+        $(this).removeClass("overlay-button-hover");
+      });
+      $overlayQuit.on("mouseenter", function() {
+        $(this).addClass("overlay-button-hover");
+      });
       $overlayQuit.on("click", function() {
         displayGameStartOverlay();
+      });
+      $overlayQuit.on("mouseleave", function() {
+        $(this).removeClass("overlay-button-hover");
       });
     }, 2000);
   }
@@ -441,6 +453,8 @@ $(document).ready(function() {
   $("body *").on("touchstart", function() {
     $gameModeTimed.removeClass("overlay-button-hover");
     $gameModePractice.removeClass("overlay-button-hover");
+    $overlayPlayAgain.removeClass("overlay-button-hover")
+    $overlayQuit.removeClass("overlay-button-hover")
   });
 
   $gameModeTimed.on("mouseenter", function() {
