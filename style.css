@@ -108,14 +108,9 @@ body {
   cursor: pointer;
 }
 
-#game-mode-timed:hover {
-  color: rgba(255, 255, 255, 0.7);
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-#game-mode-practice:hover {
-  color: rgba(255, 255, 255, 0.7);
-  background-color: rgba(0, 0, 0, 0.7);
+.overlay-button-hover {
+  color: rgba(255, 255, 255, 0.7) !important;
+  background-color: rgba(0, 0, 0, 0.7) !important;
 }
 
 #overlay-play-again {
