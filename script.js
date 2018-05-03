@@ -115,11 +115,23 @@ $(document).ready(function() {
     $gameModePractice = $("#game-mode-practice");
 
   /* ------------------ Overlay Event Handlers ------------------ */
+    $gameModeTimed.on("mouseenter", function() {
+      $(this).addClass("overlay-button-hover");
+    });
     $gameModeTimed.on("click", function() {
       startGameModeTimed();
     });
+    $gameModeTimed.on("mouseleave", function() {
+      $(this).removeClass("overlay-button-hover");
+    });
+    $gameModePractice.on("mouseenter", function() {
+      $(this).addClass("overlay-button-hover");
+    });
     $gameModePractice.on("click", function() {
       startGameModePractice();
+    });
+    $gameModePractice.on("mouseleave", function() {
+      $(this).removeClass("overlay-button-hover");
     });
   }
 
@@ -426,12 +438,33 @@ $(document).ready(function() {
     $gamestartOverlayBackground.css("height", $(document).height());
   });
 
+  $("body *").on("touchstart", function() {
+    $gameModeTimed.removeClass("overlay-button-hover");
+    $gameModePractice.removeClass("overlay-button-hover");
+  });
+
+  $gameModeTimed.on("mouseenter", function() {
+    $(this).addClass("overlay-button-hover");
+  });
+
   $gameModeTimed.on("click", function() {
     startGameModeTimed();
   });
 
+  $gameModeTimed.on("mouseleave", function() {
+    $(this).removeClass("overlay-button-hover");
+  });
+
+  $gameModePractice.on("mouseenter", function() {
+    $(this).addClass("overlay-button-hover");
+  });
+
   $gameModePractice.on("click", function() {
     startGameModePractice();
+  });
+
+  $gameModePractice.on("mouseleave", function() {
+    $(this).removeClass("overlay-button-hover");
   });
 
   $(document).on("touchstart", function() {
