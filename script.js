@@ -479,8 +479,10 @@ $(document).ready(function() {
   $("body *").on("touchstart", function() {
     $gameModeTimed.removeClass("overlay-button-hover");
     $gameModePractice.removeClass("overlay-button-hover");
-    $overlayPlayAgain.removeClass("overlay-button-hover")
-    $overlayQuit.removeClass("overlay-button-hover")
+    $overlayPlayAgain.removeClass("overlay-button-hover");
+    $overlayQuit.removeClass("overlay-button-hover");
+    $cornerQuit.removeClass("overlay-button-hover");
+    $muteButton.removeClass("overlay-button-hover");
   });
 
   $gameModeTimed.on("mouseenter", function() {
