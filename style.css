@@ -27,6 +27,11 @@ body {
   transition: visibility 0.4s ease-in-out, opacity 0.4s ease-in-out;
 }
 
+.overlay-button-hover {
+  color: rgba(255, 255, 255, 0.7) !important;
+  background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
 .centered-colon {
   position: absolute;
   top: -3px;
@@ -108,11 +113,6 @@ body {
   cursor: pointer;
 }
 
-.overlay-button-hover {
-  color: rgba(255, 255, 255, 0.7) !important;
-  background-color: rgba(0, 0, 0, 0.7) !important;
-}
-
 #overlay-play-again {
   position: relative;
   top: 60px;
@@ -144,14 +144,6 @@ body {
   border-radius: 8px;
   cursor: pointer;
 }
-
-/* #overlay-play-again:hover {
-  color: white;
-}
-
-#overlay-quit:hover {
-  color: white;
-} */
 
 #game-timer {
   position: absolute;
@@ -215,7 +207,7 @@ body {
   font-size: 20px;
   font-weight: 400;
   line-height: 0;
-  color: white;
+  color: rgba(255, 255, 255, 1.0);
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 8px;
   box-sizing: border-box;
@@ -413,7 +405,7 @@ body {
   padding-top: 2px;
   font-size: 44px;
   text-align: center;
-  color: white;
+  color: rgba(255, 255, 255, 1.0);
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 8px;
   box-sizing: border-box;
