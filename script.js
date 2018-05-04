@@ -445,6 +445,32 @@ $(document).ready(function() {
     event.stopPropagation();
   });
 
+  $(document).on("touchstart", function() {
+    if(muteStatus === false) {
+      chainHitAudio.muted = false;
+      cageHitAudio.muted = false;
+      metalHitAudio.muted = false;
+    }
+    else if(muteStatus === true) {
+      chainHitAudio.muted = true;
+      cageHitAudio.muted = true;
+      metalHitAudio.muted = true;
+    }
+  });
+
+  $(document).on("click", function() {
+    if(muteStatus === false) {
+      chainHitAudio.muted = false;
+      cageHitAudio.muted = false;
+      metalHitAudio.muted = false;
+    }
+    else if(muteStatus === true) {
+      chainHitAudio.muted = true;
+      cageHitAudio.muted = true;
+      metalHitAudio.muted = true;
+    }
+  });
+
   $(window).resize(function() {
     resizeBasket();
     $gamestartOverlayBackground.css("height", $(document).height());
@@ -481,38 +507,28 @@ $(document).ready(function() {
     $(this).removeClass("overlay-button-hover");
   });
 
-  $(document).on("touchstart", function() {
-    if(muteStatus === false) {
-      chainHitAudio.muted = false;
-      cageHitAudio.muted = false;
-      metalHitAudio.muted = false;
-    }
-    else if(muteStatus === true) {
-      chainHitAudio.muted = true;
-      cageHitAudio.muted = true;
-      metalHitAudio.muted = true;
-    }
+  $cornerQuit.on("mouseenter", function() {
+    $(this).addClass("overlay-button-hover");
   });
 
-  $(document).on("click", function() {
-    if(muteStatus === false) {
-      chainHitAudio.muted = false;
-      cageHitAudio.muted = false;
-      metalHitAudio.muted = false;
-    }
-    else if(muteStatus === true) {
-      chainHitAudio.muted = true;
-      cageHitAudio.muted = true;
-      metalHitAudio.muted = true;
-    }
+  $cornerQuit.on("click", function() {
+    displayGameStartOverlay();
+  });
+
+  $cornerQuit.on("mouseleave", function() {
+    $(this).removeClass("overlay-button-hover");
+  });
+
+  $muteButton.on("mouseenter", function() {
+    $(this).addClass("overlay-button-hover");
   });
 
   $muteButton.on("click", function() {
     muteToggle();
   });
 
-  $cornerQuit.on("click", function() {
-    displayGameStartOverlay();
+  $muteButton.on("mouseleave", function() {
+    $(this).removeClass("overlay-button-hover");
   });
 
   $basket.draggable({
