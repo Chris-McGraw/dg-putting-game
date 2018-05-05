@@ -951,6 +951,94 @@ body {
   z-index: -3;
 }
 
+#background-tree-1 {
+  position: absolute;
+  top: 147px;
+  left: -360px;
+  right: 0;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-bottom: 28px solid darkGreen;
+  z-index: -2;
+}
+
+#background-tree-1:before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: -24px;
+  right: 0;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-bottom: 30px solid green;
+  z-index: -2;
+}
+
+#background-tree-1:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  right: 0;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-bottom: 26px solid green;
+  z-index: -2;
+}
+
+#background-tree-2 {
+  position: absolute;
+  top: 147px;
+  left: -288px;
+  right: 0;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border-left: 9px solid transparent;
+	border-right: 9px solid transparent;
+	border-bottom: 30px solid green;
+  z-index: -2;
+}
+
+#background-tree-2:before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: -22px;
+  right: 0;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-bottom: 28px solid darkGreen;
+  z-index: -2;
+}
+
+#background-tree-2:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 0;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border-left: 9px solid transparent;
+	border-right: 9px solid transparent;
+	border-bottom: 28px solid darkGreen;
+  z-index: -2;
+}
+
 #background-grass {
   position: absolute;
   top: 172px;
