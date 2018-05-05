@@ -477,13 +477,12 @@ $(document).ready(function() {
   });
 
   $("body *").on("touchstart", function() {
-    $gameModeTimed.removeClass("overlay-button-hover");
-    $gameModePractice.removeClass("overlay-button-hover");
-    $overlayPlayAgain.removeClass("overlay-button-hover");
-    $overlayQuit.removeClass("overlay-button-hover");
-    $cornerQuit.removeClass("overlay-button-hover");
-    $muteButton.removeClass("overlay-button-hover");
-    $muteButton.css({"color": "rgba(255, 255, 255, 1.0) !important", "background-color": "rgba(0, 0, 0, 0.6) !important"});
+    $gameModeTimed.off("mouseenter");
+    $gameModePractice.off("mouseenter");
+    $overlayPlayAgain.off("mouseenter");
+    $overlayQuit.off("mouseenter");
+    $cornerQuit.off("mouseenter");
+    $muteButton.off("mouseenter");
   });
 
   $gameModeTimed.on("mouseenter", function() {
