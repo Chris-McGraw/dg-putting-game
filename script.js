@@ -483,6 +483,7 @@ $(document).ready(function() {
     $overlayQuit.removeClass("overlay-button-hover");
     $cornerQuit.removeClass("overlay-button-hover");
     $muteButton.removeClass("overlay-button-hover");
+    $muteButton.css({"color": "rgba(255, 255, 255, 1.0) !important", "background-color": "rgba(0, 0, 0, 0.6) !important"});
   });
 
   $gameModeTimed.on("mouseenter", function() {
