@@ -51,6 +51,20 @@ $(document).ready(function() {
   }
 
 
+  function chainHitAnimation() {
+    $basket.attr("src", "https://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_80/v1525625856/dg-basket-chain-hit-1_rpzvvt.png");
+    setTimeout(function() {
+      $basket.attr("src", "http://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_80/v1525623498/dg-basket-chain-hit-test_xcpgr2.png");
+    }, 150);
+    setTimeout(function() {
+      $basket.attr("src", "https://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_80/v1525625856/dg-basket-chain-hit-2_opgt7j.png");
+    }, 300);
+    setTimeout(function() {
+      $basket.attr("src", "https://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_80/v1511904652/dg-basket-edit_Resize_pnxwcj.png");
+    }, 450);
+  }
+
+
   function startGameModeTimed() {
     gameMode = "timed";
     $gamestartOverlayBackground.addClass("hidden");
@@ -309,6 +323,10 @@ $(document).ready(function() {
           var shotHeight = powerChange + -295 + powerChange + (powerChange / 1.5);
           $disc.addClass("putt-mobile");
           $disc.css({"transform": "translate(16px," + shotHeight + "px) rotate(-15deg)"});
+
+          setTimeout(function() {
+            chainHitAnimation();
+          }, 1000);
 
           setTimeout(function() {
             var dropHeight = powerChange + -263;
