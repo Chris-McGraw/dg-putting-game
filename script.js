@@ -52,16 +52,22 @@ $(document).ready(function() {
 
 
   function chainHitAnimation() {
-    $basket.attr("src", "https://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_80/v1525625856/dg-basket-chain-hit-1_rpzvvt.png");
+    $basket.attr("src", "https://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_80/v1525745000/dg-basket-animation-frame-1_moev7w.png");
+    setTimeout(function() {
+      $basket.attr("src", "https://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_80/v1525745000/dg-basket-animation-frame-2_qokf6w.png");
+    }, 90);
+    setTimeout(function() {
+      $basket.attr("src", "https://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_80/v1525745000/dg-basket-animation-frame-3_qk40sz.png");
+    }, 180);
+    setTimeout(function() {
+      $basket.attr("src", "https://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_80/v1525745000/dg-basket-animation-frame-2_qokf6w.png");
+    }, 270);
+    setTimeout(function() {
+      $basket.attr("src", "https://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_80/v1525745000/dg-basket-animation-frame-1_moev7w.png");
+    }, 360);
     setTimeout(function() {
       $basket.attr("src", "https://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_80/v1511904652/dg-basket-edit_Resize_pnxwcj.png");
-    }, 200);
-    /* setTimeout(function() {
-      $basket.attr("src", "https://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_80/v1525625856/dg-basket-chain-hit-2_opgt7j.png");
-    }, 300);
-    setTimeout(function() {
-      $basket.attr("src", "https://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_80/v1511904652/dg-basket-edit_Resize_pnxwcj.png");
-    }, 450); */
+    }, 450);
   }
 
 
