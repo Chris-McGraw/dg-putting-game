@@ -21,7 +21,7 @@ $(document).ready(function() {
   basketImageLarge = "https://res.cloudinary.com/dtwyohvli/image/upload/v1511904652/dg-basket-edit_Resize_pnxwcj.png";
   basketImageSmall = "https://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_80/v1511904652/dg-basket-edit_Resize_pnxwcj.png";
 
-  chainHitAnimationSmallFrameOne = "https://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_80/v1525745000/dg-basket-animation-frame-1_moev7w.png";
+  chainHitAnimationSmallFrameOne = "https://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_80/v1525748572/dg-basket-animation-frame-1_s4t66g.png";
   chainHitAnimationSmallFrameTwo = "https://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_80/v1525745000/dg-basket-animation-frame-2_qokf6w.png";
   chainHitAnimationSmallFrameThree = "https://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_80/v1525745000/dg-basket-animation-frame-3_qk40sz.png";
 
