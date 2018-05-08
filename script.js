@@ -19,8 +19,12 @@ $(document).ready(function() {
   metalHitAudio.volume = 0.7;
 
   basketImageLarge = "https://res.cloudinary.com/dtwyohvli/image/upload/v1511904652/dg-basket-edit_Resize_pnxwcj.png";
+  cageImageLarge = "https://res.cloudinary.com/dtwyohvli/image/upload/v1521906280/dg-basket-only_zirrcr.png";
   basketImageSmall = "https://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_80/v1511904652/dg-basket-edit_Resize_pnxwcj.png";
-
+  cageImageSmall = "https://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_78/v1521906280/dg-basket-only_zirrcr.png";
+  chainHitAnimationLargeFrameOne = "https://res.cloudinary.com/dtwyohvli/image/upload/v1525748572/dg-basket-animation-frame-1_s4t66g.png";
+  chainHitAnimationLargeFrameTwo = "https://res.cloudinary.com/dtwyohvli/image/upload/v1525745000/dg-basket-animation-frame-2_qokf6w.png";
+  chainHitAnimationLargeFrameThree = "https://res.cloudinary.com/dtwyohvli/image/upload/v1525745000/dg-basket-animation-frame-3_qk40sz.png";
   chainHitAnimationSmallFrameOne = "https://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_80/v1525748572/dg-basket-animation-frame-1_s4t66g.png";
   chainHitAnimationSmallFrameTwo = "https://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_80/v1525745000/dg-basket-animation-frame-2_qokf6w.png";
   chainHitAnimationSmallFrameThree = "https://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_80/v1525745000/dg-basket-animation-frame-3_qk40sz.png";
@@ -49,32 +53,52 @@ $(document).ready(function() {
   function resizeBasket() {
     if($(window).height() <= 675) {
       $basket.attr("src", basketImageSmall);
-      $cage.attr("src", "https://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_78/v1521906280/dg-basket-only_zirrcr.png");
+      $cage.attr("src", cageImageSmall);
     }
     else {
       $basket.attr("src", basketImageLarge);
-      $cage.attr("src", "https://res.cloudinary.com/dtwyohvli/image/upload/v1521906280/dg-basket-only_zirrcr.png");
+      $cage.attr("src", cageImageLarge);
     }
   }
 
 
   function chainHitAnimation() {
-    $basket.attr("src", chainHitAnimationSmallFrameOne);
-    setTimeout(function() {
-      $basket.attr("src", chainHitAnimationSmallFrameTwo);
-    }, 90);
-    setTimeout(function() {
-      $basket.attr("src", chainHitAnimationSmallFrameThree);
-    }, 180);
-    setTimeout(function() {
-      $basket.attr("src", chainHitAnimationSmallFrameTwo);
-    }, 270);
-    setTimeout(function() {
+    if($(window).height() <= 675) {
       $basket.attr("src", chainHitAnimationSmallFrameOne);
-    }, 360);
-    setTimeout(function() {
-      $basket.attr("src", basketImageSmall);
-    }, 450);
+      setTimeout(function() {
+        $basket.attr("src", chainHitAnimationSmallFrameTwo);
+      }, 90);
+      setTimeout(function() {
+        $basket.attr("src", chainHitAnimationSmallFrameThree);
+      }, 180);
+      setTimeout(function() {
+        $basket.attr("src", chainHitAnimationSmallFrameTwo);
+      }, 270);
+      setTimeout(function() {
+        $basket.attr("src", chainHitAnimationSmallFrameOne);
+      }, 360);
+      setTimeout(function() {
+        $basket.attr("src", basketImageSmall);
+      }, 450);
+    }
+    else {
+      $basket.attr("src", chainHitAnimationLargeFrameOne);
+      setTimeout(function() {
+        $basket.attr("src", chainHitAnimationLargeFrameTwo);
+      }, 90);
+      setTimeout(function() {
+        $basket.attr("src", chainHitAnimationLargeFrameThree);
+      }, 180);
+      setTimeout(function() {
+        $basket.attr("src", chainHitAnimationLargeFrameTwo);
+      }, 270);
+      setTimeout(function() {
+        $basket.attr("src", chainHitAnimationLargeFrameOne);
+      }, 360);
+      setTimeout(function() {
+        $basket.attr("src", basketImageLarge);
+      }, 450);
+    }
   }
 
 
@@ -338,10 +362,6 @@ $(document).ready(function() {
           $disc.css({"transform": "translate(16px," + shotHeight + "px) rotate(-15deg)"});
 
           setTimeout(function() {
-            chainHitAnimation();
-          }, 1000);
-
-          setTimeout(function() {
             var dropHeight = powerChange + -263;
             $disc.addClass("putt-drop");
             $disc.css({"transform": "translate(16px," + dropHeight + "px) rotate(0deg)"});
@@ -350,6 +370,7 @@ $(document).ready(function() {
         }
 
         setTimeout(function() {
+          chainHitAnimation();
           chainHitAudio.play();
         }, 1000);
 
