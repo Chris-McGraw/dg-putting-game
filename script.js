@@ -18,6 +18,13 @@ $(document).ready(function() {
   metalHitAudio.muted = true;
   metalHitAudio.volume = 0.7;
 
+  basketImageLarge = "https://res.cloudinary.com/dtwyohvli/image/upload/v1511904652/dg-basket-edit_Resize_pnxwcj.png";
+  basketImageSmall = "https://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_80/v1511904652/dg-basket-edit_Resize_pnxwcj.png";
+
+  chainHitAnimationSmallFrameOne = "https://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_80/v1525748572/dg-basket-animation-frame-1_s4t66g.png";
+  chainHitAnimationSmallFrameTwo = "https://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_80/v1525745000/dg-basket-animation-frame-2_qokf6w.png";
+  chainHitAnimationSmallFrameThree = "https://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_80/v1525745000/dg-basket-animation-frame-3_qk40sz.png";
+
   $gamestartOverlayBackground = $("#gamestart-overlay-background");
   $gamestartOverlayMenu = $("#gamestart-overlay-menu");
   $gameTitleTop = $("#game-title-top");
@@ -41,32 +48,32 @@ $(document).ready(function() {
 
   function resizeBasket() {
     if($(window).height() <= 675) {
-      $basket.attr("src", "https://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_80/v1511904652/dg-basket-edit_Resize_pnxwcj.png");
+      $basket.attr("src", basketImageSmall);
       $cage.attr("src", "https://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_78/v1521906280/dg-basket-only_zirrcr.png");
     }
     else {
-      $basket.attr("src", "https://res.cloudinary.com/dtwyohvli/image/upload/v1511904652/dg-basket-edit_Resize_pnxwcj.png");
+      $basket.attr("src", basketImageLarge);
       $cage.attr("src", "https://res.cloudinary.com/dtwyohvli/image/upload/v1521906280/dg-basket-only_zirrcr.png");
     }
   }
 
 
   function chainHitAnimation() {
-    $basket.attr("src", "https://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_80/v1525745000/dg-basket-animation-frame-1_moev7w.png");
+    $basket.attr("src", chainHitAnimationSmallFrameOne);
     setTimeout(function() {
-      $basket.attr("src", "https://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_80/v1525745000/dg-basket-animation-frame-2_qokf6w.png");
+      $basket.attr("src", chainHitAnimationSmallFrameTwo);
     }, 90);
     setTimeout(function() {
-      $basket.attr("src", "https://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_80/v1525745000/dg-basket-animation-frame-3_qk40sz.png");
+      $basket.attr("src", chainHitAnimationSmallFrameThree);
     }, 180);
     setTimeout(function() {
-      $basket.attr("src", "https://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_80/v1525745000/dg-basket-animation-frame-2_qokf6w.png");
+      $basket.attr("src", chainHitAnimationSmallFrameTwo);
     }, 270);
     setTimeout(function() {
-      $basket.attr("src", "https://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_80/v1525745000/dg-basket-animation-frame-1_moev7w.png");
+      $basket.attr("src", chainHitAnimationSmallFrameOne);
     }, 360);
     setTimeout(function() {
-      $basket.attr("src", "https://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_80/v1511904652/dg-basket-edit_Resize_pnxwcj.png");
+      $basket.attr("src", basketImageSmall);
     }, 450);
   }
 
