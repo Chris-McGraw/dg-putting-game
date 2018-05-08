@@ -19,7 +19,9 @@ $(document).ready(function() {
   metalHitAudio.volume = 0.7;
 
   basketImageLarge = "https://res.cloudinary.com/dtwyohvli/image/upload/v1511904652/dg-basket-edit_Resize_pnxwcj.png";
+  cageImageLarge = "https://res.cloudinary.com/dtwyohvli/image/upload/v1521906280/dg-basket-only_zirrcr.png";
   basketImageSmall = "https://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_80/v1511904652/dg-basket-edit_Resize_pnxwcj.png";
+  cageImageSmall = "https://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_78/v1521906280/dg-basket-only_zirrcr.png";
 
   chainHitAnimationSmallFrameOne = "https://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_80/v1525748572/dg-basket-animation-frame-1_s4t66g.png";
   chainHitAnimationSmallFrameTwo = "https://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_80/v1525745000/dg-basket-animation-frame-2_qokf6w.png";
@@ -49,11 +51,11 @@ $(document).ready(function() {
   function resizeBasket() {
     if($(window).height() <= 675) {
       $basket.attr("src", basketImageSmall);
-      $cage.attr("src", "https://res.cloudinary.com/dtwyohvli/image/upload/c_scale,w_78/v1521906280/dg-basket-only_zirrcr.png");
+      $cage.attr("src", cageImageSmall);
     }
     else {
       $basket.attr("src", basketImageLarge);
-      $cage.attr("src", "https://res.cloudinary.com/dtwyohvli/image/upload/v1521906280/dg-basket-only_zirrcr.png");
+      $cage.attr("src", cageImageLarge);
     }
   }
 
