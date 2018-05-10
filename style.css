@@ -1291,6 +1291,17 @@ body {
   z-index: -100;
 }
 
+#background-grass-accent-0 {
+  position: absolute;
+  top: 243px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: auto;
+  height: auto;
+  z-index: 0;
+}
+
 /* ----------------------------- Media Queries ----------------------------- */
 
 @media screen and (max-width: 680px) {
@@ -1444,6 +1455,10 @@ body {
 
   #mute-button {
     top: 492px;
+  }
+
+  #background-grass-accent-0 {
+    top: 225px;
   }
 }
 
