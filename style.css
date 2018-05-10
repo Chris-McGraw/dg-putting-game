@@ -924,57 +924,57 @@ body {
 
 #background-tree-1 {
   position: absolute;
-  top: 140px;
+  top: 120px;
   left: -312px;
   right: 0;
   margin: auto;
   width: 0;
   height: 0;
-  border-left: 11px solid transparent;
-	border-right: 11px solid transparent;
-	border-bottom: 37px solid #579e00;
+  border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-bottom: 27px solid #2e7f00;
   z-index: -20;
 }
 
 #background-tree-1:before {
   content: "";
   position: absolute;
-  top: 2px;
-  left: -32px;
+  top: 12px;
+  left: -19px;
   right: 0;
   margin: auto;
   width: 0;
   height: 0;
-  border-left: 11px solid transparent;
-	border-right: 11px solid transparent;
-	border-bottom: 40px solid #2e7f00;
+  border-left: 19px solid transparent;
+	border-right: 19px solid transparent;
+	border-bottom: 27px solid #2e7f00;
 }
 
-/* #background-tree-1:after {
+#background-tree-1:after {
   content: "";
   position: absolute;
-  top: 6px;
-  left: 0;
+  top: 24px;
+  left: -25px;
   right: 0;
   margin: auto;
   width: 0;
   height: 0;
-  border-left: 11px solid transparent;
-	border-right: 11px solid transparent;
-	border-bottom: 34px solid #459000;
+  border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-bottom: 27px solid #2e7f00;
 }
 
 #background-tree-2 {
   position: absolute;
-  top: 139px;
+  top: 140px;
   left: -236px;
   right: 0;
   margin: auto;
   width: 0;
   height: 0;
-  border-left: 9px solid transparent;
-	border-right: 9px solid transparent;
-	border-bottom: 36px solid #579e00;
+  border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 20px solid #2e7f00;
   z-index: -20;
 }
 
@@ -982,127 +982,141 @@ body {
   content: "";
   position: absolute;
   top: 10px;
-  left: -23px;
-  right: 0;
-  margin: auto;
-  width: 0;
-  height: 0;
-  border-left: 11px solid transparent;
-	border-right: 11px solid transparent;
-	border-bottom: 34px solid #2e7f00;
-}
-
-#background-tree-2:after {
-  content: "";
-  position: absolute;
-  top: 3px;
-  left: 1px;
-  right: 0;
-  margin: auto;
-  width: 0;
-  height: 0;
-  border-left: 12px solid transparent;
-	border-right: 12px solid transparent;
-	border-bottom: 37px solid #459000;
-}
-
-#background-tree-3 {
-  position: absolute;
-  top: 144px;
-  left: -75px;
-  right: 0;
-  margin: auto;
-  width: 0;
-  height: 0;
-  border-left: 8px solid transparent;
-	border-right: 8px solid transparent;
-	border-bottom: 32px solid #459000;
-  z-index: -20;
-}
-
-#background-tree-3:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 1px;
-  right: 0;
-  margin: auto;
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-	border-right: 10px solid transparent;
-	border-bottom: 36px solid #2e7f00;
-}
-
-#background-tree-4 {
-  position: absolute;
-  top: 150px;
-  left: 160px;
-  right: 0;
-  margin: auto;
-  width: 0;
-  height: 0;
-  border-left: 9px solid transparent;
-	border-right: 9px solid transparent;
-	border-bottom: 26px solid #579e00;
-  z-index: -20;
-}
-
-#background-tree-4:before {
-  content: "";
-  position: absolute;
-  top: -3px;
-  left: -26px;
-  right: 0;
-  margin: auto;
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-	border-right: 10px solid transparent;
-	border-bottom: 33px solid #459000;
-}
-
-#background-tree-5 {
-  position: absolute;
-  top: 153px;
-  left: 222px;
-  right: 0;
-  margin: auto;
-  width: 0;
-  height: 0;
-  border-left: 9px solid transparent;
-	border-right: 9px solid transparent;
-	border-bottom: 24px solid #579e00;
-  z-index: -20;
-}
-
-#background-tree-5:before {
-  content: "";
-  position: absolute;
-  top: -11px;
-  left: -30px;
+  left: -13px;
   right: 0;
   margin: auto;
   width: 0;
   height: 0;
   border-left: 13px solid transparent;
 	border-right: 13px solid transparent;
-	border-bottom: 40px solid #2e7f00;
+	border-bottom: 20px solid #2e7f00;
 }
 
-#background-tree-5:after {
-  content: "";
+#background-tree-3 {
   position: absolute;
-  top: -4px;
-  left: 3px;
+  top: 129px;
+  left: -175px;
   right: 0;
   margin: auto;
   width: 0;
   height: 0;
   border-left: 11px solid transparent;
 	border-right: 11px solid transparent;
-	border-bottom: 31px solid #459000;
-} */
+	border-bottom: 22px solid #2e7f00;
+  z-index: -20;
+}
+
+#background-tree-3:before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: -14px;
+  right: 0;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border-left: 14px solid transparent;
+	border-right: 14px solid transparent;
+	border-bottom: 22px solid #2e7f00;
+}
+
+#background-tree-3:after {
+  content: "";
+  position: absolute;
+  top: 24px;
+  left: -18px;
+  right: 0;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border-left: 18px solid transparent;
+	border-right: 18px solid transparent;
+	border-bottom: 22px solid #2e7f00;
+}
+
+#background-tree-4 {
+  position: absolute;
+  top: 111px;
+  left: 0;
+  right: -200px;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border-left: 16px solid transparent;
+	border-right: 16px solid transparent;
+	border-bottom: 30px solid #2e7f00;
+  z-index: -20;
+}
+
+#background-tree-4:before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: -20px;
+  right: 0;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-bottom: 30px solid #2e7f00;
+}
+
+#background-tree-4:after {
+  content: "";
+  position: absolute;
+  top: 29px;
+  left: -25px;
+  right: 0;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-bottom: 30px solid #2e7f00;
+}
+
+#background-tree-5 {
+  position: absolute;
+  top: 130px;
+  left: 0;
+  right: -302px;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 20px solid #2e7f00;
+  z-index: -20;
+}
+
+#background-tree-5:before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: -13px;
+  right: 0;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border-left: 13px solid transparent;
+	border-right: 13px solid transparent;
+	border-bottom: 20px solid #2e7f00;
+}
+
+#background-tree-5:after {
+  content: "";
+  position: absolute;
+  top: 21px;
+  left: -16px;
+  right: 0;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border-left: 16px solid transparent;
+	border-right: 16px solid transparent;
+	border-bottom: 20px solid #2e7f00;
+}
 
 #background-grass-line-06 {
   position: absolute;
