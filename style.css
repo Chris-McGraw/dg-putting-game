@@ -951,7 +951,7 @@ body {
   z-index: -3;
 }
 
-#background-tree-1 {
+/* #background-tree-1 {
   position: absolute;
   top: 140px;
   left: -312px;
@@ -1131,12 +1131,12 @@ body {
   border-left: 11px solid transparent;
 	border-right: 11px solid transparent;
 	border-bottom: 31px solid #459000;
-}
+} */
 
-#grassline-test-02 {
+#background-grass-line-06 {
   position: absolute;
   top: 152px;
-  left: -392px;
+  left: -1200px;
   right: 0;
   margin: auto;
   width: auto;
@@ -1144,10 +1144,10 @@ body {
   z-index: -3;
 }
 
-#grassline-test-01 {
+#background-grass-line-05 {
   position: absolute;
   top: 152px;
-  left: -196px;
+  left: -1000px;
   right: 0;
   margin: auto;
   width: auto;
@@ -1155,7 +1155,51 @@ body {
   z-index: -3;
 }
 
-#grassline-test-0 {
+#background-grass-line-04 {
+  position: absolute;
+  top: 152px;
+  left: -800px;
+  right: 0;
+  margin: auto;
+  width: auto;
+  height: auto;
+  z-index: -3;
+}
+
+#background-grass-line-03 {
+  position: absolute;
+  top: 152px;
+  left: -600px;
+  right: 0;
+  margin: auto;
+  width: auto;
+  height: auto;
+  z-index: -3;
+}
+
+#background-grass-line-02 {
+  position: absolute;
+  top: 152px;
+  left: -400px;
+  right: 0;
+  margin: auto;
+  width: auto;
+  height: auto;
+  z-index: -3;
+}
+
+#background-grass-line-01 {
+  position: absolute;
+  top: 152px;
+  left: -200px;
+  right: 0;
+  margin: auto;
+  width: auto;
+  height: auto;
+  z-index: -3;
+}
+
+#background-grass-line-0 {
   position: absolute;
   top: 152px;
   left: 0;
@@ -1166,10 +1210,10 @@ body {
   z-index: -3;
 }
 
-#grassline-test-1 {
+#background-grass-line-1 {
   position: absolute;
   top: 152px;
-  left: 195px;
+  left: 200px;
   right: 0;
   margin: auto;
   width: auto;
@@ -1177,11 +1221,55 @@ body {
   z-index: -3;
 }
 
-#grassline-test-2 {
+#background-grass-line-2 {
   position: absolute;
   top: 152px;
   left: 0;
-  right: -391px;
+  right: -400px;
+  margin: auto;
+  width: auto;
+  height: auto;
+  z-index: -3;
+}
+
+#background-grass-line-3 {
+  position: absolute;
+  top: 152px;
+  left: 0;
+  right: -600px;
+  margin: auto;
+  width: auto;
+  height: auto;
+  z-index: -3;
+}
+
+#background-grass-line-4 {
+  position: absolute;
+  top: 152px;
+  left: 0;
+  right: -800px;
+  margin: auto;
+  width: auto;
+  height: auto;
+  z-index: -3;
+}
+
+#background-grass-line-5 {
+  position: absolute;
+  top: 152px;
+  left: 0;
+  right: -1000px;
+  margin: auto;
+  width: auto;
+  height: auto;
+  z-index: -3;
+}
+
+#background-grass-line-6 {
+  position: absolute;
+  top: 152px;
+  left: 0;
+  right: -1200px;
   margin: auto;
   width: auto;
   height: auto;
@@ -1193,8 +1281,11 @@ body {
   top: 172px;
   width: 100%;
   height: 100%;
-  background-color: #8fcc33;
-  background: linear-gradient(white, #bce085, #8fcc33, #72a329);
+
+  /* background-color: #8fcc33;
+  background: linear-gradient(white, #bce085, #8fcc33, #72a329); */
+  background-color: #bce085;
+
   background-repeat: no-repeat;
   background-attachment: fixed;
   z-index: -100;
