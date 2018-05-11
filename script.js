@@ -62,6 +62,52 @@ $(document).ready(function() {
   }
 
 
+  function startCloudScroll() {
+    $("#cloud-test-1").removeClass("hidden");
+    $("#cloud-test-1").addClass("cloud-scroll");
+    setTimeout(function() {
+      $("#cloud-test-1").addClass("hidden");
+      $("#cloud-test-1").removeClass("cloud-scroll");
+    }, 25000);
+
+    setTimeout(function() {
+      $("#cloud-test-2").removeClass("hidden");
+      $("#cloud-test-2").addClass("cloud-scroll");
+      setTimeout(function() {
+        $("#cloud-test-2").addClass("hidden");
+        $("#cloud-test-2").removeClass("cloud-scroll");
+      }, 25000);
+    }, 4250);
+
+    setTimeout(function() {
+      $("#cloud-test-3").removeClass("hidden");
+      $("#cloud-test-3").addClass("cloud-scroll");
+      setTimeout(function() {
+        $("#cloud-test-3").addClass("hidden");
+        $("#cloud-test-3").removeClass("cloud-scroll");
+      }, 25000);
+    }, 8500);
+
+    setTimeout(function() {
+      $("#cloud-test-4").removeClass("hidden");
+      $("#cloud-test-4").addClass("cloud-scroll");
+      setTimeout(function() {
+        $("#cloud-test-4").addClass("hidden");
+        $("#cloud-test-4").removeClass("cloud-scroll");
+      }, 25000);
+    }, 12750);
+
+    setTimeout(function() {
+      $("#cloud-test-5").removeClass("hidden");
+      $("#cloud-test-5").addClass("cloud-scroll");
+      setTimeout(function() {
+        $("#cloud-test-5").addClass("hidden");
+        $("#cloud-test-5").removeClass("cloud-scroll");
+      }, 25000);
+    }, 17000);
+  }
+
+
   function chainHitAnimation() {
     if($(window).height() <= 675) {
       $basket.attr("src", chainHitAnimationSmallFrameOne);
@@ -120,6 +166,8 @@ $(document).ready(function() {
     $gameTimer.html("Remaining Time: " + currentTime);
     currentScore = 0;
     $playerScore.html("Score: " + currentScore);
+
+    startCloudScroll();
   }
 
 
