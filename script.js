@@ -68,7 +68,7 @@ $(document).ready(function() {
     setTimeout(function() {
       $("#cloud-test-1").addClass("hidden");
       $("#cloud-test-1").removeClass("cloud-scroll");
-    }, 25000);
+    }, 40000);
 
     setTimeout(function() {
       $("#cloud-test-2").removeClass("hidden");
@@ -76,8 +76,8 @@ $(document).ready(function() {
       setTimeout(function() {
         $("#cloud-test-2").addClass("hidden");
         $("#cloud-test-2").removeClass("cloud-scroll");
-      }, 25000);
-    }, 4250);
+      }, 40000);
+    }, 5000);
 
     setTimeout(function() {
       $("#cloud-test-3").removeClass("hidden");
@@ -85,8 +85,8 @@ $(document).ready(function() {
       setTimeout(function() {
         $("#cloud-test-3").addClass("hidden");
         $("#cloud-test-3").removeClass("cloud-scroll");
-      }, 25000);
-    }, 8500);
+      }, 40000);
+    }, 10000);
 
     setTimeout(function() {
       $("#cloud-test-4").removeClass("hidden");
@@ -94,8 +94,8 @@ $(document).ready(function() {
       setTimeout(function() {
         $("#cloud-test-4").addClass("hidden");
         $("#cloud-test-4").removeClass("cloud-scroll");
-      }, 25000);
-    }, 12750);
+      }, 40000);
+    }, 15000);
 
     setTimeout(function() {
       $("#cloud-test-5").removeClass("hidden");
@@ -103,8 +103,8 @@ $(document).ready(function() {
       setTimeout(function() {
         $("#cloud-test-5").addClass("hidden");
         $("#cloud-test-5").removeClass("cloud-scroll");
-      }, 25000);
-    }, 17000);
+      }, 40000);
+    }, 20000);
   }
 
 

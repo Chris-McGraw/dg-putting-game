@@ -481,8 +481,8 @@ body {
 }
 
 .cloud-scroll {
-  transform: translate(1000px);
-  transition: transform 25000ms linear;
+  transform: translate(1500px);
+  transition: transform 45000ms linear;
 }
 
 #background-mountain-1 {
