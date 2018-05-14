@@ -65,13 +65,13 @@ $(document).ready(function() {
 
   function generateCloud() {
     if(gameMode === "practice") {
-      var randomHeight = Math.floor((Math.random() * 51) + 10);
+      var randomPosition = Math.floor((Math.random() * 51) + 10);
 
       console.log("cloudCount value = " + cloudCount);
-      console.log(randomHeight);
+      console.log(randomPosition);
 
       $(document.body).append("<div id='cloud-" + cloudCount + "'class='cloud-test'></div>");
-      $("#cloud-" + cloudCount).css("top", randomHeight);
+      $("#cloud-" + cloudCount).css("top", randomPosition);
 
       setTimeout(function() {
         $("#cloud-" + cloudCount).addClass("cloud-scroll");
@@ -79,6 +79,56 @@ $(document).ready(function() {
       }, 20);
 
       cloudLoop = setTimeout(function() {
+        if(cloudCount > 10) {
+          $("#cloud-1").removeClass("cloud-scroll");
+          $("#cloud-1").remove();
+          cloudCount = 1;
+
+          setTimeout(function() {
+            $("#cloud-2").removeClass("cloud-scroll");
+            $("#cloud-2").remove();
+          }, 5000);
+
+          setTimeout(function() {
+            $("#cloud-3").removeClass("cloud-scroll");
+            $("#cloud-3").remove();
+          }, 10000);
+
+          setTimeout(function() {
+            $("#cloud-4").removeClass("cloud-scroll");
+            $("#cloud-4").remove();
+          }, 15000);
+
+          setTimeout(function() {
+            $("#cloud-5").removeClass("cloud-scroll");
+            $("#cloud-5").remove();
+          }, 20000);
+
+          setTimeout(function() {
+            $("#cloud-6").removeClass("cloud-scroll");
+            $("#cloud-6").remove();
+          }, 25000);
+
+          setTimeout(function() {
+            $("#cloud-7").removeClass("cloud-scroll");
+            $("#cloud-7").remove();
+          }, 30000);
+
+          setTimeout(function() {
+            $("#cloud-8").removeClass("cloud-scroll");
+            $("#cloud-8").remove();
+          }, 35000);
+
+          setTimeout(function() {
+            $("#cloud-9").removeClass("cloud-scroll");
+            $("#cloud-9").remove();
+          }, 40000);
+
+          setTimeout(function() {
+            $("#cloud-10").removeClass("cloud-scroll");
+            $("#cloud-10").remove();
+          }, 45000);
+        }
         generateCloud();
       }, 5000);
     }
