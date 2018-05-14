@@ -424,54 +424,8 @@ body {
   z-index: -60;
 }
 
-#cloud-test-1 {
+.cloud-test {
   position: absolute;
-  top: 60px;
-  left: -50px;
-  width: 40px;
-  height: 40px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 100%;
-  z-index: -40;
-}
-
-
-#cloud-test-2 {
-  position: absolute;
-  top: 10px;
-  left: -50px;
-  width: 40px;
-  height: 40px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 100%;
-  z-index: -40;
-}
-
-#cloud-test-3 {
-  position: absolute;
-  top: 36px;
-  left: -50px;
-  width: 40px;
-  height: 40px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 100%;
-  z-index: -40;
-}
-
-#cloud-test-4 {
-  position: absolute;
-  top: 51px;
-  left: -50px;
-  width: 40px;
-  height: 40px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 100%;
-  z-index: -40;
-}
-
-#cloud-test-5 {
-  position: absolute;
-  top: 28px;
   left: -50px;
   width: 40px;
   height: 40px;
@@ -481,8 +435,8 @@ body {
 }
 
 .cloud-scroll {
-  transform: translate(1000px);
-  transition: transform 25000ms linear;
+  transform: translate(1500px);
+  transition: transform 45000ms linear;
 }
 
 #background-mountain-1 {

@@ -62,49 +62,46 @@ $(document).ready(function() {
   }
 
 
-  function startCloudScroll() {
-    $("#cloud-test-1").removeClass("hidden");
-    $("#cloud-test-1").addClass("cloud-scroll");
-    setTimeout(function() {
-      $("#cloud-test-1").addClass("hidden");
-      $("#cloud-test-1").removeClass("cloud-scroll");
-    }, 25000);
+  i = 1;
 
-    setTimeout(function() {
-      $("#cloud-test-2").removeClass("hidden");
-      $("#cloud-test-2").addClass("cloud-scroll");
-      setTimeout(function() {
-        $("#cloud-test-2").addClass("hidden");
-        $("#cloud-test-2").removeClass("cloud-scroll");
-      }, 25000);
-    }, 4250);
+  function generateCloud() {
+    if(gameMode === "practice") {
+      var randomHeight = Math.floor((Math.random() * 51) + 10);
+      console.log(randomHeight);
 
-    setTimeout(function() {
-      $("#cloud-test-3").removeClass("hidden");
-      $("#cloud-test-3").addClass("cloud-scroll");
-      setTimeout(function() {
-        $("#cloud-test-3").addClass("hidden");
-        $("#cloud-test-3").removeClass("cloud-scroll");
-      }, 25000);
-    }, 8500);
+      $(document.body).append("<div id='cloud-" +i+ "' class='cloud-test'></div>");
+      $("#cloud-" + i).css("top", randomHeight);
 
-    setTimeout(function() {
-      $("#cloud-test-4").removeClass("hidden");
-      $("#cloud-test-4").addClass("cloud-scroll");
       setTimeout(function() {
-        $("#cloud-test-4").addClass("hidden");
-        $("#cloud-test-4").removeClass("cloud-scroll");
-      }, 25000);
-    }, 12750);
+        $("#cloud-" + i).addClass("cloud-scroll");
+      }, 20);
 
-    setTimeout(function() {
-      $("#cloud-test-5").removeClass("hidden");
-      $("#cloud-test-5").addClass("cloud-scroll");
+      /* setTimeout(function() {
+        $("#cloud-1").removeClass("cloud-scroll");
+        $("#cloud-1").remove();
+      }, 40000);
+
       setTimeout(function() {
-        $("#cloud-test-5").addClass("hidden");
-        $("#cloud-test-5").removeClass("cloud-scroll");
-      }, 25000);
-    }, 17000);
+        $("#cloud-2").removeClass("cloud-scroll");
+        $("#cloud-2").remove();
+      }, 45000);
+
+      setTimeout(function() {
+        $("#cloud-3").removeClass("cloud-scroll");
+        $("#cloud-3").remove();
+      }, 50000); */
+
+      setTimeout(function() {
+        i++;
+        console.log("i value = " + i);
+        generateCloud();
+      }, 5000);
+    }
+  }
+
+
+  function startCloudLoop() {
+    generateCloud();
   }
 
 
@@ -167,7 +164,7 @@ $(document).ready(function() {
     currentScore = 0;
     $playerScore.html("Score: " + currentScore);
 
-    startCloudScroll();
+    startCloudLoop();
   }
 
 
@@ -212,6 +209,9 @@ $(document).ready(function() {
     $gameModeTimed = $("#game-mode-timed");
     $gamestartOverlayMenu.append("<div id='game-mode-practice'>Practice</div>");
     $gameModePractice = $("#game-mode-practice");
+
+    $(".cloud-test").removeClass("cloud-scroll");
+    $(".cloud-test").remove();
 
   /* ------------------ Overlay Event Handlers ------------------ */
     $gameModeTimed.on("mouseenter", function() {
