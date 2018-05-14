@@ -62,18 +62,21 @@ $(document).ready(function() {
   }
 
 
-  i = 1;
+  cloudCount = 1;
 
-  function generateCloud() {
+  function cloudLoop() {
     if(gameMode === "practice") {
       var randomHeight = Math.floor((Math.random() * 51) + 10);
+
+      console.log("cloudCount value = " + cloudCount);
       console.log(randomHeight);
 
-      $(document.body).append("<div id='cloud-" +i+ "' class='cloud-test'></div>");
-      $("#cloud-" + i).css("top", randomHeight);
+      $(document.body).append("<div id='cloud-" + cloudCount + "'class='cloud-test'></div>");
+      $("#cloud-" + cloudCount).css("top", randomHeight);
 
       setTimeout(function() {
-        $("#cloud-" + i).addClass("cloud-scroll");
+        $("#cloud-" + cloudCount).addClass("cloud-scroll");
+        cloudCount++;
       }, 20);
 
       /* setTimeout(function() {
@@ -92,16 +95,9 @@ $(document).ready(function() {
       }, 50000); */
 
       setTimeout(function() {
-        i++;
-        console.log("i value = " + i);
-        generateCloud();
+        cloudLoop();
       }, 5000);
     }
-  }
-
-
-  function startCloudLoop() {
-    generateCloud();
   }
 
 
@@ -164,7 +160,7 @@ $(document).ready(function() {
     currentScore = 0;
     $playerScore.html("Score: " + currentScore);
 
-    startCloudLoop();
+    cloudLoop();
   }
 
 
@@ -212,6 +208,7 @@ $(document).ready(function() {
 
     $(".cloud-test").removeClass("cloud-scroll");
     $(".cloud-test").remove();
+    cloudCount = 1;
 
   /* ------------------ Overlay Event Handlers ------------------ */
     $gameModeTimed.on("mouseenter", function() {
