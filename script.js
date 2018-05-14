@@ -7,6 +7,7 @@ $(document).ready(function() {
   timerStart = false;
   currentTime = 0;
   currentScore = 0;
+  cloudCount = 1;
 
   chainHitAudio = document.getElementById("chain-hit-audio");
   chainHitAudio.muted = true;
@@ -62,46 +63,25 @@ $(document).ready(function() {
   }
 
 
-  i = 1;
-
   function generateCloud() {
     if(gameMode === "practice") {
       var randomHeight = Math.floor((Math.random() * 51) + 10);
+
+      console.log("cloudCount value = " + cloudCount);
       console.log(randomHeight);
 
-      $(document.body).append("<div id='cloud-" +i+ "' class='cloud-test'></div>");
-      $("#cloud-" + i).css("top", randomHeight);
+      $(document.body).append("<div id='cloud-" + cloudCount + "'class='cloud-test'></div>");
+      $("#cloud-" + cloudCount).css("top", randomHeight);
 
       setTimeout(function() {
-        $("#cloud-" + i).addClass("cloud-scroll");
+        $("#cloud-" + cloudCount).addClass("cloud-scroll");
+        cloudCount++;
       }, 20);
 
-      /* setTimeout(function() {
-        $("#cloud-1").removeClass("cloud-scroll");
-        $("#cloud-1").remove();
-      }, 40000);
-
-      setTimeout(function() {
-        $("#cloud-2").removeClass("cloud-scroll");
-        $("#cloud-2").remove();
-      }, 45000);
-
-      setTimeout(function() {
-        $("#cloud-3").removeClass("cloud-scroll");
-        $("#cloud-3").remove();
-      }, 50000); */
-
-      setTimeout(function() {
-        i++;
-        console.log("i value = " + i);
+      cloudLoop = setTimeout(function() {
         generateCloud();
       }, 5000);
     }
-  }
-
-
-  function startCloudLoop() {
-    generateCloud();
   }
 
 
@@ -164,7 +144,7 @@ $(document).ready(function() {
     currentScore = 0;
     $playerScore.html("Score: " + currentScore);
 
-    startCloudLoop();
+    generateCloud();
   }
 
 
@@ -212,6 +192,8 @@ $(document).ready(function() {
 
     $(".cloud-test").removeClass("cloud-scroll");
     $(".cloud-test").remove();
+    clearTimeout(cloudLoop);
+    cloudCount = 1;
 
   /* ------------------ Overlay Event Handlers ------------------ */
     $gameModeTimed.on("mouseenter", function() {
