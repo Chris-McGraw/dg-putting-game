@@ -429,9 +429,31 @@ body {
   left: -50px;
   width: 40px;
   height: 40px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 1.0);
   border-radius: 100%;
   z-index: -40;
+}
+
+.cloud-test::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: -16px;
+  width: 30px;
+  height: 25px;
+  background-color: rgba(255, 255, 255, 1.0);
+  border-radius: 100%;
+}
+
+.cloud-test::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: -18px;
+  width: 40px;
+  height: 24px;
+  background-color: rgba(255, 255, 255, 1.0);
+  border-radius: 100%;
 }
 
 .cloud-scroll {
