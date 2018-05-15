@@ -67,8 +67,8 @@ $(document).ready(function() {
     if(gameMode === "practice" || gameMode === "timed") {
       var randomPosition = Math.floor((Math.random() * 51) + 10);
 
-      console.log("cloudCount value = " + cloudCount);
-      console.log(randomPosition);
+      /* console.log("cloudCount value = " + cloudCount);
+      console.log(randomPosition); */
 
       $(document.body).append("<div id='cloud-" + cloudCount + "'class='cloud-style'></div>");
       $("#cloud-" + cloudCount).css("top", randomPosition);
@@ -183,7 +183,6 @@ $(document).ready(function() {
     currentScore = 0;
     $playerScore.html("Score: " + currentScore);
     timerStart = false;
-
     generateCloud();
   }
 
@@ -195,7 +194,6 @@ $(document).ready(function() {
     $gameTimer.html("Remaining Time: " + currentTime);
     currentScore = 0;
     $playerScore.html("Score: " + currentScore);
-
     generateCloud();
   }
 
@@ -241,7 +239,6 @@ $(document).ready(function() {
     $gameModeTimed = $("#game-mode-timed");
     $gamestartOverlayMenu.append("<div id='game-mode-practice'>Practice</div>");
     $gameModePractice = $("#game-mode-practice");
-
     $(".cloud-style").removeClass("cloud-scroll");
     $(".cloud-style").remove();
     clearTimeout(cloudLoop);
@@ -282,7 +279,6 @@ $(document).ready(function() {
     $gameModePractice.remove();
     $overlayPlayAgain.remove();
     $overlayQuit.remove();
-
     $(".cloud-style").removeClass("cloud-scroll");
     $(".cloud-style").remove();
     clearTimeout(cloudLoop);
