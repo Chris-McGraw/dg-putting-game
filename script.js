@@ -64,7 +64,7 @@ $(document).ready(function() {
 
 
   function generateCloud() {
-    if(gameMode === "practice") {
+    if(gameMode === "practice" || gameMode === "timed") {
       var randomPosition = Math.floor((Math.random() * 51) + 10);
 
       console.log("cloudCount value = " + cloudCount);
@@ -183,6 +183,8 @@ $(document).ready(function() {
     currentScore = 0;
     $playerScore.html("Score: " + currentScore);
     timerStart = false;
+
+    generateCloud();
   }
 
 
@@ -280,6 +282,11 @@ $(document).ready(function() {
     $gameModePractice.remove();
     $overlayPlayAgain.remove();
     $overlayQuit.remove();
+
+    $(".cloud-style").removeClass("cloud-scroll");
+    $(".cloud-style").remove();
+    clearTimeout(cloudLoop);
+    cloudCount = 1;
 
     setTimeout(function() {
       $gameTitleBottom.html(currentScore);
