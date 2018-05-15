@@ -70,7 +70,7 @@ $(document).ready(function() {
       console.log("cloudCount value = " + cloudCount);
       console.log(randomPosition);
 
-      $(document.body).append("<div id='cloud-" + cloudCount + "'class='cloud-test'></div>");
+      $(document.body).append("<div id='cloud-" + cloudCount + "'class='cloud-style'></div>");
       $("#cloud-" + cloudCount).css("top", randomPosition);
 
       setTimeout(function() {
@@ -240,8 +240,8 @@ $(document).ready(function() {
     $gamestartOverlayMenu.append("<div id='game-mode-practice'>Practice</div>");
     $gameModePractice = $("#game-mode-practice");
 
-    $(".cloud-test").removeClass("cloud-scroll");
-    $(".cloud-test").remove();
+    $(".cloud-style").removeClass("cloud-scroll");
+    $(".cloud-style").remove();
     clearTimeout(cloudLoop);
     cloudCount = 1;
 
