@@ -424,7 +424,7 @@ body {
   z-index: -60;
 }
 
-.cloud-test {
+.cloud-style {
   position: absolute;
   left: -80px;
   width: 40px;
@@ -434,7 +434,7 @@ body {
   z-index: -40;
 }
 
-.cloud-test::before {
+.cloud-style::before {
   content: "";
   position: absolute;
   top: 8px;
@@ -445,7 +445,7 @@ body {
   border-radius: 100%;
 }
 
-.cloud-test::after {
+.cloud-style::after {
   content: "";
   position: absolute;
   top: 12px;
