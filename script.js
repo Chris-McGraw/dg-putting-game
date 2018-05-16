@@ -196,7 +196,6 @@ $(document).ready(function() {
     currentScore = 0;
     $playerScore.html("Score: " + currentScore);
     timerStart = false;
-    generateCloud();
   }
 
 
@@ -207,7 +206,6 @@ $(document).ready(function() {
     $gameTimer.html("Remaining Time: " + currentTime);
     currentScore = 0;
     $playerScore.html("Score: " + currentScore);
-    generateCloud();
   }
 
 
@@ -263,8 +261,11 @@ $(document).ready(function() {
     $gameModeTimed.on("mouseenter", function() {
       $(this).addClass("overlay-button-hover");
     });
-    $gameModeTimed.on("click", function() {
-      startGameModeTimed();
+    $gameModeTimed.one("click", function() {
+      if(gameMode === "") {
+        startGameModeTimed();
+        generateCloud();
+      }
     });
     $gameModeTimed.on("mouseleave", function() {
       $(this).removeClass("overlay-button-hover");
@@ -272,8 +273,11 @@ $(document).ready(function() {
     $gameModePractice.on("mouseenter", function() {
       $(this).addClass("overlay-button-hover");
     });
-    $gameModePractice.on("click", function() {
-      startGameModePractice();
+    $gameModePractice.one("click", function() {
+      if(gameMode === "") {
+        startGameModePractice();
+        generateCloud();
+      }
     });
     $gameModePractice.on("mouseleave", function() {
       $(this).removeClass("overlay-button-hover");
@@ -310,8 +314,9 @@ $(document).ready(function() {
       $overlayPlayAgain.on("mouseenter", function() {
         $(this).addClass("overlay-button-hover");
       });
-      $overlayPlayAgain.on("click", function() {
+      $overlayPlayAgain.one("click", function() {
         startGameModeTimed();
+        generateCloud();
       });
       $overlayPlayAgain.on("mouseleave", function() {
         $(this).removeClass("overlay-button-hover");
@@ -639,8 +644,11 @@ $(document).ready(function() {
     $(this).addClass("overlay-button-hover");
   });
 
-  $gameModeTimed.on("click", function() {
-    startGameModeTimed();
+  $gameModeTimed.one("click", function() {
+    if(gameMode === "") {
+      startGameModeTimed();
+      generateCloud();
+    }
   });
 
   $gameModeTimed.on("mouseleave", function() {
@@ -651,8 +659,11 @@ $(document).ready(function() {
     $(this).addClass("overlay-button-hover");
   });
 
-  $gameModePractice.on("click", function() {
-    startGameModePractice();
+  $gameModePractice.one("click", function() {
+    if(gameMode === "") {
+      startGameModePractice();
+      generateCloud();
+    }
   });
 
   $gameModePractice.on("mouseleave", function() {
