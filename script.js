@@ -48,6 +48,19 @@ $(document).ready(function() {
   $disc = $("#disc");
   $puttStartLineRight = $("#putt-start-line-right");
   $muteButton = $("#mute-button");
+  $grassLine = $(".grass-line");
+  $backgroundGrassAccent0 = $("#background-grass-accent-0");
+
+  delayScoreUpdateTimed = setTimeout(function() {
+    if(gameMode === "timed" && currentTime >= 0) {
+      $playerScore.html("Score: " + currentScore);
+    }
+  }, 0);
+  delayScoreUpdatePractice = setTimeout(function() {
+    if(gameMode === "practice" && currentTime === "&infin;") {
+      $playerScore.html("Score: " + currentScore);
+    }
+  }, 0);
 
 /* ------------------------- Function Declarations ------------------------- */
 
@@ -226,6 +239,8 @@ $(document).ready(function() {
     $puttStartLineRight.removeClass("putt-start-line-right-collapsed");
     currentTime = 0;
     $gameTimer.html("Remaining Time: " + currentTime);
+    clearTimeout(delayScoreUpdateTimed);
+    clearTimeout(delayScoreUpdatePractice);
     currentScore = 0;
     $playerScore.html("Score: " + currentScore);
     timerStart = false;
@@ -457,14 +472,14 @@ $(document).ready(function() {
           chainHitAudio.play();
         }, 1000);
 
-        setTimeout(function() {
+        delayScoreUpdateTimed = setTimeout(function() {
           if(gameMode === "timed" && currentTime >= 0) {
             currentScore++;
             $playerScore.html("Score: " + currentScore);
           }
         }, 2000);
 
-        setTimeout(function() {
+        delayScoreUpdatePractice = setTimeout(function() {
           if(gameMode === "practice" && currentTime === "&infin;") {
             currentScore++;
             $playerScore.html("Score: " + currentScore);
@@ -675,6 +690,18 @@ $(document).ready(function() {
   });
 
   $cage.draggable({
+    start: function(event, ui ) {
+      event.preventDefault();
+    }
+  });
+
+  $grassLine.draggable({
+    start: function(event, ui ) {
+      event.preventDefault();
+    }
+  });
+
+  $backgroundGrassAccent0.draggable({
     start: function(event, ui ) {
       event.preventDefault();
     }
