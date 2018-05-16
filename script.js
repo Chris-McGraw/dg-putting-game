@@ -49,6 +49,17 @@ $(document).ready(function() {
   $puttStartLineRight = $("#putt-start-line-right");
   $muteButton = $("#mute-button");
 
+  delayScoreUpdateTimed = setTimeout(function() {
+    if(gameMode === "timed" && currentTime >= 0) {
+      $playerScore.html("Score: " + currentScore);
+    }
+  }, 0);
+  delayScoreUpdatePractice = setTimeout(function() {
+    if(gameMode === "practice" && currentTime === "&infin;") {
+      $playerScore.html("Score: " + currentScore);
+    }
+  }, 0);
+
 /* ------------------------- Function Declarations ------------------------- */
 
   function resizeBasket() {
@@ -226,6 +237,8 @@ $(document).ready(function() {
     $puttStartLineRight.removeClass("putt-start-line-right-collapsed");
     currentTime = 0;
     $gameTimer.html("Remaining Time: " + currentTime);
+    clearTimeout(delayScoreUpdateTimed);
+    clearTimeout(delayScoreUpdatePractice);
     currentScore = 0;
     $playerScore.html("Score: " + currentScore);
     timerStart = false;
@@ -457,14 +470,14 @@ $(document).ready(function() {
           chainHitAudio.play();
         }, 1000);
 
-        setTimeout(function() {
+        delayScoreUpdateTimed = setTimeout(function() {
           if(gameMode === "timed" && currentTime >= 0) {
             currentScore++;
             $playerScore.html("Score: " + currentScore);
           }
         }, 2000);
 
-        setTimeout(function() {
+        delayScoreUpdatePractice = setTimeout(function() {
           if(gameMode === "practice" && currentTime === "&infin;") {
             currentScore++;
             $playerScore.html("Score: " + currentScore);
