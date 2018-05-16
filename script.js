@@ -48,6 +48,8 @@ $(document).ready(function() {
   $disc = $("#disc");
   $puttStartLineRight = $("#putt-start-line-right");
   $muteButton = $("#mute-button");
+  $grassLine = $(".grass-line");
+  $backgroundGrassAccent0 = $("#background-grass-accent-0");
 
   delayScoreUpdateTimed = setTimeout(function() {
     if(gameMode === "timed" && currentTime >= 0) {
@@ -688,6 +690,18 @@ $(document).ready(function() {
   });
 
   $cage.draggable({
+    start: function(event, ui ) {
+      event.preventDefault();
+    }
+  });
+
+  $grassLine.draggable({
+    start: function(event, ui ) {
+      event.preventDefault();
+    }
+  });
+
+  $backgroundGrassAccent0.draggable({
     start: function(event, ui ) {
       event.preventDefault();
     }
