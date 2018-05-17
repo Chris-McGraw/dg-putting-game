@@ -8,6 +8,7 @@ $(document).ready(function() {
   currentTime = 0;
   currentScore = 0;
   cloudCount = 1;
+  puttAnimationStatus = false;
 
   chainHitAudio = document.getElementById("chain-hit-audio");
   chainHitAudio.muted = true;
@@ -357,6 +358,8 @@ $(document).ready(function() {
   function missedPuttLow() {
     for(shotPower = 0; shotPower <= 22; shotPower++) {
       if($disc.position().top === shotPower) {
+        puttAnimationStatus = true;
+
         if($(window).height() >= 676) {
           var powerChange = 0 - shotPower;
           var shotHeight = powerChange + -287 + powerChange + (powerChange / 4);
@@ -392,6 +395,7 @@ $(document).ready(function() {
           $disc.removeClass("putt-drop");
           $disc.addClass("disc-start");
           $disc.css({"transform": "translate(0px, 0px) rotate(0deg)"});
+          puttAnimationStatus = false;
         }, 2250);
       }
     }
@@ -401,6 +405,8 @@ $(document).ready(function() {
   function missedPuttCage() {
     for(shotPower = 23; shotPower <= 54; shotPower++) {
       if($disc.position().top === shotPower) {
+        puttAnimationStatus = true;
+
         if($(window).height() >= 676) {
           var powerChange = 0 - shotPower;
           var shotHeight = powerChange + -287 + powerChange + (powerChange / 4);
@@ -436,6 +442,7 @@ $(document).ready(function() {
           $disc.removeClass("putt-drop");
           $disc.addClass("disc-start");
           $disc.css({"transform": "translate(0px, 0px) rotate(0deg)"});
+          puttAnimationStatus = false;
         }, 2250);
       }
     }
@@ -445,6 +452,8 @@ $(document).ready(function() {
   function madePutt() {
     for(shotPower = 55; shotPower <= 75; shotPower++) {
       if($disc.position().top === shotPower) {
+        puttAnimationStatus = true;
+
         if($(window).height() >= 676) {
           var powerChange = 55 - shotPower;
           var shotHeight = powerChange + -415 + powerChange + powerChange;
@@ -498,6 +507,7 @@ $(document).ready(function() {
           $cage.removeClass("cage-overlay");
           $disc.addClass("disc-start");
           $disc.css({"transform": "translate(0px, 0px) rotate(0deg)"});
+          puttAnimationStatus = false;
         }, 2250);
       }
     }
@@ -507,6 +517,8 @@ $(document).ready(function() {
   function missedPuttBelt() {
     for(shotPower = 76; shotPower <= 91; shotPower++) {
       if($disc.position().top === shotPower) {
+        puttAnimationStatus = true;
+
         if($(window).height() >= 676) {
           var powerChange = 76 - shotPower;
           var shotHeight = powerChange + -480 + powerChange + powerChange;
@@ -542,6 +554,7 @@ $(document).ready(function() {
           $disc.removeClass("putt-drop");
           $disc.addClass("disc-start");
           $disc.css({"transform": "translate(0px, 0px) rotate(0deg)"});
+          puttAnimationStatus = false;
         }, 2250);
       }
     }
@@ -551,6 +564,8 @@ $(document).ready(function() {
   function missedPuttHigh() {
     for(shotPower = 92; shotPower <= 110; shotPower++) {
       if($disc.position().top === shotPower) {
+        puttAnimationStatus = true;
+
         if($(window).height() >= 676) {
           var powerChange = 92 - shotPower;
           var shotHeight = powerChange + -531 + powerChange + powerChange;
@@ -583,6 +598,7 @@ $(document).ready(function() {
           $disc.removeClass("putt-drop-behind-mobile");
           $disc.addClass("disc-start");
           $disc.css({"transform": "translate(0px, 0px) rotate(0deg)"});
+          puttAnimationStatus = false;
         }, 2250);
       }
     }
@@ -723,6 +739,9 @@ $(document).ready(function() {
     containment: "#arrow-container", scroll: false,
 
     start: function(event, ui ) {
+      if(puttAnimationStatus === true) {
+        event.preventDefault();
+      }
       $disc.removeClass("disc-start");
     },
 
