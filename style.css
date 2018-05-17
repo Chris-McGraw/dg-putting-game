@@ -306,7 +306,6 @@ body {
   height: 33%;
   border-radius: 0 0 20px 20px;
   background-color: rgba(0, 0, 0, 0.3);
-  cursor: pointer;
   z-index: 1;
 }
 
@@ -321,6 +320,7 @@ body {
   width: 40px !important;
   height: 6px !important;
   transition: transform 1000ms ease-out, width 1000ms ease-in, height 1000ms ease-in;
+  cursor: default !important;
 }
 
 .putt-high {
@@ -328,6 +328,7 @@ body {
   width: 38px !important;
   height: 6px !important;
   transition: transform 1000ms ease-out, width 1000ms ease-in, height 1000ms ease-in;
+  cursor: default !important;
 }
 
 .putt-mobile {
@@ -335,6 +336,7 @@ body {
   width: 34px !important;
   height: 5px !important;
   transition: transform 1000ms ease-out, width 1000ms ease-in, height 1000ms ease-in;
+  cursor: default !important;
 }
 
 .putt-high-mobile {
@@ -342,12 +344,14 @@ body {
   width: 32px !important;
   height: 5px !important;
   transition: transform 1000ms ease-out, width 1000ms ease-in, height 1000ms ease-in;
+  cursor: default !important;
 }
 
 .putt-drop {
   transform: translate(18px, -480px) rotate(0deg);
   transition: transform 500ms;
   z-index: 1;
+  cursor: default !important;
 }
 
 .putt-drop-behind {
@@ -356,6 +360,7 @@ body {
   height: 4px !important;
   z-index: -1 !important;
   transition: transform 1000ms ease-out, width 1000ms ease-in, height 1000ms ease-in;
+  cursor: default !important;
 }
 
 .putt-drop-behind-mobile {
@@ -364,6 +369,7 @@ body {
   height: 4px !important;
   z-index: -1 !important;
   transition: transform 1000ms ease-out, width 1000ms ease-in, height 1000ms ease-in;
+  cursor: default !important;
 }
 
 #arrow-container {
