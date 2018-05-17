@@ -54,6 +54,8 @@ $(document).ready(function() {
 
   delayTimerStart = setTimeout(function() {
   }, 0);
+  delayTimerInterval = setTimeout(function() {
+  }, 0);
   delayScoreUpdateTimed = setTimeout(function() {
     if(gameMode === "timed" && currentTime >= 0) {
       $playerScore.html("Score: " + currentScore);
@@ -242,6 +244,8 @@ $(document).ready(function() {
     $gameTimer.html("Remaining Time: " + currentTime);
     clearTimeout(delayScoreUpdateTimed);
     clearTimeout(delayScoreUpdatePractice);
+    clearTimeout(delayTimerStart);
+    clearTimeout(delayTimerInterval);
     currentScore = 0;
     $playerScore.html("Score: " + currentScore);
     timerStart = false;
@@ -259,7 +263,6 @@ $(document).ready(function() {
     $(".cloud-style").remove();
     clearTimeout(cloudLoop);
     cloudCount = 1;
-    clearTimeout(delayTimerStart);
 
   /* ------------------ Overlay Event Handlers ------------------ */
     $gameModeTimed.on("mouseenter", function() {
@@ -345,7 +348,7 @@ $(document).ready(function() {
 
     $gameTimer.html("Remaining Time: " + currentTime);
 
-    delayTimerStart = setTimeout(function() {
+    delayTimerInterval = setTimeout(function() {
       if(currentTime > 0) {
         startTimerCountDown();
       }
@@ -759,7 +762,7 @@ $(document).ready(function() {
 
       if(gameMode === "timed" && timerStart === false) {
         timerStart = true;
-        setTimeout(function() {
+        delayTimerStart = setTimeout(function() {
           startTimerCountDown();
         }, 500);
       }
