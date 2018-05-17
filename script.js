@@ -52,6 +52,8 @@ $(document).ready(function() {
   $grassLine = $(".grass-line");
   $backgroundGrassAccent0 = $("#background-grass-accent-0");
 
+  delayTimerStart = setTimeout(function() {
+  }, 0);
   delayScoreUpdateTimed = setTimeout(function() {
     if(gameMode === "timed" && currentTime >= 0) {
       $playerScore.html("Score: " + currentScore);
@@ -257,6 +259,7 @@ $(document).ready(function() {
     $(".cloud-style").remove();
     clearTimeout(cloudLoop);
     cloudCount = 1;
+    clearTimeout(delayTimerStart);
 
   /* ------------------ Overlay Event Handlers ------------------ */
     $gameModeTimed.on("mouseenter", function() {
@@ -341,11 +344,13 @@ $(document).ready(function() {
     /* console.log(currentTime); */
 
     $gameTimer.html("Remaining Time: " + currentTime);
-    setTimeout(function() {
+
+    delayTimerStart = setTimeout(function() {
       if(currentTime > 0) {
         startTimerCountDown();
       }
     }, 1000);
+
     if(currentTime === 0) {
       displayTimedScoreOverlay();
       setTimeout(function() {
