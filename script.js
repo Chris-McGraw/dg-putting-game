@@ -5,10 +5,10 @@ $(document).ready(function() {
   gameMode = "";
   muteStatus = false;
   timerStart = false;
+  puttAnimationStatus = false;
   currentTime = 0;
   currentScore = 0;
   cloudCount = 1;
-  puttAnimationStatus = false;
 
   chainHitAudio = document.getElementById("chain-hit-audio");
   chainHitAudio.muted = true;
@@ -57,14 +57,8 @@ $(document).ready(function() {
   delayTimerInterval = setTimeout(function() {
   }, 0);
   delayScoreUpdateTimed = setTimeout(function() {
-    if(gameMode === "timed" && currentTime >= 0) {
-      $playerScore.html("Score: " + currentScore);
-    }
   }, 0);
   delayScoreUpdatePractice = setTimeout(function() {
-    if(gameMode === "practice" && currentTime === "&infin;") {
-      $playerScore.html("Score: " + currentScore);
-    }
   }, 0);
 
 /* ------------------------- Function Declarations ------------------------- */
@@ -84,10 +78,6 @@ $(document).ready(function() {
   function generateCloud() {
     if(gameMode === "practice" || gameMode === "timed") {
       var randomPosition = Math.floor((Math.random() * 51) + 10);
-
-      /* console.log("cloudCount value = " + cloudCount);
-      console.log(randomPosition); */
-
       $(document.body).append("<div id='cloud-" + cloudCount + "'class='cloud-style'></div>");
       $("#cloud-" + cloudCount).css("top", randomPosition);
 
@@ -343,9 +333,6 @@ $(document).ready(function() {
 
   function startTimerCountDown() {
     currentTime--;
-
-    /* console.log(currentTime); */
-
     $gameTimer.html("Remaining Time: " + currentTime);
 
     delayTimerInterval = setTimeout(function() {
